@@ -13,6 +13,7 @@ void my_write(char *str)
 
     write(1, str, size);
 }
+
 void my_wrerror(char *str)
 {
     int size = my_strlen(str);
