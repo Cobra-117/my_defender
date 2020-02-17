@@ -9,14 +9,15 @@ NAME	= 	my_defender
 
 RM 	= 	rm -f
 
-SRCS	=	src/main.c			\
-			src/my_defender.c	\
-			src/init_struct.c	\
-			src/init_obj.c		\
-			src/init_window.c	\
-			src/free_structs.c	\
-			src/free_objects.c	\
-			src/init_turrets.c	\
+SRCS	=	src/main.c				\
+			src/my_defender.c		\
+			src/init_struct.c		\
+			src/init_obj.c			\
+			src/init_window.c		\
+			src/free_structs.c		\
+			src/free_objects.c		\
+			src/init_turrets.c		\
+			src/init_enemies.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

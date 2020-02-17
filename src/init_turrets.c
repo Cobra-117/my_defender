@@ -7,6 +7,44 @@
 
 #include "../include/my.h"
 
+void link_turrets_sprites_and_textures(Index_t *index)
+{
+    sfSprite_setTexture(index->turrets.arti_mkI_spr,
+    index->turrets.arti_mkI_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.arti_mkII_spr,
+    index->turrets.arti_mkII_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.heavy_mkI_spr,
+    index->turrets.heavy_mkI_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.heavy_mkII_spr,
+    index->turrets.heavy_mkII_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.tesla_mkI_spr,
+    index->turrets.tesla_mkI_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.tesla_mkII_spr,
+    index->turrets.tesla_mkII_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.casu_mkI_spr,
+    index->turrets.casu_mkI_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.casu_mkII_spr,
+    index->turrets.casu_mkII_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.flame_mkI_spr,
+    index->turrets.flame_mkI_tex, sfTrue);
+    sfSprite_setTexture(index->turrets.flame_mkII_spr,
+    index->turrets.flame_mkII_tex, sfTrue);
+}
+
+void init_turrets_sprites(Index_t *index)
+{
+    index->turrets.arti_mkI_spr = sfSprite_create();
+    index->turrets.arti_mkII_spr = sfSprite_create();
+    index->turrets.heavy_mkI_spr = sfSprite_create();
+    index->turrets.heavy_mkII_spr = sfSprite_create();
+    index->turrets.tesla_mkI_spr = sfSprite_create();
+    index->turrets.tesla_mkII_spr = sfSprite_create();
+    index->turrets.casu_mkI_spr = sfSprite_create();
+    index->turrets.casu_mkII_spr = sfSprite_create();
+    index->turrets.flame_mkI_spr = sfSprite_create();
+    index->turrets.flame_mkII_spr = sfSprite_create();
+}
+
 void init_turrets_tex(Index_t *index)
 {
     index->turrets.arti_mkI_tex =
@@ -29,4 +67,11 @@ void init_turrets_tex(Index_t *index)
     sfTexture_createFromFile("assets/turrets/Flame_lvl1.png", NULL);
     index->turrets.flame_mkII_tex =
     sfTexture_createFromFile("assets/turrets/Flame_lvl2.png", NULL);
+}
+
+void init_turrets(Index_t *index)
+{
+    init_turrets_tex(index);
+    init_turrets_sprites(index);
+    link_turrets_sprites_and_textures(index);
 }

@@ -9,6 +9,7 @@
 #include "struct.h"
 #include "includes.h"
 #include "../lib/my/lib.h"
+#include "defines.h"
 
 #ifndef MY_H_
 #define MY_H_
