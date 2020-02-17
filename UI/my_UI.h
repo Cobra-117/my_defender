@@ -19,6 +19,8 @@
 
 struct button_s {
     sfRectangleShape *canon;
+    float a;
+    float b;
 };
 
 typedef struct button_s button_t;
