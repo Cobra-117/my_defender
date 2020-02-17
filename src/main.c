@@ -5,7 +5,7 @@
 ** my_defender
 */
 
-#include "my.h"
+#include "../include/my.h"
 
 int main(void)
 {
