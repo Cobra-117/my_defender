@@ -1,0 +1,12 @@
+/*
+** EPITECH PROJECT, 2020
+** init struct
+** File description:
+** initialize the structures
+*/
+
+#include "../include/my.h"
+
+void init_structs(Index_t *index)
+{
+}

@@ -14,7 +14,7 @@ typedef struct misc_object_t
 {
     sfTexture *mine_tex;
     sfSprite *mine_spr;
-};
+}misc_object_t;
 
 typedef struct turrets_t
 {
@@ -28,7 +28,7 @@ typedef struct turrets_t
     sfSprite *flame_spr;
     sfTexture *slow_tex;
     sfSprite *slow_spr;
-};
+}turrets_t;
 
 typedef struct enemies_t
 {
@@ -38,7 +38,7 @@ typedef struct enemies_t
     sfSprite *med_spr;
     sfTexture *light_tex;
     sfSprite *light_spr;
-};
+}enemies_t;
 
 
 typedef struct Index_t
@@ -47,7 +47,7 @@ typedef struct Index_t
     enemies_t enemies;
     turrets_t turrets;
     misc_object_t misc_objs;
-};
+}Index_t;
 
 
 

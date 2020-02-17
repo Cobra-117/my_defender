@@ -5,9 +5,10 @@
 ** function prototyping
 */
 
-#include "lib.h"
 #include "struct.h"
 #include "includes.h"
+void init_structs(Index_t *index);
+void my_defender(void);
 
 #ifndef FUNCTIONS_H_
 #define FUNCTIONS_H_

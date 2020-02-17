@@ -9,7 +9,9 @@ NAME	= 	my_defender
 
 RM 	= 	rm -f
 
-SRCS	=	src/main.c
+SRCS	=	src/main.c			\
+			src/my_defender.c	\
+			src/init_struct.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 

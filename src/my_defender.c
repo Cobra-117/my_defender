@@ -5,7 +5,11 @@
 ** my defender
 */
 
-void my_defender()
+#include "../include/my.h"
+
+void my_defender(void)
 {
-    init_
+    Index_t index;
+
+    init_structs(&index);
 }
