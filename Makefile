@@ -5,11 +5,12 @@
 ## make file
 ##
 
-NAME	= 	mysh
+NAME	= 	my_defender
 
 RM 	= 	rm -f
 
-SRCS	=	main.c						\
+SRCS	=	src/main.c
+
 OBJ 	=	$(SRCS.c= .o)
 
 CFLAGS	=	-Wall -O0 -Wextra

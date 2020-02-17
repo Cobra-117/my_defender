@@ -7,6 +7,7 @@
 
 #include "lib.h"
 #include "struct.h"
+#include "includes.h"
 
 #ifndef FUNCTIONS_H_
 #define FUNCTIONS_H_
