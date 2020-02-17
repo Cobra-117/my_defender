@@ -65,13 +65,13 @@ int main(void)
     sfVector2f size = {50, 50};
     window = sfRenderWindow_create(mode, "", sfResize | sfClose, NULL);
     sfRenderWindow_setFramerateLimit(window, 60);
+    init_button(&button, pos, size);
     while (sfRenderWindow_isOpen(window)) {
-        while (sfRenderWindow_pollEvent(window, &event)) {
+        /*while (sfRenderWindow_pollEvent(window, &event)) {
             if (event.type == sfEvtClosed)
                 sfRenderWindow_close(window);
-        }
+        }*/
         sfRenderWindow_display(window);
-        init_button(&button, pos, size);
         sfRenderWindow_drawRectangleShape(window, button.canon, NULL);
         print_hello(&button, window);
     }
