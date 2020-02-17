@@ -16,6 +16,7 @@ SRCS	=	src/main.c			\
 			src/init_window.c	\
 			src/free_structs.c	\
 			src/free_objects.c	\
+			src/init_turrets.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 

@@ -54,4 +54,5 @@ void init_obj(Index_t *index)
     init_enemies_tex(index);
     init_enemies_sprites(index);
     link_enemies_sprites_and_textures(index);
+    init_turrets_tex(index);
 }

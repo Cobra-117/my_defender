@@ -18,16 +18,26 @@ typedef struct misc_object_t
 
 typedef struct turrets_t
 {
-    sfTexture *mki_tex;
-    sfSprite *mki_spr;
-    sfTexture *mkii_tex;
-    sfSprite *mkii_spr;
-    sfTexture *artillery_text;
-    sfSprite *artillery_spr;
-    sfTexture *flame_tex;
-    sfSprite *flame_spr;
-    sfTexture *slow_tex;
-    sfSprite *slow_spr;
+    sfTexture *heavy_mkI_tex;
+    sfSprite *heavy_mkI_spr;
+    sfTexture *heavy_mkII_tex;
+    sfSprite *heavy_mkII_spr;
+    sfTexture *tesla_mkI_tex;
+    sfSprite *tesla_mkI_spr;
+    sfTexture *tesla_mkII_tex;
+    sfSprite *tesla_mkII_spr;
+    sfTexture *casu_mkI_tex;
+    sfSprite *casu_mkI_spr;
+    sfTexture *casu_mkII_tex;
+    sfSprite *casu_mkII_spr;
+    sfTexture *arti_mkI_tex;
+    sfSprite *arti_mkI_spr;
+    sfTexture *arti_mkII_tex;
+    sfSprite *arti_mkII_spr;
+    sfTexture *flame_mkI_tex;
+    sfSprite *flame_mkI_spr;
+    sfTexture *flame_mkII_tex;
+    sfSprite *flame_mkII_spr;
 }turrets_t;
 
 typedef struct enemies_t

@@ -11,6 +11,7 @@ void free_structs(Index_t *index);
 void free_objs(Index_t *index);
 void init_obj(Index_t *index);
 void init_structs(Index_t *index);
+void init_turrets_tex(Index_t *index);
 void init_window(Index_t *index);
 void my_defender(void);
 
