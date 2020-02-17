@@ -11,25 +11,20 @@ int button_is_clicked(button_t *button, sfVector2f click_position,
 sfVector2f click_size, sfRenderWindow *window)
 {
     sfEvent event;
-    sfVector2f pos_button;
 
     while (sfRenderWindow_pollEvent(window, &event)) {
         if (event.type == sfEvtClosed)
             sfRenderWindow_close(window);
         if (event.type == sfEvtMouseButtonPressed) {
-            printf("x1 = %f, y1 = %f\n", click_position.x + click_size.x, click_position.y + click_size.y);
-            printf("x2 = %f, y2 = %f\n", click_position.x, click_position.y);
-            printf("a = %f\n", button->a);
-            if (button->a <= click_position.x /*+ click_size.x /*&&
-            event.mouseMove.x >= click_position.x /*&& event.mouseMove.y <=
-            click_position.y + click_size.y && event.mouseMove.y >=
-            click_position.y*/)
+            if (button->a <= click_position.x + click_size.x &&
+            button->a >= click_position.x && button->b <=
+            click_position.y + click_size.y && button->b >=
+            click_position.y)
                 printf("OK\n");
         }
         if (event.type == sfEvtMouseMoved) {
             button->a = event.mouseMove.x;
             button->b = event.mouseMove.y;
-            printf("xsouris = %f, ysouris = %f\n", button->a, button->b);
         }
     }
 }
@@ -37,9 +32,7 @@ sfVector2f click_size, sfRenderWindow *window)
 void print_hello(button_t *button, sfRenderWindow *window)
 {
     sfVector2f click_position = sfRectangleShape_getPosition(button->canon);
-    //printf("x = %f, y = %f\n", click_position.x, click_position.y);
     sfVector2f click_size = sfRectangleShape_getSize(button->canon);
-    //printf("x2 = %f, y2 = %f\n", click_size.x, click_size.y);
     button_is_clicked(button, click_position, click_size, window);
 }
 
@@ -67,10 +60,6 @@ int main(void)
     sfRenderWindow_setFramerateLimit(window, 60);
     init_button(&button, pos, size);
     while (sfRenderWindow_isOpen(window)) {
-        /*while (sfRenderWindow_pollEvent(window, &event)) {
-            if (event.type == sfEvtClosed)
-                sfRenderWindow_close(window);
-        }*/
         sfRenderWindow_display(window);
         sfRenderWindow_drawRectangleShape(window, button.canon, NULL);
         print_hello(&button, window);
