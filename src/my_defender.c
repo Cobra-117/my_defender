@@ -12,4 +12,6 @@ void my_defender(void)
     Index_t index;
 
     init_structs(&index);
+    //game function here
+    free_structs(&index);
 }

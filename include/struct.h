@@ -32,12 +32,18 @@ typedef struct turrets_t
 
 typedef struct enemies_t
 {
-    sfTexture *heavy_tex;
-    sfSprite *heavy_spr;
-    sfTexture *med_tex;
-    sfSprite *med_spr;
-    sfTexture *light_tex;
-    sfSprite *light_spr;
+    sfTexture *heavyW_tex;
+    sfSprite *heavyW_spr;
+    sfTexture *heavyHull_tex;
+    sfSprite *heavyHull_spr;
+    sfTexture *medW_tex;
+    sfSprite *medW_spr;
+    sfTexture *medHull_tex;
+    sfSprite *medHull_spr;
+    sfTexture *lightW_tex;
+    sfSprite *lightW_spr;
+    sfTexture *lightHull_tex;
+    sfSprite *lightHull_spr;
 }enemies_t;
 
 

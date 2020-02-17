@@ -9,4 +9,6 @@
 
 void init_structs(Index_t *index)
 {
+    init_window(index);
+    init_obj(index);
 }
