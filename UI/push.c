@@ -20,3 +20,18 @@ void push_exit(button_t *button, sfRenderWindow *window)
     button->click_size_exit = sfRectangleShape_getSize(button->button_exit);
     button_is_clicked(button, window);
 }
+
+void push_htp(button_t *button, sfRenderWindow *window)
+{
+    button->click_pos_htp = sfRectangleShape_getPosition(button->button_htp);
+    button->click_size_htp = sfRectangleShape_getSize(button->button_htp);
+    button_is_clicked(button, window);
+}
+
+void push_param(button_t *button, sfRenderWindow *window)
+{
+    button->click_pos_param = sfRectangleShape_getPosition
+    (button->button_param);
+    button->click_size_param = sfRectangleShape_getSize(button->button_param);
+    button_is_clicked(button, window);
+}

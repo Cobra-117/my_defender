@@ -7,24 +7,6 @@
 
 #include "my_ui.h"
 
-int is_play(button_t *button, sfRenderWindow *window)
-{
-    if (button->a <= button->click_pos_play.x + button->click_size_play.x &&
-        button->a >= button->click_pos_play.x && button->b <=
-        button->click_pos_play.y + button->click_size_play.y && button->b >=
-        button->click_pos_play.y)
-            printf("play\n");
-}
-
-int is_exit(button_t *button, sfRenderWindow *window)
-{
-    if (button->a <= button->click_pos_exit.x + button->click_size_exit.x &&
-        button->a >= button->click_pos_exit.x && button->b <=
-        button->click_pos_exit.y + button->click_size_exit.y && button->b >=
-        button->click_pos_exit.y)
-            printf("exit\n");
-}
-
 int button_is_clicked(button_t *button, sfRenderWindow *window)
 {
     sfEvent event;
@@ -39,6 +21,8 @@ int button_is_clicked(button_t *button, sfRenderWindow *window)
         if (event.type == sfEvtMouseButtonPressed) {
             is_play(button, window);
             is_exit(button, window);
+            is_htp(button, window);
+            is_param(button, window);
         }
     }
 }
@@ -49,8 +33,12 @@ void game_menu(button_t *button, image_t *image, sfRenderWindow *window)
     sfRenderWindow_drawSprite(window, image->spri_menu, NULL);
     sfRenderWindow_drawRectangleShape(window, button->button_play, NULL);
     sfRenderWindow_drawRectangleShape(window, button->button_exit, NULL);
+    sfRenderWindow_drawRectangleShape(window, button->button_htp, NULL);
+    sfRenderWindow_drawRectangleShape(window, button->button_param, NULL);
     push_play(button, window);
     push_exit(button, window);
+    push_htp(button, window);
+    push_param(button, window);
 }
 
 int main(void)
@@ -65,6 +53,8 @@ int main(void)
     sfRenderWindow_setFramerateLimit(window, 60);
     init_button_play(&button);
     init_button_exit(&button);
+    init_button_htp(&button);
+    init_button_param(&button);
     image.text_menu = sfTexture_createFromFile("game_menu.png", NULL);
     image.spri_menu = sfSprite_create();
     while (sfRenderWindow_isOpen(window)) {

@@ -21,13 +21,23 @@ struct button_s {
     sfRectangleShape *button_play;
     sfVector2f pos_play;
     sfVector2f size_play;
+    sfVector2f click_pos_play;
+    sfVector2f click_size_play;
     sfRectangleShape *button_exit;
     sfVector2f pos_exit;
     sfVector2f size_exit;
-    sfVector2f click_pos_play;
-    sfVector2f click_size_play;
     sfVector2f click_pos_exit;
     sfVector2f click_size_exit;
+    sfRectangleShape *button_htp;
+    sfVector2f pos_htp;
+    sfVector2f size_htp;
+    sfVector2f click_pos_htp;
+    sfVector2f click_size_htp;
+    sfRectangleShape *button_param;
+    sfVector2f pos_param;
+    sfVector2f size_param;
+    sfVector2f click_pos_param;
+    sfVector2f click_size_param;
     float a;
     float b;
 };
@@ -42,7 +52,27 @@ struct image_s {
 typedef struct image_s image_t;
 
 void push_play(button_t *button, sfRenderWindow *window);
+
 void push_exit(button_t *button, sfRenderWindow *window);
+
+void push_htp(button_t *button, sfRenderWindow *window);
+
+void push_param(button_t *button, sfRenderWindow *window);
+
 void init_button_play(button_t *button);
+
 void init_button_exit(button_t *button);
+
+void init_button_htp(button_t *button);
+
+void init_button_param(button_t *button);
+
 int button_is_clicked(button_t *button, sfRenderWindow *window);
+
+int is_play(button_t *button, sfRenderWindow *window);
+
+int is_exit(button_t *button, sfRenderWindow *window);
+
+int is_htp(button_t *button, sfRenderWindow *window);
+
+int is_param(button_t *button, sfRenderWindow *window);

@@ -9,9 +9,10 @@ NAME	= 	my_defender
 
 RM 	= 	rm -f
 
-SRCS	=	main.c			\
+SRCS	=	main.c				\
 			init_button.c		\
-			push.c		\
+			push.c				\
+			is_what_button.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 
