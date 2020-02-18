@@ -13,6 +13,7 @@ SRCS	=	main.c				\
 			init_button.c		\
 			push.c				\
 			is_what_button.c	\
+			set_text_menu.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

@@ -51,6 +51,20 @@ struct image_s {
 
 typedef struct image_s image_t;
 
+struct text_s {
+    sfText *txt_play;
+    sfFont *font;
+    sfVector2f pos_play;
+    sfText *txt_exit;
+    sfVector2f pos_exit;
+    sfText *txt_htp;
+    sfVector2f pos_htp;
+    sfText *txt_param;
+    sfVector2f pos_param;
+};
+
+typedef struct text_s text_t;
+
 void push_play(button_t *button, sfRenderWindow *window);
 
 void push_exit(button_t *button, sfRenderWindow *window);
@@ -76,3 +90,11 @@ int is_exit(button_t *button, sfRenderWindow *window);
 int is_htp(button_t *button, sfRenderWindow *window);
 
 int is_param(button_t *button, sfRenderWindow *window);
+
+void prepare_text_play(text_t *text);
+
+void prepare_text_exit(text_t *text);
+
+void prepare_text_htp(text_t *text);
+
+void prepare_text_param(text_t *text);
