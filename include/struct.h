@@ -10,6 +10,15 @@
 #ifndef STRUCT_H_
 #define STRUCT_H_
 
+typedef struct map_t
+{
+    char **map_array;
+    sfTexture *snow_tex;
+    sfSprite *snow_spr;
+    sfTexture *path_tex;
+    sfSprite *path_spr;
+}map_t;
+
 typedef struct misc_object_t
 {
     sfTexture *mine_tex;
@@ -63,6 +72,7 @@ typedef struct Index_t
     enemies_t enemies;
     turrets_t turrets;
     misc_object_t misc_objs;
+    map_t map;
 }Index_t;
 
 

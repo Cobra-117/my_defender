@@ -13,5 +13,9 @@ void my_defender(void)
 
     init_structs(&index);
     //game function here
+    while (sfRenderWindow_isOpen(index.window)) {
+        display_map(&index);
+        sfRenderWindow_display(index.window);
+    }
     free_structs(&index);
 }

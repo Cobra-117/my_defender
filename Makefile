@@ -18,6 +18,8 @@ SRCS	=	src/main.c				\
 			src/free_objects.c		\
 			src/init_turrets.c		\
 			src/init_enemies.c		\
+			src/init_map.c			\
+			src/display_map.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 
