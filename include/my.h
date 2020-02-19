@@ -10,6 +10,7 @@
 #include "includes.h"
 #include "../lib/my/lib.h"
 #include "defines.h"
+#include "my_ui.h"
 
 #ifndef MY_H_
 #define MY_H_

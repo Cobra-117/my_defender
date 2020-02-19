@@ -12,6 +12,7 @@ void my_defender(void)
     Index_t index;
 
     init_structs(&index);
+    main_menu(index.window);
     //game function here
     while (sfRenderWindow_isOpen(index.window)) {
         display_map(&index);

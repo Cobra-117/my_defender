@@ -20,6 +20,11 @@ SRCS	=	src/main.c				\
 			src/init_enemies.c		\
 			src/init_map.c			\
 			src/display_map.c		\
+			src/main_menu.c			\
+			src/is_what_button.c	\
+			src/set_text_menu.c		\
+			src/init_button.c		\
+			src/push.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 
