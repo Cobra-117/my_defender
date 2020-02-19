@@ -10,6 +10,7 @@
 void display_map(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
+int game_loop(Index_t *index);
 void init_enemies(Index_t *index);
 void init_map(Index_t *index);
 void init_obj(Index_t *index);
@@ -17,6 +18,7 @@ void init_structs(Index_t *index);
 void init_turrets(Index_t *index);
 void init_window(Index_t *index);
 void my_defender(void);
+int main_menu(sfRenderWindow *window);
 
 #ifndef FUNCTIONS_H_
 #define FUNCTIONS_H_

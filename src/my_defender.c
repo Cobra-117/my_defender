@@ -10,13 +10,16 @@
 void my_defender(void)
 {
     Index_t index;
+    int user_choice = 0;
 
     init_structs(&index);
-    main_menu(index.window);
-    //game function here
-    while (sfRenderWindow_isOpen(index.window)) {
-        display_map(&index);
-        sfRenderWindow_display(index.window);
+    while (1) {
+        user_choice = main_menu(index.window);
+        if (user_choice == 1)
+            game_loop(&index);
+        if (user_choice == 2)
+            break;
     }
+    //game function here
     free_structs(&index);
 }
