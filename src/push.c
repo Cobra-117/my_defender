@@ -7,31 +7,38 @@
 
 #include "../include/my.h"
 
-int push_play(button_t *button, sfRenderWindow *window)
+void push_play(menu_t *menu, sfRenderWindow *window)
 {
-    button->click_pos_play = sfRectangleShape_getPosition(button->button_play);
-    button->click_size_play = sfRectangleShape_getSize(button->button_play);
-    button_is_clicked(button, window);
+    menu->button.click_pos_play = sfRectangleShape_getPosition
+    (menu->button.button_play);
+    menu->button.click_size_play = sfRectangleShape_getSize
+    (menu->button.button_play);
+    button_is_clicked(menu, window);
 }
 
-int push_exit(button_t *button, sfRenderWindow *window)
+void push_exit(menu_t *menu, sfRenderWindow *window)
 {
-    button->click_pos_exit = sfRectangleShape_getPosition(button->button_exit);
-    button->click_size_exit = sfRectangleShape_getSize(button->button_exit);
-    button_is_clicked(button, window);
+    menu->button.click_pos_exit = sfRectangleShape_getPosition
+    (menu->button.button_exit);
+    menu->button.click_size_exit = sfRectangleShape_getSize
+    (menu->button.button_exit);
+    button_is_clicked(menu, window);
 }
 
-void push_htp(button_t *button, sfRenderWindow *window)
+void push_htp(menu_t *menu, sfRenderWindow *window)
 {
-    button->click_pos_htp = sfRectangleShape_getPosition(button->button_htp);
-    button->click_size_htp = sfRectangleShape_getSize(button->button_htp);
-    button_is_clicked(button, window);
+    menu->button.click_pos_htp = sfRectangleShape_getPosition
+    (menu->button.button_htp);
+    menu->button.click_size_htp = sfRectangleShape_getSize
+    (menu->button.button_htp);
+    button_is_clicked(menu, window);
 }
 
-void push_param(button_t *button, sfRenderWindow *window)
+void push_param(menu_t *menu, sfRenderWindow *window)
 {
-    button->click_pos_param = sfRectangleShape_getPosition
-    (button->button_param);
-    button->click_size_param = sfRectangleShape_getSize(button->button_param);
-    button_is_clicked(button, window);
+    menu->button.click_pos_param = sfRectangleShape_getPosition
+    (menu->button.button_param);
+    menu->button.click_size_param = sfRectangleShape_getSize
+    (menu->button.button_param);
+    button_is_clicked(menu, window);
 }

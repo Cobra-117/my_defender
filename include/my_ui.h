@@ -65,38 +65,29 @@ struct text_s {
 
 typedef struct text_s text_t;
 
-void push_play(button_t *button, sfRenderWindow *window);
+struct menu_s {
+    image_t image;
+    button_t button;
+    text_t text;
+    int player_choice;
+};
 
-void push_exit(button_t *button, sfRenderWindow *window);
+typedef struct menu_s menu_t;
 
-void push_htp(button_t *button, sfRenderWindow *window);
-
-void push_param(button_t *button, sfRenderWindow *window);
-
-void init_button_play(button_t *button);
-
-void init_button_exit(button_t *button);
-
-void init_button_htp(button_t *button);
-
-void init_button_param(button_t *button);
-
-int button_is_clicked(button_t *button, sfRenderWindow *window);
-
-int is_play(button_t *button, sfRenderWindow *window);
-
-int is_exit(button_t *button, sfRenderWindow *window);
-
-int is_htp(button_t *button, sfRenderWindow *window);
-
-int is_param(button_t *button, sfRenderWindow *window);
-
-int main_menu(sfRenderWindow *window);
-
-void prepare_text_play(text_t *text);
-
-void prepare_text_exit(text_t *text);
-
-void prepare_text_htp(text_t *text);
-
-void prepare_text_param(text_t *text);
+void push_play(menu_t *menu, sfRenderWindow *window);
+void push_exit(menu_t *menu, sfRenderWindow *window);
+void push_htp(menu_t *menu, sfRenderWindow *window);
+void push_param(menu_t *menu, sfRenderWindow *window);
+void init_button_play(menu_t *menu);
+void init_button_exit(menu_t *menu);
+void init_button_htp(menu_t *menu);
+void init_button_param(menu_t *menu);
+int button_is_clicked(menu_t *menu, sfRenderWindow *window);
+int is_play(menu_t *menu, sfRenderWindow *window);
+int is_exit(menu_t *menu, sfRenderWindow *window);
+int is_htp(menu_t *menu, sfRenderWindow *window);
+int is_param(menu_t *menu, sfRenderWindow *window);
+void prepare_text_play(menu_t *menu);
+void prepare_text_exit(menu_t *menu);
+void prepare_text_htp(menu_t *menu);
+void prepare_text_param(menu_t *menu);
