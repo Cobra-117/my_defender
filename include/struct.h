@@ -71,6 +71,23 @@ typedef struct ui_t
     sfSprite *spri_socle;
     sfVector2f pos_socle;
     sfVector2f scale_socle;
+    sfRectangleShape *button_ui_tower;
+    sfVector2f pos_ui_tower;
+    sfVector2f size_ui_tower;
+    sfVector2f click_pos_ui_tower;
+    sfVector2f click_size_ui_tower;
+    sfRectangleShape *button_utility;
+    sfVector2f pos_utility;
+    sfVector2f size_utility;
+    sfVector2f click_pos_utility;
+    sfVector2f click_size_utility;
+    sfRectangleShape *button_skill;
+    sfVector2f pos_skill;
+    sfVector2f size_skill;
+    sfVector2f click_pos_skill;
+    sfVector2f click_size_skill;
+    float coord_mouse_x;
+    float coord_mouse_y;
 }ui_t;
 
 typedef struct Index_t

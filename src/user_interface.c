@@ -10,9 +10,15 @@
 void display_user_interface(Index_t *index)
 {
     sfRenderWindow_drawSprite(index->window, index->ui.spri_socle, NULL);
+    sfRenderWindow_drawRectangleShape(index->window,
+    index->ui.button_ui_tower, NULL);
+    sfRenderWindow_drawRectangleShape(index->window,
+    index->ui.button_utility, NULL);
+    sfRenderWindow_drawRectangleShape(index->window,
+    index->ui.button_skill, NULL);
 }
 
-void init_user_interface(Index_t *index)
+void init_socle(Index_t *index)
 {
     index->ui.tex_socle = sfTexture_createFromFile
     ("assets/UI/Grey_Square.png", NULL);
@@ -25,4 +31,12 @@ void init_user_interface(Index_t *index)
     index->ui.scale_socle.x = 0.99;
     index->ui.scale_socle.y = 0.94;
     sfSprite_setScale(index->ui.spri_socle, index->ui.scale_socle);
+}
+
+void init_user_interface(Index_t *index)
+{
+    init_socle(index);
+    init_ui_tower(index);
+    init_utility(index);
+    init_skill(index);
 }

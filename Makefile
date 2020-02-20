@@ -27,6 +27,10 @@ SRCS	=	src/main.c				\
 			src/push.c				\
 			src/game_loop.c			\
 			src/user_interface.c	\
+			src/init_button_interface.c	\
+			src/button_game_clicked.c	\
+			src/push_game.c			\
+			src/is_game_button.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 
