@@ -65,6 +65,13 @@ typedef struct enemies_t
     sfSprite *lightHull_spr;
 }enemies_t;
 
+typedef struct ui_t
+{
+    sfTexture *tex_socle;
+    sfSprite *spri_socle;
+    sfVector2f pos_socle;
+    sfVector2f scale_socle;
+}ui_t;
 
 typedef struct Index_t
 {
@@ -73,6 +80,7 @@ typedef struct Index_t
     turrets_t turrets;
     misc_object_t misc_objs;
     map_t map;
+    ui_t ui;
 }Index_t;
 
 
