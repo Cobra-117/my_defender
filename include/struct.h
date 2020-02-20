@@ -101,15 +101,41 @@ typedef struct ui_text_t
     sfVector2f pos_skill;
 }ui_text_t;
 
+typedef struct ui_turrets_t
+{
+    sfTexture *heavy_ui_mkI_tex;
+    sfSprite *heavy_ui_mkI_spr;
+    sfVector2f pos_ui_heavy_mkI;
+    sfVector2f scale_ui_heavy_mkI;
+    sfTexture *tesla_ui_mkI_tex;
+    sfSprite *tesla_ui_mkI_spr;
+    sfVector2f pos_ui_tesla_mkI;
+    sfVector2f scale_ui_tesla_mkI;
+    sfTexture *casu_ui_mkI_tex;
+    sfSprite *casu_ui_mkI_spr;
+    sfVector2f pos_ui_casu_mkI;
+    sfVector2f scale_ui_casu_mkI;
+    sfTexture *arti_ui_mkI_tex;
+    sfSprite *arti_ui_mkI_spr;
+    sfVector2f pos_ui_arti_mkI;
+    sfVector2f scale_ui_arti_mkI;
+    sfTexture *flame_ui_mkI_tex;
+    sfSprite *flame_ui_mkI_spr;
+    sfVector2f pos_ui_flame_mkI;
+    sfVector2f scale_ui_flame_mkI;
+}ui_turrets_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
+    int what_is_open;
     enemies_t enemies;
     turrets_t turrets;
     misc_object_t misc_objs;
     map_t map;
     ui_t ui;
     ui_text_t ui_text;
+    ui_turrets_t ui_turrets;
 }Index_t;
 
 

@@ -14,7 +14,7 @@ int is_ui_tower(Index_t *index)
     index->ui.click_pos_ui_tower.x && index->ui.coord_mouse_y <=
     index->ui.click_pos_ui_tower.y + index->ui.click_size_ui_tower.y
     && index->ui.coord_mouse_y >= index->ui.click_pos_ui_tower.y)
-            printf("Tower\n");
+            index->what_is_open = 1;
 }
 
 int is_utility(Index_t *index)

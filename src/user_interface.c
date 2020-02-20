@@ -38,6 +38,7 @@ void init_socle(Index_t *index)
 
 void init_user_interface(Index_t *index)
 {
+    index->what_is_open = 1;
     init_socle(index);
     init_ui_tower(index);
     init_utility(index);
@@ -45,5 +46,5 @@ void init_user_interface(Index_t *index)
     prepare_text_tower(index);
     prepare_text_utility(index);
     prepare_text_skill(index);
-
+    prepare_ui_tower(index);
 }

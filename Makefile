@@ -32,6 +32,9 @@ SRCS	=	src/main.c				\
 			src/push_game.c			\
 			src/is_game_button.c	\
 			src/set_text_game.c		\
+			src/prepare_ui_tower.c	\
+			src/print_ui_tower.c	\
+			src/give_turrets_scale.c\
 
 OBJ 	=	$(SRCS.c= .o)
 
