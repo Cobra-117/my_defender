@@ -90,6 +90,17 @@ typedef struct ui_t
     float coord_mouse_y;
 }ui_t;
 
+typedef struct ui_text_t
+{
+    sfText *txt_tower;
+    sfFont *font;
+    sfVector2f pos_tower;
+    sfText *txt_utility;
+    sfVector2f pos_utility;
+    sfText *txt_skill;
+    sfVector2f pos_skill;
+}ui_text_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
@@ -98,6 +109,7 @@ typedef struct Index_t
     misc_object_t misc_objs;
     map_t map;
     ui_t ui;
+    ui_text_t ui_text;
 }Index_t;
 
 

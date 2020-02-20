@@ -31,6 +31,7 @@ SRCS	=	src/main.c				\
 			src/button_game_clicked.c	\
 			src/push_game.c			\
 			src/is_game_button.c	\
+			src/set_text_game.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

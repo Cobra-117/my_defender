@@ -16,6 +16,9 @@ void display_user_interface(Index_t *index)
     index->ui.button_utility, NULL);
     sfRenderWindow_drawRectangleShape(index->window,
     index->ui.button_skill, NULL);
+    sfRenderWindow_drawText(index->window, index->ui_text.txt_tower, NULL);
+    sfRenderWindow_drawText(index->window, index->ui_text.txt_utility, NULL);
+    sfRenderWindow_drawText(index->window, index->ui_text.txt_skill, NULL);
 }
 
 void init_socle(Index_t *index)
@@ -39,4 +42,8 @@ void init_user_interface(Index_t *index)
     init_ui_tower(index);
     init_utility(index);
     init_skill(index);
+    prepare_text_tower(index);
+    prepare_text_utility(index);
+    prepare_text_skill(index);
+
 }
