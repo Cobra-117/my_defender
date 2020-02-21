@@ -16,6 +16,7 @@ void check_event(Index_t *index)
 
 int game_main_function(Index_t *index)
 {
+    //manage_enemies(index);
     check_event(index);
     display_map(index);
     display_user_interface(index);

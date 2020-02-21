@@ -10,6 +10,34 @@
 #ifndef STRUCT_H_
 #define STRUCT_H_
 
+typedef struct mytime_t
+{
+    sfClock *clock;
+    float *balises;
+    int balises_nbr;
+}mytime_t;
+
+typedef struct enemies_list_t
+{
+    sfVector2f coordinates;
+    int life;
+    int type;
+    float speed;
+    struct enemies_list_t *next;
+    struct enemies_list_t *last;
+}enemies_list_t;
+//typedef struct enemies_list_t enemies_list_t;
+
+typedef struct wave_t
+{
+    int fd;
+    int wave_nbr;
+    int max_wave;
+    int is_end_wave;
+    int left_enemies;
+    char *filepath;
+}wave_t;
+
 typedef struct map_t
 {
     char **map_array;
@@ -128,7 +156,6 @@ typedef struct ui_turrets_t
 typedef struct Index_t
 {
     sfRenderWindow *window;
-    int what_is_open;
     enemies_t enemies;
     turrets_t turrets;
     misc_object_t misc_objs;
@@ -136,6 +163,10 @@ typedef struct Index_t
     ui_t ui;
     ui_text_t ui_text;
     ui_turrets_t ui_turrets;
+    wave_t wave;
+    enemies_list_t *enemies_list;
+    mytime_t time;
+    int what_is_open;
 }Index_t;
 
 
