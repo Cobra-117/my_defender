@@ -22,6 +22,8 @@ int game_main_function(Index_t *index)
     display_user_interface(index);
     if (index->what_is_open == 1)
         print_ui_tower(index);
+    if (index->what_is_open == 2)
+        print_ui_utilities(index);
     sfRenderWindow_display(index->window);
 }
 

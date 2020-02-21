@@ -155,6 +155,18 @@ typedef struct ui_turrets_t
     sfVector2f scale_ui_flame_mkI;
 }ui_turrets_t;
 
+typedef struct ui_utilities_t
+{
+    sfTexture *mine_ui_tex;
+    sfSprite *mine_ui_spr;
+    sfVector2f pos_ui_mine;
+    sfVector2f scale_ui_mine;
+    sfTexture *barb_ui_tex;
+    sfSprite *barb_ui_spr;
+    sfVector2f pos_ui_barb;
+    sfVector2f scale_ui_barb;
+}ui_utilities_t;
+
 typedef struct ui_info_t
 {
     sfTexture *money_tex;
@@ -177,6 +189,7 @@ typedef struct Index_t
     ui_t ui;
     ui_text_t ui_text;
     ui_turrets_t ui_turrets;
+    ui_utilities_t ui_utilities;
     ui_info_t ui_info;
     wave_t wave;
     enemies_list_t *enemies_list;
