@@ -17,9 +17,10 @@
 
 /*Waves values*/
 #define numer_of_waves (3);
-#define wave_read_interval (0.50);
+//#define wave_read_interval (0.50);
 
 /*time*/
 #define BALISES_NBR (3);
 #define BAL_READMAP (0);
+#define INTERV_READMAP (0.50)
 #endif /* !DEFINES_H_ */
