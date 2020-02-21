@@ -35,6 +35,7 @@ int is_utility(Index_t *index);
 
 void my_defender(void);
 int main_menu(sfRenderWindow *window);
+char *my_nbr_to_str(int i);
 void prepare_text_skill(Index_t *index);
 void prepare_text_tower(Index_t *index);
 void prepare_text_utility(Index_t *index);

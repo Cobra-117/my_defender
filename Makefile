@@ -38,6 +38,7 @@ SRCS	=	src/main.c					\
 			src/init_wave.c				\
 			src/init_enemies_list.c		\
 			src/money_life.c			\
+			src/my_nbr_to_str.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

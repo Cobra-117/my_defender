@@ -127,6 +127,8 @@ typedef struct ui_text_t
     sfVector2f pos_utility;
     sfText *txt_skill;
     sfVector2f pos_skill;
+    sfText *txt_money;
+    sfVector2f pos_money;
 }ui_text_t;
 
 typedef struct ui_turrets_t
