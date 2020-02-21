@@ -18,6 +18,7 @@ void give_turrets_scale(Index_t *index);
 void init_enemies(Index_t *index);
 void init_enemies_list(Index_t *index);
 void init_map(Index_t *index);
+void init_money_life(Index_t *index);
 void init_obj(Index_t *index);
 void init_skill(Index_t *index);
 void init_structs(Index_t *index);
