@@ -18,6 +18,7 @@ void give_turrets_scale(Index_t *index);
 void init_enemies(Index_t *index);
 void init_enemies_list(Index_t *index);
 void init_map(Index_t *index);
+void init_money_life(Index_t *index);
 void init_obj(Index_t *index);
 void init_skill(Index_t *index);
 void init_structs(Index_t *index);
@@ -34,14 +35,20 @@ int is_utility(Index_t *index);
 
 void my_defender(void);
 int main_menu(sfRenderWindow *window);
+char *my_nbr_to_str(int i);
+void give_utilities_scale(Index_t *index);
+void prepare_text_money(Index_t *index);
 void prepare_text_skill(Index_t *index);
 void prepare_text_tower(Index_t *index);
 void prepare_text_utility(Index_t *index);
 void prepare_ui_tower(Index_t *index);
+void prepare_ui_utilities(Index_t *index);
 void print_ui_tower(Index_t *index);
 void push_ui_tower(Index_t *index);
+void print_ui_utilities(Index_t *index);
 void push_utility(Index_t *index);
 void push_skill(Index_t *index);
+void set_utilities_scale(Index_t *index);
 
 #ifndef FUNCTIONS_H_
 #define FUNCTIONS_H_

@@ -127,6 +127,8 @@ typedef struct ui_text_t
     sfVector2f pos_utility;
     sfText *txt_skill;
     sfVector2f pos_skill;
+    sfText *txt_money;
+    sfVector2f pos_money;
 }ui_text_t;
 
 typedef struct ui_turrets_t
@@ -153,6 +155,30 @@ typedef struct ui_turrets_t
     sfVector2f scale_ui_flame_mkI;
 }ui_turrets_t;
 
+typedef struct ui_utilities_t
+{
+    sfTexture *mine_ui_tex;
+    sfSprite *mine_ui_spr;
+    sfVector2f pos_ui_mine;
+    sfVector2f scale_ui_mine;
+    sfTexture *barb_ui_tex;
+    sfSprite *barb_ui_spr;
+    sfVector2f pos_ui_barb;
+    sfVector2f scale_ui_barb;
+}ui_utilities_t;
+
+typedef struct ui_info_t
+{
+    sfTexture *money_tex;
+    sfSprite *money_spr;
+    sfVector2f pos_money;
+    sfVector2f scale_money;
+    sfTexture *life_tex;
+    sfSprite *life_spr;
+    sfVector2f pos_life;
+    sfVector2f scale_life;
+}ui_info_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
@@ -163,6 +189,8 @@ typedef struct Index_t
     ui_t ui;
     ui_text_t ui_text;
     ui_turrets_t ui_turrets;
+    ui_utilities_t ui_utilities;
+    ui_info_t ui_info;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;

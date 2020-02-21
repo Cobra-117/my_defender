@@ -37,6 +37,10 @@ SRCS	=	src/main.c					\
 			src/give_turrets_scale.c	\
 			src/init_wave.c				\
 			src/init_enemies_list.c		\
+			src/money_life.c			\
+			src/my_nbr_to_str.c			\
+			src/init_utilities.c		\
+			src/give_utilities_scale.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 

@@ -43,3 +43,15 @@ void prepare_text_skill(Index_t *index)
     index->ui_text.pos_skill.y = 14;
     sfText_setPosition(index->ui_text.txt_skill, index->ui_text.pos_skill);
 }
+
+void prepare_text_money(Index_t *index)
+{
+    index->ui_text.txt_money = sfText_create();
+    sfText_setString(index->ui_text.txt_money, my_nbr_to_str(17890));
+    sfText_setFont(index->ui_text.txt_money, index->ui_text.font);
+    sfText_setColor(index->ui_text.txt_money, sfWhite);
+    sfText_setCharacterSize(index->ui_text.txt_money, 50);
+    index->ui_text.pos_money.x = 1080;
+    index->ui_text.pos_money.y = 14;
+    sfText_setPosition(index->ui_text.txt_money, index->ui_text.pos_money);
+}
