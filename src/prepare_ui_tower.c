@@ -46,11 +46,11 @@ void spri_to_tex(Index_t *index)
 
 void give_position(Index_t *index)
 {
-    index->ui_turrets.pos_ui_arti_mkI.x = 600;
+    index->ui_turrets.pos_ui_arti_mkI.x = 650;
     index->ui_turrets.pos_ui_arti_mkI.y = 100;
     sfSprite_setPosition(index->ui_turrets.arti_ui_mkI_spr,
     index->ui_turrets.pos_ui_arti_mkI);
-    index->ui_turrets.pos_ui_heavy_mkI.x = 715;
+    index->ui_turrets.pos_ui_heavy_mkI.x = 750;
     index->ui_turrets.pos_ui_heavy_mkI.y = 100;
     sfSprite_setPosition(index->ui_turrets.heavy_ui_mkI_spr,
     index->ui_turrets.pos_ui_heavy_mkI);
