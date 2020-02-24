@@ -198,6 +198,16 @@ typedef struct ui_button_turret_t
     sfVector2f size_arti;
     sfVector2f click_pos_arti;
     sfVector2f click_size_arti;
+    sfRectangleShape *button_flamme;
+    sfVector2f pos_flamme;
+    sfVector2f size_flamme;
+    sfVector2f click_pos_flamme;
+    sfVector2f click_size_flamme;
+    sfRectangleShape *button_tesla;
+    sfVector2f pos_tesla;
+    sfVector2f size_tesla;
+    sfVector2f click_pos_tesla;
+    sfVector2f click_size_tesla;
 }ui_button_turret_t;
 
 typedef struct Index_t

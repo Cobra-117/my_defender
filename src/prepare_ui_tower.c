@@ -46,7 +46,7 @@ void spri_to_tex(Index_t *index)
 
 void give_position(Index_t *index)
 {
-    index->ui_turrets.pos_ui_arti_mkI.x = 630;
+    index->ui_turrets.pos_ui_arti_mkI.x = 890;
     index->ui_turrets.pos_ui_arti_mkI.y = 80;
     sfSprite_setPosition(index->ui_turrets.arti_ui_mkI_spr,
     index->ui_turrets.pos_ui_arti_mkI);
@@ -54,15 +54,15 @@ void give_position(Index_t *index)
     index->ui_turrets.pos_ui_heavy_mkI.y = 80;
     sfSprite_setPosition(index->ui_turrets.heavy_ui_mkI_spr,
     index->ui_turrets.pos_ui_heavy_mkI);
-    index->ui_turrets.pos_ui_tesla_mkI.x = 890;
+    index->ui_turrets.pos_ui_tesla_mkI.x = 1150;
     index->ui_turrets.pos_ui_tesla_mkI.y = 80;
     sfSprite_setPosition(index->ui_turrets.tesla_ui_mkI_spr,
     index->ui_turrets.pos_ui_tesla_mkI);
-    index->ui_turrets.pos_ui_casu_mkI.x = 1020;
+    index->ui_turrets.pos_ui_casu_mkI.x = 630;
     index->ui_turrets.pos_ui_casu_mkI.y = 80;
     sfSprite_setPosition(index->ui_turrets.casu_ui_mkI_spr,
     index->ui_turrets.pos_ui_casu_mkI);
-    index->ui_turrets.pos_ui_flame_mkI.x = 1150;
+    index->ui_turrets.pos_ui_flame_mkI.x = 1020;
     index->ui_turrets.pos_ui_flame_mkI.y = 80;
     sfSprite_setPosition(index->ui_turrets.flame_ui_mkI_spr,
     index->ui_turrets.pos_ui_flame_mkI);

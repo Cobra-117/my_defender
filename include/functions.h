@@ -31,7 +31,12 @@ void init_utility(Index_t *index);
 void init_wave(Index_t *index);
 void init_window(Index_t *index);
 
+int is_arti(Index_t *index);
+int is_casu(Index_t *index);
+int is_flamme(Index_t *index);
+int is_heavy(Index_t *index);
 int is_skill(Index_t *index);
+int is_tesla(Index_t *index);
 int is_ui_tower(Index_t *index);
 int is_utility(Index_t *index);
 
@@ -48,8 +53,11 @@ void prepare_ui_tower(Index_t *index);
 void prepare_ui_utilities(Index_t *index);
 void print_ui_skills(Index_t *index);
 void print_ui_tower(Index_t *index);
+void push_arti(Index_t *index);
 void push_casu(Index_t *index);
+void push_flamme(Index_t *index);
 void push_heavy(Index_t *index);
+void push_tesla(Index_t *index);
 void push_ui_tower(Index_t *index);
 void print_ui_utilities(Index_t *index);
 void push_utility(Index_t *index);
