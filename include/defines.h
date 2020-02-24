@@ -22,5 +22,5 @@
 /*time*/
 #define BALISES_NBR (3);
 #define BAL_READMAP (0);
-#define INTERV_READMAP (0.50)
+#define INTERV_READMAP (0.50);
 #endif /* !DEFINES_H_ */

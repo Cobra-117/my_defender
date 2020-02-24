@@ -19,12 +19,8 @@ void check_event(Index_t *index)
     push_tesla(index);
 }
 
-int game_main_function(Index_t *index)
+void manage_what_is_open(Index_t *index)
 {
-    //manage_enemies(index);
-    check_event(index);
-    display_map(index);
-    display_user_interface(index);
     if (index->what_is_open == 1) {
         print_ui_tower(index);
         sfText_setColor(index->ui_text.txt_tower, sfBlack);
@@ -43,6 +39,15 @@ int game_main_function(Index_t *index)
         sfText_setColor(index->ui_text.txt_utility, sfWhite);
         sfText_setColor(index->ui_text.txt_skill, sfBlack);
     }
+}
+
+int game_main_function(Index_t *index)
+{
+    manage_enemies(index);
+    check_event(index);
+    display_map(index);
+    display_user_interface(index);
+    manage_what_is_open(index);
     sfRenderWindow_display(index->window);
 }
 
