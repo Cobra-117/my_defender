@@ -12,6 +12,9 @@ void check_event(Index_t *index)
     push_ui_tower(index);
     push_utility(index);
     push_skill(index);
+    push_casu(index);
+    push_heavy(index);
+    push_arti(index);
 }
 
 int game_main_function(Index_t *index)

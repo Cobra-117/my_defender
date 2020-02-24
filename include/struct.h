@@ -187,6 +187,25 @@ typedef struct ui_info_t
     sfVector2f scale_life;
 }ui_info_t;
 
+typedef struct ui_button_turret_t
+{
+    sfRectangleShape *button_casu;
+    sfVector2f pos_casu;
+    sfVector2f size_casu;
+    sfVector2f click_pos_casu;
+    sfVector2f click_size_casu;
+    sfRectangleShape *button_heavy;
+    sfVector2f pos_heavy;
+    sfVector2f size_heavy;
+    sfVector2f click_pos_heavy;
+    sfVector2f click_size_heavy;
+    sfRectangleShape *button_arti;
+    sfVector2f pos_arti;
+    sfVector2f size_arti;
+    sfVector2f click_pos_arti;
+    sfVector2f click_size_arti;
+}ui_button_turret_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
@@ -200,6 +219,7 @@ typedef struct Index_t
     ui_utilities_t ui_utilities;
     ui_skills_t ui_skills;
     ui_info_t ui_info;
+    ui_button_turret_t ui_button_turret;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;

@@ -10,12 +10,12 @@
 void prepare_text_tower(Index_t *index)
 {
     index->ui_text.txt_tower = sfText_create();
-    sfText_setString(index->ui_text.txt_tower, "Tower");
+    sfText_setString(index->ui_text.txt_tower, "Turret");
     index->ui_text.font = sfFont_createFromFile("assets/UI/arial_font.TTF");
     sfText_setFont(index->ui_text.txt_tower, index->ui_text.font);
     sfText_setColor(index->ui_text.txt_tower, sfWhite);
-    sfText_setCharacterSize(index->ui_text.txt_tower, 30);
-    index->ui_text.pos_tower.x = 645;
+    sfText_setCharacterSize(index->ui_text.txt_tower, 29);
+    index->ui_text.pos_tower.x = 640;
     index->ui_text.pos_tower.y = 14;
     sfText_setPosition(index->ui_text.txt_tower, index->ui_text.pos_tower);
 }

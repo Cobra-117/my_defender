@@ -43,6 +43,9 @@ SRCS	=	src/main.c					\
 			src/give_utilities_scale.c	\
 			src/init_skills.c			\
 			src/give_skills_scale.c		\
+			src/init_button_turrets.c	\
+			src/push_button_turret.c	\
+			src/is_turrets.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

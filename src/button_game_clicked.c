@@ -22,6 +22,8 @@ int button_game_clicked(Index_t *index)
             is_ui_tower(index);
             is_utility(index);
             is_skill(index);
+            is_casu(index);
+            is_heavy(index);
         }
     }
 }

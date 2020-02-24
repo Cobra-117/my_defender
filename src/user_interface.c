@@ -47,6 +47,7 @@ void init_user_interface(Index_t *index)
     init_ui_tower(index);
     init_utility(index);
     init_skill(index);
+    init_button_casu(index);
     prepare_text_tower(index);
     prepare_text_utility(index);
     prepare_text_skill(index);
