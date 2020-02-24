@@ -22,6 +22,7 @@ typedef struct enemies_list_t
     sfVector2f coordinates;
     int life;
     int type;
+    sfVector2f rotation;
     float speed;
     struct enemies_list_t *next;
     struct enemies_list_t *last;

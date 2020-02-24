@@ -48,6 +48,10 @@ SRCS	=	src/main.c					\
 			src/is_turrets.c			\
 			src/info_turrets.c			\
 			src/text_info_turrets.c 	\
+			src/manage_enemies.c		\
+			src/time_utilies.c			\
+			src/change_text_colors.c	\
+			src/check_text.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 
