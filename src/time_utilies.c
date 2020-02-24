@@ -7,8 +7,14 @@
 
 #include "../include/my.h"
 
-int compare_time(float balise, float interval)
+int compare_time(Index_t *index, int balise_nbr, float interval)
 {
-    //comparer balise avec time +interval
+    sfTime current_time = sfClock_getElapsedTime(index->time.clock);
+    float time_float = sfTime_asMilliseconds(current_time);
+
+    if (time_float >= index->time.balises[balise_nbr] + interval) {
+        index->time.balises[balise_nbr] = time_float;
+        return (1);
+    }
     return (0);
 }

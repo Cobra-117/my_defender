@@ -9,18 +9,12 @@
 
 void destroy_enemies(Index_t *index)
 {
-    sfTexture_destroy(index->enemies.heavyHull_tex);
-    sfTexture_destroy(index->enemies.heavyW_tex);
-    sfTexture_destroy(index->enemies.medHull_tex);
-    sfTexture_destroy(index->enemies.medW_tex);
-    sfTexture_destroy(index->enemies.lightHull_tex);
-    sfTexture_destroy(index->enemies.lightW_tex);
-    sfSprite_destroy(index->enemies.heavyHull_spr);
-    sfSprite_destroy(index->enemies.heavyW_spr);
-    sfSprite_destroy(index->enemies.medHull_spr);
-    sfSprite_destroy(index->enemies.medW_spr);
-    sfSprite_destroy(index->enemies.lightHull_spr);
-    sfSprite_destroy(index->enemies.lightW_spr);
+    sfTexture_destroy(index->enemies.heavy_tex);
+    sfTexture_destroy(index->enemies.med_tex);
+    sfTexture_destroy(index->enemies.light_tex);
+    sfSprite_destroy(index->enemies.heavy_spr);
+    sfSprite_destroy(index->enemies.med_spr);
+    sfSprite_destroy(index->enemies.light_spr);
 }
 
 void destroy_turrets_tex(Index_t *index)
