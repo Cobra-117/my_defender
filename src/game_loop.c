@@ -20,12 +20,24 @@ int game_main_function(Index_t *index)
     check_event(index);
     display_map(index);
     display_user_interface(index);
-    if (index->what_is_open == 1)
+    if (index->what_is_open == 1) {
         print_ui_tower(index);
-    if (index->what_is_open == 2)
+        sfText_setColor(index->ui_text.txt_tower, sfBlack);
+        sfText_setColor(index->ui_text.txt_utility, sfWhite);
+        sfText_setColor(index->ui_text.txt_skill, sfWhite);
+    }
+    if (index->what_is_open == 2) {
         print_ui_utilities(index);
-    if (index->what_is_open == 3)
+        sfText_setColor(index->ui_text.txt_tower, sfWhite);
+        sfText_setColor(index->ui_text.txt_utility, sfBlack);
+        sfText_setColor(index->ui_text.txt_skill, sfWhite);
+    }
+    if (index->what_is_open == 3) {
         print_ui_skills(index);
+        sfText_setColor(index->ui_text.txt_tower, sfWhite);
+        sfText_setColor(index->ui_text.txt_utility, sfWhite);
+        sfText_setColor(index->ui_text.txt_skill, sfBlack);
+    }
     sfRenderWindow_display(index->window);
 }
 
