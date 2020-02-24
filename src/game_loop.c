@@ -15,6 +15,8 @@ void check_event(Index_t *index)
     push_casu(index);
     push_heavy(index);
     push_arti(index);
+    push_flamme(index);
+    push_tesla(index);
 }
 
 int game_main_function(Index_t *index)

@@ -24,6 +24,9 @@ int button_game_clicked(Index_t *index)
             is_skill(index);
             is_casu(index);
             is_heavy(index);
+            is_arti(index);
+            is_flamme(index);
+            is_tesla(index);
         }
     }
 }

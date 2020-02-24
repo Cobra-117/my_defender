@@ -33,3 +33,21 @@ void push_arti(Index_t *index)
     (index->ui_button_turret.button_arti);
     button_game_clicked(index);
 }
+
+void push_flamme(Index_t *index)
+{
+    index->ui_button_turret.click_pos_flamme = sfRectangleShape_getPosition
+    (index->ui_button_turret.button_flamme);
+    index->ui_button_turret.click_size_flamme = sfRectangleShape_getSize
+    (index->ui_button_turret.button_flamme);
+    button_game_clicked(index);
+}
+
+void push_tesla(Index_t *index)
+{
+    index->ui_button_turret.click_pos_tesla = sfRectangleShape_getPosition
+    (index->ui_button_turret.button_tesla);
+    index->ui_button_turret.click_size_tesla = sfRectangleShape_getSize
+    (index->ui_button_turret.button_tesla);
+    button_game_clicked(index);
+}
