@@ -17,9 +17,9 @@ void set_utilities_scale(Index_t *index)
 
 void give_utilities_scale(Index_t *index)
 {
-    index->ui_utilities.scale_ui_mine.x = 0.5;
-    index->ui_utilities.scale_ui_mine.y = 0.5;
-    index->ui_utilities.scale_ui_barb.x = 0.5;
-    index->ui_utilities.scale_ui_barb.y = 0.5;
+    index->ui_utilities.scale_ui_mine.x = 1.5;
+    index->ui_utilities.scale_ui_mine.y = 1.5;
+    index->ui_utilities.scale_ui_barb.x = 1.5;
+    index->ui_utilities.scale_ui_barb.y = 1.5;
     set_utilities_scale(index);
 }

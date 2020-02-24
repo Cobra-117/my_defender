@@ -31,12 +31,12 @@ void spri_to_tex_utilities(Index_t *index)
 
 void give_position_utilities(Index_t *index)
 {
-    index->ui_utilities.pos_ui_mine.x = 630;
-    index->ui_utilities.pos_ui_mine.y = 80;
+    index->ui_utilities.pos_ui_mine.x = 650;
+    index->ui_utilities.pos_ui_mine.y = 100;
     sfSprite_setPosition(index->ui_utilities.mine_ui_spr,
     index->ui_utilities.pos_ui_mine);
-    index->ui_utilities.pos_ui_barb.x = 760;
-    index->ui_utilities.pos_ui_barb.y = 80;
+    index->ui_utilities.pos_ui_barb.x = 780;
+    index->ui_utilities.pos_ui_barb.y = 100;
     sfSprite_setPosition(index->ui_utilities.barb_ui_spr,
     index->ui_utilities.pos_ui_barb);
 }
