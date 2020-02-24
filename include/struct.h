@@ -167,6 +167,14 @@ typedef struct ui_utilities_t
     sfVector2f scale_ui_barb;
 }ui_utilities_t;
 
+typedef struct ui_skills_t
+{
+    sfTexture *order_ui_tex;
+    sfSprite *order_ui_spr;
+    sfVector2f pos_ui_order;
+    sfVector2f scale_ui_order;
+}ui_skills_t;
+
 typedef struct ui_info_t
 {
     sfTexture *money_tex;
@@ -190,6 +198,7 @@ typedef struct Index_t
     ui_text_t ui_text;
     ui_turrets_t ui_turrets;
     ui_utilities_t ui_utilities;
+    ui_skills_t ui_skills;
     ui_info_t ui_info;
     wave_t wave;
     enemies_list_t *enemies_list;

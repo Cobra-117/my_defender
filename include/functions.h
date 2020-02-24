@@ -14,6 +14,7 @@ void free_structs(Index_t *index);
 void free_objs(Index_t *index);
 int game_loop(Index_t *index);
 void give_turrets_scale(Index_t *index);
+void give_skills_scale(Index_t *index);
 
 void init_enemies(Index_t *index);
 void init_enemies_list(Index_t *index);
@@ -41,8 +42,10 @@ void prepare_text_money(Index_t *index);
 void prepare_text_skill(Index_t *index);
 void prepare_text_tower(Index_t *index);
 void prepare_text_utility(Index_t *index);
+void prepare_ui_skills(Index_t *index);
 void prepare_ui_tower(Index_t *index);
 void prepare_ui_utilities(Index_t *index);
+void print_ui_skills(Index_t *index);
 void print_ui_tower(Index_t *index);
 void push_ui_tower(Index_t *index);
 void print_ui_utilities(Index_t *index);

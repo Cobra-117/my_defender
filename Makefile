@@ -41,6 +41,8 @@ SRCS	=	src/main.c					\
 			src/my_nbr_to_str.c			\
 			src/init_utilities.c		\
 			src/give_utilities_scale.c	\
+			src/init_skills.c			\
+			src/give_skills_scale.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

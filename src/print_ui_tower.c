@@ -28,3 +28,9 @@ void print_ui_utilities(Index_t *index)
     sfRenderWindow_drawSprite(index->window,
     index->ui_utilities.barb_ui_spr, NULL);
 }
+
+void print_ui_skills(Index_t *index)
+{
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_skills.order_ui_spr, NULL);
+}
