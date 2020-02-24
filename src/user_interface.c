@@ -42,6 +42,7 @@ void init_socle(Index_t *index)
 void init_user_interface(Index_t *index)
 {
     index->what_is_open = 1;
+    index->ui_text.which_text = 0;
     init_socle(index);
     init_money_life(index);
     init_ui_tower(index);
@@ -53,6 +54,7 @@ void init_user_interface(Index_t *index)
     prepare_text_skill(index);
     prepare_text_money(index);
     prepare_text_casu(index);
+    prepare_text_heavy(index);
     prepare_ui_tower(index);
     prepare_ui_utilities(index);
     prepare_ui_skills(index);

@@ -117,6 +117,7 @@ typedef struct ui_text_t
 {
     sfText *txt_tower;
     sfFont *font;
+    sfFont *font2;
     sfVector2f pos_tower;
     sfText *txt_utility;
     sfVector2f pos_utility;
@@ -127,6 +128,8 @@ typedef struct ui_text_t
     int which_text;
     sfText *txt_casu;
     sfVector2f pos_casu;
+    sfText *txt_heavy;
+    sfVector2f pos_heavy;
 }ui_text_t;
 
 typedef struct ui_turrets_t
