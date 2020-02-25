@@ -8,6 +8,10 @@
 #include "struct.h"
 #include "includes.h"
 int button_game_clicked(Index_t *index);
+void change_skills_colors(Index_t *index);
+void change_ui_tower_colors(Index_t *index);
+void change_utility_colors(Index_t *index);
+void check_text(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
 void display_map(Index_t *index);
 void display_user_interface(Index_t *index);
@@ -16,6 +20,7 @@ void free_objs(Index_t *index);
 int game_loop(Index_t *index);
 void give_turrets_scale(Index_t *index);
 void give_skills_scale(Index_t *index);
+void info_casu(Index_t *index);
 
 void init_button_casu(Index_t *index);
 void init_enemies(Index_t *index);
@@ -41,12 +46,14 @@ int is_tesla(Index_t *index);
 int is_ui_tower(Index_t *index);
 int is_utility(Index_t *index);
 
+
 void my_defender(void);
 int main_menu(sfRenderWindow *window);
 void manage_enemies(Index_t *index);
 char *my_nbr_to_str(int i);
 void give_utilities_scale(Index_t *index);
 
+void prepare_text_casu(Index_t *index);
 void prepare_text_money(Index_t *index);
 void prepare_text_skill(Index_t *index);
 void prepare_text_tower(Index_t *index);
@@ -68,6 +75,7 @@ void push_ui_tower(Index_t *index);
 void push_utility(Index_t *index);
 void push_skill(Index_t *index);
 
+void quick_init(Index_t *index);
 void set_utilities_scale(Index_t *index);
 
 #ifndef FUNCTIONS_H_

@@ -11,9 +11,12 @@
 #define DEFINES_H_
 
 /*tank values*/
-#define light_speed (3.00)
-#define medium_speed (1.50)
-#define heavy_speed (1.00)
+#define LIGHT_SPEED (3.00)
+#define MEDIUM_SPEED (1.50)
+#define HEAVY_SPEED (1.00)
+#define LIGHT_HEALTH (100);
+#define MEDIUM_HEALTH (200);
+#define HEAVY_HEALTH (300)
 
 /*Waves values*/
 #define numer_of_waves (3)

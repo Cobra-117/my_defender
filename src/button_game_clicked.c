@@ -17,6 +17,7 @@ int button_game_clicked(Index_t *index)
         if (event.type == sfEvtMouseMoved) {
             index->ui.coord_mouse_x = event.mouseMove.x;
             index->ui.coord_mouse_y = event.mouseMove.y;
+            info_casu(index);
         }
         if (event.type == sfEvtMouseButtonPressed) {
             is_ui_tower(index);

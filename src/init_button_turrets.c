@@ -66,7 +66,7 @@ void init_button_casu(Index_t *index)
 {
     index->ui_button_turret.pos_casu.x = 680;
     index->ui_button_turret.pos_casu.y = 80;
-    index->ui_button_turret.size_casu.x = 50;
+    index->ui_button_turret.size_casu.x = 40;
     index->ui_button_turret.size_casu.y = 100;
     index->ui_button_turret.button_casu = sfRectangleShape_create();
     sfRectangleShape_setPosition(index->ui_button_turret.button_casu,

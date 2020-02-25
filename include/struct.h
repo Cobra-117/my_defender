@@ -22,7 +22,7 @@ typedef struct enemies_list_t
     sfVector2f coordinates;
     int life;
     int type;
-    sfVector2f rotation;
+    float rotation;
     float speed;
     struct enemies_list_t *next;
     struct enemies_list_t *last;
@@ -86,6 +86,7 @@ typedef struct enemies_t
     sfSprite *med_spr;
     sfTexture *light_tex;
     sfSprite *light_spr;
+    int enemy_nbr;
 }enemies_t;
 
 typedef struct ui_t
@@ -124,6 +125,9 @@ typedef struct ui_text_t
     sfVector2f pos_skill;
     sfText *txt_money;
     sfVector2f pos_money;
+    int which_text;
+    sfText *txt_casu;
+    sfVector2f pos_casu;
 }ui_text_t;
 
 typedef struct ui_turrets_t

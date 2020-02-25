@@ -23,21 +23,16 @@ void manage_what_is_open(Index_t *index)
 {
     if (index->what_is_open == 1) {
         print_ui_tower(index);
-        sfText_setColor(index->ui_text.txt_tower, sfBlack);
-        sfText_setColor(index->ui_text.txt_utility, sfWhite);
-        sfText_setColor(index->ui_text.txt_skill, sfWhite);
+        change_ui_tower_colors(index);
+        check_text(index);
     }
     if (index->what_is_open == 2) {
         print_ui_utilities(index);
-        sfText_setColor(index->ui_text.txt_tower, sfWhite);
-        sfText_setColor(index->ui_text.txt_utility, sfBlack);
-        sfText_setColor(index->ui_text.txt_skill, sfWhite);
+        change_utility_colors(index);
     }
     if (index->what_is_open == 3) {
         print_ui_skills(index);
-        sfText_setColor(index->ui_text.txt_tower, sfWhite);
-        sfText_setColor(index->ui_text.txt_utility, sfWhite);
-        sfText_setColor(index->ui_text.txt_skill, sfBlack);
+        change_skills_colors(index);
     }
 }
 
@@ -53,6 +48,7 @@ int game_main_function(Index_t *index)
 
 int game_loop(Index_t *index)
 {
+    quick_init(index);
     init_user_interface(index);
     while (game_main_function(index) != 1);
 

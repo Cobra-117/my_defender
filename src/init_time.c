@@ -12,6 +12,6 @@ void init_time(Index_t *index)
     index->time.clock = sfClock_create();
     index->time.balises_nbr = BALISES_NBR;
     index->time.balises = malloc(sizeof(float) * index->time.balises_nbr);
-    index->time.balises[0] = 42;
+    index->time.balises[0] = 0;
     printf("init time \n");
 }
