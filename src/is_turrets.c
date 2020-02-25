@@ -15,7 +15,7 @@ int is_casu(Index_t *index)
     index->ui_button_turret.click_pos_casu.y + index->ui_button_turret.
     click_size_casu.y && index->ui.coord_mouse_y >= index->ui_button_turret.
     click_pos_casu.y && index->what_is_open == 1)
-            printf("Casu\n");
+        printf("Casu\n");
 }
 
 int is_heavy(Index_t *index)
@@ -26,7 +26,7 @@ int is_heavy(Index_t *index)
     index->ui_button_turret.click_pos_heavy.y + index->ui_button_turret.
     click_size_heavy.y && index->ui.coord_mouse_y >= index->ui_button_turret.
     click_pos_heavy.y && index->what_is_open == 1)
-            printf("Heavy\n");
+        printf("Heavy\n");
 }
 
 int is_arti(Index_t *index)
@@ -37,7 +37,7 @@ int is_arti(Index_t *index)
     index->ui_button_turret.click_pos_arti.y + index->ui_button_turret.
     click_size_arti.y && index->ui.coord_mouse_y >= index->ui_button_turret.
     click_pos_arti.y && index->what_is_open == 1)
-            printf("Arti\n");
+        printf("Arti\n");
 }
 
 int is_flamme(Index_t *index)
@@ -59,5 +59,5 @@ int is_tesla(Index_t *index)
     index->ui_button_turret.click_pos_tesla.y + index->ui_button_turret.
     click_size_tesla.y && index->ui.coord_mouse_y >= index->ui_button_turret.
     click_pos_tesla.y && index->what_is_open == 1)
-            printf("Tesla\n");
+        printf("Tesla\n");
 }

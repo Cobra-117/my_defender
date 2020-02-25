@@ -34,6 +34,8 @@ void manage_what_is_open(Index_t *index)
         print_ui_skills(index);
         change_skills_colors(index);
     }
+    if (index->what_is_open == 4)
+        print_pause_menu(index);
 }
 
 int game_main_function(Index_t *index)

@@ -7,6 +7,18 @@
 
 #include "../include/my.h"
 
+void check_what_is_it(Index_t *index)
+{
+    is_ui_tower(index);
+    is_utility(index);
+    is_skill(index);
+    is_casu(index);
+    is_heavy(index);
+    is_arti(index);
+    is_flamme(index);
+    is_tesla(index);
+}
+
 int button_game_clicked(Index_t *index)
 {
     sfEvent event;
@@ -20,14 +32,10 @@ int button_game_clicked(Index_t *index)
             info_casu(index);
         }
         if (event.type == sfEvtMouseButtonPressed) {
-            is_ui_tower(index);
-            is_utility(index);
-            is_skill(index);
-            is_casu(index);
-            is_heavy(index);
-            is_arti(index);
-            is_flamme(index);
-            is_tesla(index);
+            check_what_is_it(index);
         }
+        if (event.type == sfEvtKeyPressed)
+            if (event.key.code == sfKeySpace)
+                index->what_is_open = 4;
     }
 }

@@ -55,6 +55,7 @@ SRCS	=	src/main.c					\
 			src/check_text.c			\
 			src/add_enemies.c			\
 			src/quick_init.c			\
+			src/print_pause_menu.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

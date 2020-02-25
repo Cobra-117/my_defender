@@ -114,10 +114,19 @@ typedef struct ui_t
     float coord_mouse_y;
 }ui_t;
 
+typedef struct ui_pause_t
+{
+    sfTexture *tex_pause;
+    sfSprite *spri_pause;
+    sfVector2f pos_pause;
+    sfVector2f scale_pause;
+}ui_pause_t;
+
 typedef struct ui_text_t
 {
     sfText *txt_tower;
     sfFont *font;
+    sfFont *font2;
     sfVector2f pos_tower;
     sfText *txt_utility;
     sfVector2f pos_utility;
@@ -128,6 +137,14 @@ typedef struct ui_text_t
     int which_text;
     sfText *txt_casu;
     sfVector2f pos_casu;
+    sfText *txt_heavy;
+    sfVector2f pos_heavy;
+    sfText *txt_arti;
+    sfVector2f pos_arti;
+    sfText *txt_flamme;
+    sfVector2f pos_flamme;
+    sfText *txt_tesla;
+    sfVector2f pos_tesla;
 }ui_text_t;
 
 typedef struct ui_turrets_t
@@ -228,6 +245,7 @@ typedef struct Index_t
     ui_utilities_t ui_utilities;
     ui_skills_t ui_skills;
     ui_info_t ui_info;
+    ui_pause_t ui_pause;
     ui_button_turret_t ui_button_turret;
     wave_t wave;
     enemies_list_t *enemies_list;
