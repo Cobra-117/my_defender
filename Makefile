@@ -58,6 +58,8 @@ SRCS	=	src/main.c					\
 			src/print_pause_menu.c		\
 			src/prepare_pause_button.c	\
 			src/init_text_pause.c		\
+			src/push_pause_buttons.c	\
+			src/is_what_pause.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 
