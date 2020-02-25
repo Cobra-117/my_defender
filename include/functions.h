@@ -52,7 +52,11 @@ void manage_enemies(Index_t *index);
 char *my_nbr_to_str(int i);
 void give_utilities_scale(Index_t *index);
 
+void prepare_text_arti(Index_t *index);
 void prepare_text_casu(Index_t *index);
+void prepare_text_flamme(Index_t *index);
+void prepare_text_heavy(Index_t *index);
+void prepare_text_tesla(Index_t *index);
 void prepare_text_money(Index_t *index);
 void prepare_text_skill(Index_t *index);
 void prepare_text_tower(Index_t *index);

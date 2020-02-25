@@ -130,6 +130,12 @@ typedef struct ui_text_t
     sfVector2f pos_casu;
     sfText *txt_heavy;
     sfVector2f pos_heavy;
+    sfText *txt_arti;
+    sfVector2f pos_arti;
+    sfText *txt_flamme;
+    sfVector2f pos_flamme;
+    sfText *txt_tesla;
+    sfVector2f pos_tesla;
 }ui_text_t;
 
 typedef struct ui_turrets_t

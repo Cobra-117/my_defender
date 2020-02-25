@@ -14,7 +14,7 @@ int is_ui_tower(Index_t *index)
     index->ui.click_pos_ui_tower.x && index->ui.coord_mouse_y <=
     index->ui.click_pos_ui_tower.y + index->ui.click_size_ui_tower.y
     && index->ui.coord_mouse_y >= index->ui.click_pos_ui_tower.y)
-            index->what_is_open = 1;
+        index->what_is_open = 1;
 }
 
 int is_utility(Index_t *index)
@@ -24,7 +24,7 @@ int is_utility(Index_t *index)
     index->ui.click_pos_utility.x && index->ui.coord_mouse_y <=
     index->ui.click_pos_utility.y + index->ui.click_size_utility.y
     && index->ui.coord_mouse_y >= index->ui.click_pos_utility.y)
-            index->what_is_open = 2;
+        index->what_is_open = 2;
 }
 
 int is_skill(Index_t *index)
@@ -34,5 +34,5 @@ int is_skill(Index_t *index)
     index->ui.click_pos_skill.x && index->ui.coord_mouse_y <=
     index->ui.click_pos_skill.y + index->ui.click_size_skill.y
     && index->ui.coord_mouse_y >= index->ui.click_pos_skill.y)
-            index->what_is_open = 3;
+        index->what_is_open = 3;
 }

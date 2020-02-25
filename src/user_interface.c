@@ -55,6 +55,9 @@ void init_user_interface(Index_t *index)
     prepare_text_money(index);
     prepare_text_casu(index);
     prepare_text_heavy(index);
+    prepare_text_arti(index);
+    prepare_text_flamme(index);
+    prepare_text_tesla(index);
     prepare_ui_tower(index);
     prepare_ui_utilities(index);
     prepare_ui_skills(index);
