@@ -7,13 +7,18 @@
 
 #include "struct.h"
 #include "includes.h"
+void add_enemy(Index_t *index, int type);
 int button_game_clicked(Index_t *index);
 void change_skills_colors(Index_t *index);
 void change_ui_tower_colors(Index_t *index);
 void change_utility_colors(Index_t *index);
 void check_text(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
+
+void display_enemies(Index_t *index);
+void display_first_layers(Index_t *index);
 void display_map(Index_t *index);
+
 void display_user_interface(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
@@ -50,6 +55,7 @@ int is_utility(Index_t *index);
 void my_defender(void);
 int main_menu(sfRenderWindow *window);
 void manage_enemies(Index_t *index);
+void move_enemies(Index_t *index);
 char *my_nbr_to_str(int i);
 void give_utilities_scale(Index_t *index);
 

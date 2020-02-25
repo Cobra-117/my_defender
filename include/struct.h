@@ -32,6 +32,7 @@ typedef struct enemies_list_t
 typedef struct wave_t
 {
     int fd;
+    int end;
     int wave_nbr;
     int max_wave;
     int is_end_wave;

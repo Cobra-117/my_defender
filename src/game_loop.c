@@ -42,10 +42,11 @@ int game_main_function(Index_t *index)
 {
     manage_enemies(index);
     check_event(index);
-    display_map(index);
+    display_first_layers(index);
     display_user_interface(index);
     manage_what_is_open(index);
     sfRenderWindow_display(index->window);
+    sfRenderWindow_clear(index->window, sfBlack);
 }
 
 int game_loop(Index_t *index)

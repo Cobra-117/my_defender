@@ -12,9 +12,9 @@ void fill_data(enemies_list_t *current, int type)
     sfVector2f coordinates;
 
     coordinates.x = -300;
-    coordinates.y = -300;
+    coordinates.y = 64 * FIRST_TILE_Y + 32;
     current->coordinates = coordinates;
-    current->rotation = 0;
+    current->rotation = 90;
     current->type = type;
     if (type == 1) {
         current->speed = LIGHT_SPEED;
@@ -35,6 +35,7 @@ void add_enemy_to_list(enemies_list_t *head, int type)
     current = *(&head);
     while (current->next != NULL) {
         current = current->next;
+        printf("type: %i \n", current->type);
     }
     current->next = malloc(sizeof(enemies_list_t));
     current = current->next;
@@ -43,13 +44,8 @@ void add_enemy_to_list(enemies_list_t *head, int type)
     //current->next = malloc(sizeof(enemies_list_t));
 }
 
-void add_enemy(Index_t *index)
+void add_enemy(Index_t *index, int type)
 {
-    static int debug = 0;
-
-    if (debug < 3) {
-        add_enemy_to_list(index->enemies_list, 1);
-        debug++;
-        index->enemies.enemy_nbr += 1;
-    }
+    add_enemy_to_list(index->enemies_list, type);
+    index->enemies.enemy_nbr += 1;
 }

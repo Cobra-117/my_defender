@@ -11,9 +11,10 @@
 #define DEFINES_H_
 
 /*tank values*/
-#define LIGHT_SPEED (3.00)
-#define MEDIUM_SPEED (1.50)
-#define HEAVY_SPEED (1.00)
+#define LIGHT_SPEED (15.0)
+#define MEDIUM_SPEED (7.5)
+#define HEAVY_SPEED (5.0)
+
 #define LIGHT_HEALTH (100);
 #define MEDIUM_HEALTH (200);
 #define HEAVY_HEALTH (300)
@@ -25,5 +26,11 @@
 /*time*/
 #define BALISES_NBR (3)
 #define BAL_READMAP (0)
+#define BAL_MOVE_ENEMIES (1)
+
 #define INTERV_READMAP (500)
+#define INTERV_MOVE_ENEMIES (50)
+
+/*misc*/
+#define FIRST_TILE_Y (2)
 #endif /* !DEFINES_H_ */
