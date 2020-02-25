@@ -232,6 +232,35 @@ typedef struct ui_button_turret_t
     sfVector2f click_size_tesla;
 }ui_button_turret_t;
 
+typedef struct ui_pause_button_t
+{
+    sfRectangleShape *button_resume;
+    sfVector2f pos_resume;
+    sfVector2f size_resume;
+    sfVector2f click_pos_resume;
+    sfVector2f click_size_resume;
+    sfRectangleShape *button_go_menu;
+    sfVector2f pos_go_menu;
+    sfVector2f size_go_menu;
+    sfVector2f click_pos_go_menu;
+    sfVector2f click_size_go_menu;
+    sfRectangleShape *button_exit;
+    sfVector2f pos_exit;
+    sfVector2f size_exit;
+    sfVector2f click_pos_exit;
+    sfVector2f click_size_exit;
+}ui_pause_button_t;
+
+typedef struct ui_text_pause_t
+{
+    sfText *txt_resume;
+    sfVector2f pos_resume;
+    sfText *txt_go_menu;
+    sfVector2f pos_go_menu;
+    sfText *txt_exit;
+    sfVector2f pos_exit;
+}ui_text_pause_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
@@ -247,6 +276,8 @@ typedef struct Index_t
     ui_info_t ui_info;
     ui_pause_t ui_pause;
     ui_button_turret_t ui_button_turret;
+    ui_pause_button_t ui_pause_button;
+    ui_text_pause_t ui_text_pause;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;

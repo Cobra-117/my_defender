@@ -53,6 +53,8 @@ void manage_enemies(Index_t *index);
 char *my_nbr_to_str(int i);
 void give_utilities_scale(Index_t *index);
 
+void prepare_pause_button(Index_t *index);
+void prepare_pause_menu(Index_t *index);
 void prepare_text_arti(Index_t *index);
 void prepare_text_casu(Index_t *index);
 void prepare_text_flamme(Index_t *index);
@@ -66,6 +68,7 @@ void prepare_ui_skills(Index_t *index);
 void prepare_ui_tower(Index_t *index);
 void prepare_ui_utilities(Index_t *index);
 
+void print_pause_menu(Index_t *index);
 void print_ui_skills(Index_t *index);
 void print_ui_tower(Index_t *index);
 void print_ui_utilities(Index_t *index);
