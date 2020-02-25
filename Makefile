@@ -52,6 +52,7 @@ SRCS	=	src/main.c					\
 			src/time_utilies.c			\
 			src/change_text_colors.c	\
 			src/check_text.c			\
+			src/print_pause_menu.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 
