@@ -34,8 +34,8 @@ void init_socle(Index_t *index)
     index->ui.pos_socle.y = 0;
     sfSprite_setPosition(index->ui.spri_socle,
     index->ui.pos_socle);
-    index->ui.scale_socle.x = 0.99;
-    index->ui.scale_socle.y = 0.66;
+    index->ui.scale_socle.x = 0.335;
+    index->ui.scale_socle.y = 0.295;
     sfSprite_setScale(index->ui.spri_socle, index->ui.scale_socle);
 }
 

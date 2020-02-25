@@ -44,8 +44,11 @@ void init_window(Index_t *index);
 
 int is_arti(Index_t *index);
 int is_casu(Index_t *index);
+int is_exit2(Index_t *index);
 int is_flamme(Index_t *index);
+int is_go_menu(Index_t *index);
 int is_heavy(Index_t *index);
+int is_resume(Index_t *index);
 int is_skill(Index_t *index);
 int is_tesla(Index_t *index);
 int is_ui_tower(Index_t *index);
@@ -59,31 +62,38 @@ void move_enemies(Index_t *index);
 char *my_nbr_to_str(int i);
 void give_utilities_scale(Index_t *index);
 
+void prepare_pause_button(Index_t *index);
+void prepare_pause_menu(Index_t *index);
 void prepare_text_arti(Index_t *index);
 void prepare_text_casu(Index_t *index);
 void prepare_text_flamme(Index_t *index);
 void prepare_text_heavy(Index_t *index);
-void prepare_text_tesla(Index_t *index);
 void prepare_text_money(Index_t *index);
+void prepare_text_pause(Index_t *index);
 void prepare_text_skill(Index_t *index);
+void prepare_text_tesla(Index_t *index);
 void prepare_text_tower(Index_t *index);
 void prepare_text_utility(Index_t *index);
 void prepare_ui_skills(Index_t *index);
 void prepare_ui_tower(Index_t *index);
 void prepare_ui_utilities(Index_t *index);
 
+void print_pause_menu(Index_t *index);
 void print_ui_skills(Index_t *index);
 void print_ui_tower(Index_t *index);
 void print_ui_utilities(Index_t *index);
 
 void push_arti(Index_t *index);
 void push_casu(Index_t *index);
+void push_exit2(Index_t *index);
 void push_flamme(Index_t *index);
+void push_go_menu(Index_t *index);
 void push_heavy(Index_t *index);
+void push_resume(Index_t *index);
+void push_skill(Index_t *index);
 void push_tesla(Index_t *index);
 void push_ui_tower(Index_t *index);
 void push_utility(Index_t *index);
-void push_skill(Index_t *index);
 
 void quick_init(Index_t *index);
 void set_utilities_scale(Index_t *index);

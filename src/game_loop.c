@@ -17,6 +17,9 @@ void check_event(Index_t *index)
     push_arti(index);
     push_flamme(index);
     push_tesla(index);
+    push_resume(index);
+    push_go_menu(index);
+    push_exit2(index);
 }
 
 void manage_what_is_open(Index_t *index)
