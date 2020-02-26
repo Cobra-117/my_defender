@@ -46,8 +46,9 @@ void prepare_text_skill(Index_t *index)
 
 void prepare_text_money(Index_t *index)
 {
+    index->money = 10000;
     index->ui_text.txt_money = sfText_create();
-    sfText_setString(index->ui_text.txt_money, my_nbr_to_str(17890));
+    sfText_setString(index->ui_text.txt_money, my_nbr_to_str(index->money));
     sfText_setFont(index->ui_text.txt_money, index->ui_text.font);
     sfText_setColor(index->ui_text.txt_money, sfWhite);
     sfText_setCharacterSize(index->ui_text.txt_money, 50);

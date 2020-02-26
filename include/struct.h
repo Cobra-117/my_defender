@@ -170,6 +170,10 @@ typedef struct ui_turrets_t
     sfSprite *flame_ui_mkI_spr;
     sfVector2f pos_ui_flame_mkI;
     sfVector2f scale_ui_flame_mkI;
+    sfTexture *light_effect_tex;
+    sfSprite *light_effect_spr;
+    sfVector2f pos_light_effect;
+    sfVector2f scale_light_effect;
 }ui_turrets_t;
 
 typedef struct ui_utilities_t
@@ -262,6 +266,20 @@ typedef struct ui_text_pause_t
     sfVector2f pos_exit;
 }ui_text_pause_t;
 
+typedef struct ui_which_turret_t
+{
+    int casu;
+    int heavy;
+    int arti;
+    int flamme;
+    int tesla;
+    int price_casu;
+    int price_heavy;
+    int price_arti;
+    int price_flamme;
+    int price_tesla;
+}ui_which_turret_t;
+
 typedef struct Index_t
 {
     sfRenderWindow *window;
@@ -279,10 +297,14 @@ typedef struct Index_t
     ui_button_turret_t ui_button_turret;
     ui_pause_button_t ui_pause_button;
     ui_text_pause_t ui_text_pause;
+    ui_which_turret_t ui_which_turret;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;
     int what_is_open;
+    int tmp;
+    int money;
+    int light_effect_play;
 }Index_t;
 
 

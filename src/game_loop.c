@@ -56,6 +56,8 @@ int game_loop(Index_t *index)
 {
     quick_init(index);
     init_user_interface(index);
-    while (game_main_function(index) != 1);
-
+    while (game_main_function(index) != 1 && index->what_is_open != 5
+    && index->what_is_open != 6);
+    if (index->what_is_open == 6)
+        return (-1);
 }

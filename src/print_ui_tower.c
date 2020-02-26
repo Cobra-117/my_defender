@@ -9,6 +9,7 @@
 
 void print_ui_tower(Index_t *index)
 {
+    is_light_effect(index);
     sfRenderWindow_drawSprite(index->window,
     index->ui_turrets.arti_ui_mkI_spr, NULL);
     sfRenderWindow_drawSprite(index->window,

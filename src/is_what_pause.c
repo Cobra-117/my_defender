@@ -15,7 +15,7 @@ int is_resume(Index_t *index)
     index->ui_pause_button.click_pos_resume.y + index->ui_pause_button.
     click_size_resume.y && index->ui.coord_mouse_y >= index->ui_pause_button.
     click_pos_resume.y && index->what_is_open == 4)
-        printf("RESUME\n");
+        index->what_is_open = index->tmp;
 }
 
 int is_go_menu(Index_t *index)
@@ -26,7 +26,7 @@ int is_go_menu(Index_t *index)
     index->ui_pause_button.click_pos_go_menu.y + index->ui_pause_button.
     click_size_go_menu.y && index->ui.coord_mouse_y >= index->ui_pause_button.
     click_pos_go_menu.y && index->what_is_open == 4)
-        printf("GO MENU\n");
+        index->what_is_open = 5;
 }
 
 int is_exit2(Index_t *index)
@@ -37,5 +37,5 @@ int is_exit2(Index_t *index)
     index->ui_pause_button.click_pos_exit.y + index->ui_pause_button.
     click_size_exit.y && index->ui.coord_mouse_y >= index->ui_pause_button.
     click_pos_exit.y && index->what_is_open == 4)
-        printf("EXIT\n");
+        index->what_is_open = 6;
 }
