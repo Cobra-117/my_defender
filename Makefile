@@ -63,6 +63,12 @@ SRCS	=	src/main.c						\
 			src/init_text_pause.c			\
 			src/push_pause_buttons.c		\
 			src/is_what_pause.c				\
+			src/buy_turret.c				\
+			src/init_price_turrets.c		\
+			src/modify_money.c				\
+			src/prepare_light_effect.c		\
+			src/is_light_effect.c			\
+			src/prepare_bunker.c			\
 			src/move_directions.c			\
 			src/will_collision_if_move.c	\
 			src/rm_enemies.c				\

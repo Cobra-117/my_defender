@@ -7,18 +7,14 @@
 
 #include "struct.h"
 #include "includes.h"
-void add_enemy(Index_t *index, int type);
 int button_game_clicked(Index_t *index);
+void buy_turret(Index_t *index);
 void change_skills_colors(Index_t *index);
 void change_ui_tower_colors(Index_t *index);
 void change_utility_colors(Index_t *index);
 void check_text(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
-
-void display_enemies(Index_t *index);
-void display_first_layers(Index_t *index);
 void display_map(Index_t *index);
-
 void display_user_interface(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
@@ -33,11 +29,13 @@ void init_enemies_list(Index_t *index);
 void init_map(Index_t *index);
 void init_money_life(Index_t *index);
 void init_obj(Index_t *index);
+void init_price_turrets(Index_t *index);
 void init_skill(Index_t *index);
 void init_structs(Index_t *index);
 void init_time(Index_t *index);
 void init_turrets(Index_t *index);
 void init_ui_tower(Index_t *index);
+void init_turrets_value(Index_t *index);
 void init_user_interface(Index_t *index);
 void init_utility(Index_t *index);
 void init_wave(Index_t *index);
@@ -49,14 +47,14 @@ int is_exit2(Index_t *index);
 int is_flamme(Index_t *index);
 int is_go_menu(Index_t *index);
 int is_heavy(Index_t *index);
+void is_light_effect(Index_t *index);
 int is_resume(Index_t *index);
 int is_skill(Index_t *index);
 int is_tesla(Index_t *index);
 int is_ui_tower(Index_t *index);
 int is_utility(Index_t *index);
 
-
-void my_defender(void);
+void give_utilities_scale(Index_t *index);
 int main_menu(sfRenderWindow *window);
 void manage_enemies(Index_t *index);
 
@@ -64,9 +62,16 @@ void move_down(Index_t *index, enemies_list_t *current, sfVector2f tile);
 void move_enemies(Index_t *index);
 void move_forward(Index_t *index, enemies_list_t *current, sfVector2f tile);
 
+void modify_money_arti(Index_t *index);
+void modify_money_casu(Index_t *index);
+void modify_money_flamme(Index_t *index);
+void modify_money_heavy(Index_t *index);
+void modify_money_tesla(Index_t *index);
+void my_defender(void);
 char *my_nbr_to_str(int i);
-void give_utilities_scale(Index_t *index);
 
+void prepare_bunker(Index_t *index);
+void prepare_light_effect(Index_t *index);
 void prepare_pause_button(Index_t *index);
 void prepare_pause_menu(Index_t *index);
 void prepare_text_arti(Index_t *index);

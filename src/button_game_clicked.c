@@ -38,7 +38,7 @@ int button_game_clicked(Index_t *index)
             check_what_is_it(index);
         }
         if (event.type == sfEvtKeyPressed)
-            if (event.key.code == sfKeySpace)
+            if (event.key.code == sfKeyEscape)
                 index->what_is_open = 4;
     }
 }

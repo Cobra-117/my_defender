@@ -22,6 +22,7 @@ void display_user_interface(Index_t *index)
     sfRenderWindow_drawText(index->window, index->ui_text.txt_money, NULL);
     sfRenderWindow_drawSprite(index->window, index->ui_info.money_spr, NULL);
     sfRenderWindow_drawSprite(index->window, index->ui_info.life_spr, NULL);
+    sfRenderWindow_drawSprite(index->window, index->ui_bunker.bunker_spr, NULL);
 }
 
 void init_socle(Index_t *index)
@@ -68,8 +69,13 @@ void init_user_interface(Index_t *index)
     index->ui_text.which_text = 0;
     init_ui_buttons(index);
     all_text(index);
+    init_price_turrets(index);
     prepare_ui_tower(index);
     prepare_ui_utilities(index);
     prepare_ui_skills(index);
+    prepare_light_effect(index);
     prepare_pause_menu(index);
+    prepare_bunker(index);
+    index->ui.coord_mouse_x = 0;
+    index->ui.coord_mouse_y = 0;
 }

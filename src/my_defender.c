@@ -16,7 +16,8 @@ void my_defender(void)
     while (1) {
         user_choice = main_menu(index.window);
         if (user_choice == 1)
-            game_loop(&index);
+            if (game_loop(&index) == -1)
+                break;
         if (user_choice == 2)
             break;
     }

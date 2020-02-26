@@ -9,6 +9,7 @@
 
 void print_ui_tower(Index_t *index)
 {
+    is_light_effect(index);
     sfRenderWindow_drawSprite(index->window,
     index->ui_turrets.arti_ui_mkI_spr, NULL);
     sfRenderWindow_drawSprite(index->window,
@@ -26,7 +27,9 @@ void print_ui_utilities(Index_t *index)
     sfRenderWindow_drawSprite(index->window,
     index->ui_utilities.mine_ui_spr, NULL);
     sfRenderWindow_drawSprite(index->window,
-    index->ui_utilities.barb_ui_spr, NULL);
+    index->ui_utilities.order_ui_spr, NULL);
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_utilities.tchernobyl_ui_spr, NULL);
 }
 
 void print_ui_skills(Index_t *index)
