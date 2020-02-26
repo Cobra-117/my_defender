@@ -24,14 +24,15 @@ sfVector2f get_tile_from_pos(sfVector2f pos)
 
 void move_this_enemy(Index_t *index, enemies_list_t *current)
 {
-    sfVector2f current_case = get_tile_from_pos(current->coordinates);
+    sfVector2f current_case;
 
     if (current->type == 0) {
-        rm_enemy(index, current);
+        return;
     }
-    if (current->coordinates.y >= 1080 + 64 ||
+    current_case = get_tile_from_pos(current->coordinates);
+    if (current->coordinates.y >= 800 + 64 ||
     current->coordinates.x >= 1920 + 64) {
-        //rm_enemy
+        rm_enemy(index, current);
         return;
     }
     if (current->rotation == 0)
@@ -47,15 +48,10 @@ void move_enemies(Index_t *index)
     enemies_list_t *current;
 
     current = *(&index->enemies_list);
-    if (current->type == 0)
-        return;
     while (current->next != NULL)
     {
-        //printf("type: %i \n", current->type);
         move_this_enemy(index, current);
         current = current->next;
     }
-    //printf("type: %i \n", current->type);
     move_this_enemy(index, current);
-    //printf("end move \n\n");
 }

@@ -9,9 +9,8 @@
 
 void display_this_enemy(enemies_list_t *current, Index_t *index)
 {
-    //printf("coordinates: x: %f y: \n", current->coordinates.x, current->coordinates.y);
     if (current->type == 1) {
-        sfSprite_setRotation(index->enemies.heavy_spr, current->rotation);
+        sfSprite_setRotation(index->enemies.light_spr, current->rotation);
         sfSprite_setPosition(index->enemies.light_spr, current->coordinates);
         sfRenderWindow_drawSprite(index->window,
         index->enemies.light_spr, NULL);
@@ -23,7 +22,7 @@ void display_this_enemy(enemies_list_t *current, Index_t *index)
         index->enemies.med_spr, NULL);
     }
     if (current->type == 3) {
-        sfSprite_setRotation(index->enemies.light_spr, current->rotation);
+        sfSprite_setRotation(index->enemies.heavy_spr, current->rotation);
         sfSprite_setPosition(index->enemies.heavy_spr, current->coordinates);
         sfRenderWindow_drawSprite(index->window,
         index->enemies.heavy_spr, NULL);
@@ -42,5 +41,4 @@ void display_enemies(Index_t *index)
         current = current->next;
     }
     display_this_enemy(current, index);
-    //printf("\nend display\n\n");
 }

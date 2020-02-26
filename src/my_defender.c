@@ -21,6 +21,5 @@ void my_defender(void)
         if (user_choice == 2)
             break;
     }
-    //game function here
     free_structs(&index);
 }

@@ -15,7 +15,7 @@ int read_map(Index_t *index)
         return (-1);
     }
     read(index->wave.fd, &buff, 1);
-    printf("buff 0: %c \n", buff[0]);
+    //printf("buff 0: %c \n", buff[0]);
     if (buff[0] == '|') {
         index->wave.end = 1;
         return (-1);
@@ -35,10 +35,8 @@ void manage_enemies(Index_t *index)
     if (compare_time(index, BAL_READMAP, INTERV_READMAP) == 1) {
         type = read_map(index);
         if (type == - 1) {
-            //printf("end_wave\n");
         }
-        //printf("time\n");
-        if (type == 1 || type ==2 || type == 3)
+        if (type == 1 || type == 2 || type == 3)
             add_enemy(index, type);
     }
 }

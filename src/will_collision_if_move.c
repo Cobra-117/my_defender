@@ -42,7 +42,6 @@ int will_collision_if_move_up(Index_t *index, enemies_list_t *current)
         }
         if (element->coordinates.x - enemy_pos.x <= current->speed + 64 &&
         element->coordinates.y - enemy_pos.y <= current->speed + 64) {
-            //exit (69);
             return (1);
         }
         element = element->next;
