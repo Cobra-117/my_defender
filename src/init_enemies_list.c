@@ -12,5 +12,4 @@ void init_enemies_list(Index_t *index)
     index->enemies_list = malloc(sizeof(enemies_list_t));
     index->enemies_list->type = 0;
     index->enemies_list->next = NULL;
-    //index->enemies_list->last = index->enemies_list;
 }

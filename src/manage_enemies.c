@@ -15,7 +15,6 @@ int read_map(Index_t *index)
         return (-1);
     }
     read(index->wave.fd, &buff, 1);
-    //printf("buff 0: %c \n", buff[0]);
     if (buff[0] == '|') {
         index->wave.end = 1;
         return (-1);
