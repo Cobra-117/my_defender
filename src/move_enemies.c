@@ -7,16 +7,39 @@
 
 #include "../include/my.h"
 
-void move_forward(enemies_list_t *current)
+sfVector2f get_tile_from_pos(sfVector2f pos)
 {
-    current->coordinates.x += current->speed;
+    sfVector2f tile;
+    tile.x = 0;
+    tile.y = 0;
+
+    for (int i = 0; pos.x > 64; pos.x = pos.x - 64) {
+        tile.x += 1;
+    }
+    for (int i = 0; pos.y > 64; pos.y = pos.y - 64) {
+        tile.y += 1;
+    }
+    return (tile);
 }
 
-void move_this_enemy(enemies_list_t *current)
+void move_this_enemy(Index_t *index, enemies_list_t *current)
 {
-    if (current->type == 0)
+    sfVector2f current_case = get_tile_from_pos(current->coordinates);
+
+    if (current->type == 0) {
+        rm_enemy(index, current);
+    }
+    if (current->coordinates.y >= 1080 + 64 ||
+    current->coordinates.x >= 1920 + 64) {
+        //rm_enemy
         return;
-    move_forward(current);
+    }
+    if (current->rotation == 0)
+        move_up(index, current, current_case);
+    if (current->rotation == 90)
+        move_forward(index, current, current_case);
+    if (current->rotation == 180)
+        move_down(index, current, current_case);
 }
 
 void move_enemies(Index_t *index)
@@ -24,10 +47,15 @@ void move_enemies(Index_t *index)
     enemies_list_t *current;
 
     current = *(&index->enemies_list);
+    if (current->type == 0)
+        return;
     while (current->next != NULL)
     {
-        move_this_enemy(current);
+        //printf("type: %i \n", current->type);
+        move_this_enemy(index, current);
         current = current->next;
     }
-    move_this_enemy(current);
+    //printf("type: %i \n", current->type);
+    move_this_enemy(index, current);
+    //printf("end move \n\n");
 }

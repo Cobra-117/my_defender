@@ -41,7 +41,4 @@ void manage_enemies(Index_t *index)
         if (type == 1 || type ==2 || type == 3)
             add_enemy(index, type);
     }
-    //add
-
-    //rm
 }

@@ -9,11 +9,9 @@
 
 void fill_one_line(Index_t *index, int fd, int i)
 {
-    index->map.map_array[i] = malloc(sizeof(char) * 31);
-    read(fd, index->map.map_array[i], 31);
+    index->map.map_array[i] = malloc(sizeof(char) * 33);
+    read(fd, index->map.map_array[i], 33);
     index->map.map_array[i][30] = '\0';
-    //my_putstr(index->map.map_array[i]);
-    //my_putchar('\n');
 }
 
 void fill_map_array(Index_t *index)
@@ -21,8 +19,8 @@ void fill_map_array(Index_t *index)
     int fd = open("assets/map/map01", O_RDONLY);
     if (fd == -1)
         exit (64);
-    index->map.map_array = malloc(sizeof(char *) * 17);
-    for (int i = 0; i < 17; i++) {
+    index->map.map_array = malloc(sizeof(char *) * 19);
+    for (int i = 0; i < 19; i++) {
         fill_one_line(index, fd, i);
     }
 }

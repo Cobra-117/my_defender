@@ -33,9 +33,13 @@ void add_enemy_to_list(enemies_list_t *head, int type)
     enemies_list_t *current;
 
     current = *(&head);
+    if (current->type == 0) {
+        fill_data(current, type);
+        return;
+    }
     while (current->next != NULL) {
         current = current->next;
-        printf("type: %i \n", current->type);
+        //printf("type: %i \n", current->type);
     }
     current->next = malloc(sizeof(enemies_list_t));
     current = current->next;
