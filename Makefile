@@ -68,6 +68,7 @@ SRCS	=	src/main.c					\
 			src/modify_money.c			\
 			src/prepare_light_effect.c	\
 			src/is_light_effect.c		\
+			src/prepare_bunker.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

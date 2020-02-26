@@ -204,6 +204,14 @@ typedef struct ui_skills_t
     sfVector2f scale_ui_order;
 }ui_skills_t;
 
+typedef struct ui_bunker_t
+{
+    sfTexture *bunker_tex;
+    sfSprite *bunker_spr;
+    sfVector2f pos_bunker;
+    sfVector2f scale_bunker;
+}ui_bunker_t;
+
 typedef struct ui_info_t
 {
     sfTexture *money_tex;
@@ -306,6 +314,7 @@ typedef struct Index_t
     ui_pause_button_t ui_pause_button;
     ui_text_pause_t ui_text_pause;
     ui_which_turret_t ui_which_turret;
+    ui_bunker_t ui_bunker;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;

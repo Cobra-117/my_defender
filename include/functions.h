@@ -64,6 +64,7 @@ void modify_money_tesla(Index_t *index);
 void my_defender(void);
 char *my_nbr_to_str(int i);
 
+void prepare_bunker(Index_t *index);
 void prepare_light_effect(Index_t *index);
 void prepare_pause_button(Index_t *index);
 void prepare_pause_menu(Index_t *index);
