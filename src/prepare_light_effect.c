@@ -15,7 +15,7 @@ void prepare_light_effect(Index_t *index)
     sfSprite_setTexture(index->ui_turrets.light_effect_spr,
     index->ui_turrets.light_effect_tex, sfTrue);
     index->ui_turrets.pos_light_effect.x = 680;
-    index->ui_turrets.pos_light_effect.y = 76;
+    index->ui_turrets.pos_light_effect.y = 74;
     sfSprite_setPosition(index->ui_turrets.light_effect_spr,
     index->ui_turrets.pos_light_effect);
     index->ui_turrets.scale_light_effect.x = 0.22;
