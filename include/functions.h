@@ -46,6 +46,7 @@ int is_exit2(Index_t *index);
 int is_flamme(Index_t *index);
 int is_go_menu(Index_t *index);
 int is_heavy(Index_t *index);
+void is_light_effect(Index_t *index);
 int is_resume(Index_t *index);
 int is_skill(Index_t *index);
 int is_tesla(Index_t *index);
@@ -63,7 +64,7 @@ void modify_money_tesla(Index_t *index);
 void my_defender(void);
 char *my_nbr_to_str(int i);
 
-
+void prepare_light_effect(Index_t *index);
 void prepare_pause_button(Index_t *index);
 void prepare_pause_menu(Index_t *index);
 void prepare_text_arti(Index_t *index);

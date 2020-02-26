@@ -186,6 +186,14 @@ typedef struct ui_utilities_t
     sfSprite *barb_ui_spr;
     sfVector2f pos_ui_barb;
     sfVector2f scale_ui_barb;
+    sfTexture *order_ui_tex;
+    sfSprite *order_ui_spr;
+    sfVector2f pos_ui_order;
+    sfVector2f scale_ui_order;
+    sfTexture *tchernobyl_ui_tex;
+    sfSprite *tchernobyl_ui_spr;
+    sfVector2f pos_ui_tchernobyl;
+    sfVector2f scale_ui_tchernobyl;
 }ui_utilities_t;
 
 typedef struct ui_skills_t
