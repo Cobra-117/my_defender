@@ -9,14 +9,14 @@
 
 void buy_turret(Index_t *index)
 {
-    if (index->ui_which_turret.casu == 1)
+    if (index->ui_which_turret == 1)
         modify_money_casu(index);
-    if (index->ui_which_turret.heavy == 1)
+    if (index->ui_which_turret == 2)
         modify_money_heavy(index);
-    if (index->ui_which_turret.arti == 1)
+    if (index->ui_which_turret == 3)
         modify_money_arti(index);
-    if (index->ui_which_turret.flamme == 1)
+    if (index->ui_which_turret == 4)
         modify_money_flamme(index);
-    if (index->ui_which_turret.tesla == 1)
+    if (index->ui_which_turret == 5)
         modify_money_tesla(index);
 }

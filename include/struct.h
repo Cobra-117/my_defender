@@ -206,11 +206,41 @@ typedef struct ui_utilities_t
 
 typedef struct ui_skills_t
 {
-    sfTexture *order_ui_tex;
-    sfSprite *order_ui_spr;
-    sfVector2f pos_ui_order;
-    sfVector2f scale_ui_order;
+    sfTexture *casu_sk_tex;
+    sfSprite *casu_sk_spr;
+    sfVector2f pos_sk_casu;
+    sfVector2f scale_sk_casu;
+    sfTexture *heavy_sk_tex;
+    sfSprite *heavy_sk_spr;
+    sfVector2f pos_sk_heavy;
+    sfVector2f scale_sk_heavy;
+    sfTexture *arti_sk_tex;
+    sfSprite *arti_sk_spr;
+    sfVector2f pos_sk_arti;
+    sfVector2f scale_sk_arti;
+    sfTexture *flame_sk_tex;
+    sfSprite *flame_sk_spr;
+    sfVector2f pos_sk_flame;
+    sfVector2f scale_sk_flame;
+    sfTexture *tesla_sk_tex;
+    sfSprite *tesla_sk_spr;
+    sfVector2f pos_sk_tesla;
+    sfVector2f scale_sk_tesla;
 }ui_skills_t;
+
+typedef struct text_skills_t
+{
+    sfText *txt_casu2;
+    sfVector2f pos_casu2;
+    sfText *txt_heavy2;
+    sfVector2f pos_heavy2;
+    sfText *txt_arti2;
+    sfVector2f pos_arti2;
+    sfText *txt_flame2;
+    sfVector2f pos_flame2;
+    sfText *txt_tesla2;
+    sfVector2f pos_tesla2;
+}text_skills_t;
 
 typedef struct ui_bunker_t
 {
@@ -290,19 +320,14 @@ typedef struct ui_text_pause_t
     sfVector2f pos_exit;
 }ui_text_pause_t;
 
-typedef struct ui_which_turret_t
+typedef struct ui_price_turret_t
 {
-    int casu;
-    int heavy;
-    int arti;
-    int flamme;
-    int tesla;
     int price_casu;
     int price_heavy;
     int price_arti;
     int price_flamme;
     int price_tesla;
-}ui_which_turret_t;
+}ui_price_turret_t;
 
 typedef struct Index_t
 {
@@ -311,6 +336,7 @@ typedef struct Index_t
     turrets_t turrets;
     misc_object_t misc_objs;
     map_t map;
+    text_skills_t text_skills;
     ui_t ui;
     ui_text_t ui_text;
     ui_turrets_t ui_turrets;
@@ -321,8 +347,8 @@ typedef struct Index_t
     ui_button_turret_t ui_button_turret;
     ui_pause_button_t ui_pause_button;
     ui_text_pause_t ui_text_pause;
-    ui_which_turret_t ui_which_turret;
     ui_bunker_t ui_bunker;
+    ui_price_turret_t ui_price_turret;
     wave_t wave;
     enemies_list_t *enemies_list;
     mytime_t time;
@@ -330,6 +356,7 @@ typedef struct Index_t
     int tmp;
     int money;
     int light_effect_play;
+    int ui_which_turret;
     sfVector2f pos_turret;
     turret_obj_t **turrets_array;
 }Index_t;

@@ -35,5 +35,13 @@ void print_ui_utilities(Index_t *index)
 void print_ui_skills(Index_t *index)
 {
     sfRenderWindow_drawSprite(index->window,
-    index->ui_skills.order_ui_spr, NULL);
+    index->ui_skills.casu_sk_spr, NULL);
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_skills.heavy_sk_spr, NULL);
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_skills.arti_sk_spr, NULL);
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_skills.flame_sk_spr, NULL);
+    sfRenderWindow_drawSprite(index->window,
+    index->ui_skills.tesla_sk_spr, NULL);
 }
