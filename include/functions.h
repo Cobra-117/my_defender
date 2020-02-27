@@ -40,6 +40,7 @@ void init_structs(Index_t *index);
 void init_time(Index_t *index);
 void init_turrets(Index_t *index);
 void init_ui_tower(Index_t *index);
+void init_turret_array(Index_t *index);
 void init_turrets_origin(Index_t *index);
 void init_turrets_rects(Index_t *index);
 void init_turrets_value(Index_t *index);

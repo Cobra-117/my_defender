@@ -13,5 +13,6 @@ void init_structs(Index_t *index)
     init_obj(index);
     init_map(index);
     init_wave(index);
+    init_turret_array(index);
     init_time(index);
 }

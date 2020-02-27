@@ -17,6 +17,14 @@ typedef struct mytime_t
     int balises_nbr;
 }mytime_t;
 
+typedef struct turret_obj_t
+{
+    int type;
+    float damage;
+    float range;
+    float rotation;
+}turret_obj_t;
+
 typedef struct enemies_list_t
 {
     sfVector2f coordinates;
@@ -323,6 +331,7 @@ typedef struct Index_t
     int money;
     int light_effect_play;
     sfVector2f pos_turret;
+    turret_obj_t **turrets_array;
 }Index_t;
 
 
