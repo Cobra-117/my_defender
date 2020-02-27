@@ -75,6 +75,7 @@ SRCS	=	src/main.c						\
 			src/manage_waves.c				\
 			src/init_turrets_rect.c			\
 			src/init_turrets_part2.c		\
+			src/place_is_valid.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 
