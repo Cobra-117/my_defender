@@ -23,6 +23,7 @@ void fill_map_array(Index_t *index)
     for (int i = 0; i < 19; i++) {
         fill_one_line(index, fd, i);
     }
+    close(fd);
 }
 
 void init_map_tiles(Index_t *index)

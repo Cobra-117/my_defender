@@ -26,5 +26,4 @@ void display_first_layers(Index_t *index)
     display_map(index);
     display_enemies(index);
     sfRenderWindow_drawSprite(index->window, index->turrets.casu_mkI_spr, NULL);
-    //debug_display(index);
 }

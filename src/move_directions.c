@@ -10,15 +10,15 @@
 float get_path_dir(Index_t *index, enemies_list_t *current, sfVector2f tile)
 {
     if (current->rotation == 90 || current->rotation == 270) {
-        if (index->map.map_array[(int)tile.y - 1][(int)tile.x] == 'o')
+        if (index->map.map_array[(int)tile.y - 1][(int)tile.x] != 'x')
             return (0);
-        if (index->map.map_array[(int)tile.y + 1][(int)tile.x] == 'o')
+        if (index->map.map_array[(int)tile.y + 1][(int)tile.x] != 'x')
             return (180);
     }
     if (current->rotation == 0 || current->rotation == 180) {
-        if (index->map.map_array[(int)tile.y][(int)tile.x + 1] == 'o')
+        if (index->map.map_array[(int)tile.y][(int)tile.x + 1] != 'x')
             return (90);
-        if (index->map.map_array[(int)tile.y][(int)tile.x - 1] == 'o')
+        if (index->map.map_array[(int)tile.y][(int)tile.x - 1] != 'x')
             return (270);
     }
 }
