@@ -24,6 +24,7 @@ void display_user_interface(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
 int game_loop(Index_t *index);
+float get_turret_optimal_rotation(Index_t *index, sfVector2f pos);
 void give_turrets_scale(Index_t *index);
 void give_skills_scale(Index_t *index);
 void info_casu(Index_t *index);

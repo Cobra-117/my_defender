@@ -9,6 +9,7 @@
 
 void check_what_is_it(Index_t *index)
 {
+    place_is_valid(index);
     is_ui_tower(index);
     is_utility(index);
     is_skill(index);
@@ -20,7 +21,6 @@ void check_what_is_it(Index_t *index)
     is_resume(index);
     is_go_menu(index);
     is_exit2(index);
-    place_is_valid(index);
 }
 
 int button_game_clicked(Index_t *index)

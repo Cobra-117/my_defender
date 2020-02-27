@@ -31,7 +31,7 @@ int is_heavy(Index_t *index)
     click_pos_heavy.y && index->what_is_open == 1) {
         index->ui_which_turret = 2;
         index->light_effect_play = 12;
-        buy_turret(index);
+        //buy_turret(index);
     }
 }
 
@@ -45,7 +45,7 @@ int is_arti(Index_t *index)
     click_pos_arti.y && index->what_is_open == 1) {
         index->ui_which_turret = 3;
         index->light_effect_play = 13;
-        buy_turret(index);
+        //buy_turret(index);
     }
 }
 
@@ -59,7 +59,7 @@ int is_flamme(Index_t *index)
     click_pos_flamme.y && index->what_is_open == 1) {
         index->ui_which_turret = 4;
         index->light_effect_play = 14;
-        buy_turret(index);
+        //buy_turret(index);
     }
 }
 
@@ -73,6 +73,6 @@ int is_tesla(Index_t *index)
     click_pos_tesla.y && index->what_is_open == 1) {
         index->ui_which_turret = 5;
         index->light_effect_play = 15;
-        buy_turret(index);
+        //buy_turret(index);
     }
 }
