@@ -17,8 +17,8 @@ int is_casu(Index_t *index)
     click_pos_casu.y && index->what_is_open == 1) {
         index->ui_which_turret.casu = 1;
         index->light_effect_play  = 11;
-        buy_turret(index);
-        }
+        //buy_turret(index);
+    }
 }
 
 int is_heavy(Index_t *index)

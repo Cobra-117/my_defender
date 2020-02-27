@@ -322,6 +322,7 @@ typedef struct Index_t
     int tmp;
     int money;
     int light_effect_play;
+    sfVector2f pos_turret;
 }Index_t;
 
 

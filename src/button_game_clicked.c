@@ -20,6 +20,7 @@ void check_what_is_it(Index_t *index)
     is_resume(index);
     is_go_menu(index);
     is_exit2(index);
+    place_is_valid(index);
 }
 
 int button_game_clicked(Index_t *index)
@@ -34,9 +35,8 @@ int button_game_clicked(Index_t *index)
             index->ui.coord_mouse_y = event.mouseMove.y;
             info_casu(index);
         }
-        if (event.type == sfEvtMouseButtonPressed) {
+        if (event.type == sfEvtMouseButtonPressed)
             check_what_is_it(index);
-        }
         if (event.type == sfEvtKeyPressed)
             if (event.key.code == sfKeyEscape)
                 index->what_is_open = 4;

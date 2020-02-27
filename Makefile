@@ -73,6 +73,7 @@ SRCS	=	src/main.c						\
 			src/will_collision_if_move.c	\
 			src/rm_enemies.c				\
 			src/manage_waves.c				\
+			src/place_is_valid.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

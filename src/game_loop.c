@@ -20,6 +20,7 @@ void check_event(Index_t *index)
     push_resume(index);
     push_go_menu(index);
     push_exit2(index);
+    //place_is_valid(index);
 }
 
 void manage_what_is_open(Index_t *index)
@@ -44,7 +45,6 @@ void manage_what_is_open(Index_t *index)
 int game_main_function(Index_t *index)
 {
     manage_enemies(index);
-    manage_waves(index);
     check_event(index);
     display_first_layers(index);
     display_user_interface(index);
