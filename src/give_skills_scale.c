@@ -23,15 +23,15 @@ void set_skills_scale(Index_t *index)
 
 void give_skills_scale(Index_t *index)
 {
-    index->ui_skills.scale_sk_casu.x = 0.4;
-    index->ui_skills.scale_sk_casu.y = 0.4;
-    index->ui_skills.scale_sk_heavy.x = 0.4;
-    index->ui_skills.scale_sk_heavy.y = 0.4;
-    index->ui_skills.scale_sk_arti.x = 0.4;
-    index->ui_skills.scale_sk_arti.y = 0.4;
-    index->ui_skills.scale_sk_flame.x = 0.4;
-    index->ui_skills.scale_sk_flame.y = 0.4;
-    index->ui_skills.scale_sk_tesla.x = 0.4;
-    index->ui_skills.scale_sk_tesla.y = 0.4;
+    index->ui_skills.scale_sk_casu.x = 0.5;
+    index->ui_skills.scale_sk_casu.y = 0.5;
+    index->ui_skills.scale_sk_heavy.x = 0.5;
+    index->ui_skills.scale_sk_heavy.y = 0.5;
+    index->ui_skills.scale_sk_arti.x = 0.5;
+    index->ui_skills.scale_sk_arti.y = 0.5;
+    index->ui_skills.scale_sk_flame.x = 0.5;
+    index->ui_skills.scale_sk_flame.y = 0.5;
+    index->ui_skills.scale_sk_tesla.x = 0.5;
+    index->ui_skills.scale_sk_tesla.y = 0.5;
     set_skills_scale(index);
 }

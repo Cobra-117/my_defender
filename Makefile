@@ -78,7 +78,12 @@ SRCS	=	src/main.c						\
 			src/place_is_valid.c			\
 			src/init_turrets_array.c		\
 			src/init_text_skills.c			\
-			src/draw_text_skills.c			\
+			src/info_turret_lvl2.c			\
+			src/init_button_skills.c		\
+			src/push_button_skills.c		\
+			src/is_turrets2.c				\
+			src/is_upgrade.c				\
+			src/push_upgrade.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 

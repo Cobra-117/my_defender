@@ -20,6 +20,12 @@ void check_event(Index_t *index)
     push_resume(index);
     push_go_menu(index);
     push_exit2(index);
+    push_casu2(index);
+    push_heavy2(index);
+    push_arti2(index);
+    push_flame2(index);
+    push_tesla2(index);
+    //push_upgrade(index);
 }
 
 void manage_what_is_open(Index_t *index)
@@ -36,6 +42,7 @@ void manage_what_is_open(Index_t *index)
     if (index->what_is_open == 3) {
         print_ui_skills(index);
         change_skills_colors(index);
+        check_text(index);
     }
     if (index->what_is_open == 4)
         print_pause_menu(index);

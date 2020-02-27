@@ -17,7 +17,7 @@ void info_tesla(Index_t *index)
     click_pos_tesla.y && index->what_is_open == 1)
         index->ui_text.which_text = 5;
     else
-        index->ui_text.which_text = 0;
+        info_casu2(index);
 }
 
 void info_flamme(Index_t *index)

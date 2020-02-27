@@ -34,6 +34,7 @@ void print_ui_utilities(Index_t *index)
 
 void print_ui_skills(Index_t *index)
 {
+    is_light_effect(index);
     sfRenderWindow_drawSprite(index->window,
     index->ui_skills.casu_sk_spr, NULL);
     sfRenderWindow_drawSprite(index->window,
