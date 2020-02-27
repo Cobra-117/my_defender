@@ -228,6 +228,40 @@ typedef struct ui_skills_t
     sfVector2f scale_sk_tesla;
 }ui_skills_t;
 
+typedef struct ui_button_skills_t
+{
+    sfRectangleShape *button_casu2;
+    sfVector2f pos_casu2;
+    sfVector2f size_casu2;
+    sfVector2f click_pos_casu2;
+    sfVector2f click_size_casu2;
+    sfRectangleShape *button_heavy2;
+    sfVector2f pos_heavy2;
+    sfVector2f size_heavy2;
+    sfVector2f click_pos_heavy2;
+    sfVector2f click_size_heavy2;
+    sfRectangleShape *button_arti2;
+    sfVector2f pos_arti2;
+    sfVector2f size_arti2;
+    sfVector2f click_pos_arti2;
+    sfVector2f click_size_arti2;
+    sfRectangleShape *button_flame2;
+    sfVector2f pos_flame2;
+    sfVector2f size_flame2;
+    sfVector2f click_pos_flame2;
+    sfVector2f click_size_flame2;
+    sfRectangleShape *button_tesla2;
+    sfVector2f pos_tesla2;
+    sfVector2f size_tesla2;
+    sfVector2f click_pos_tesla2;
+    sfVector2f click_size_tesla2;
+    sfRectangleShape *button_upgrade;
+    sfVector2f pos_upgrade;
+    sfVector2f size_upgrade;
+    sfVector2f click_pos_upgrade;
+    sfVector2f click_size_upgrade;
+}ui_button_skills_t;
+
 typedef struct text_skills_t
 {
     sfText *txt_casu2;
@@ -346,6 +380,7 @@ typedef struct Index_t
     ui_pause_t ui_pause;
     ui_button_turret_t ui_button_turret;
     ui_pause_button_t ui_pause_button;
+    ui_button_skills_t ui_button_skills;
     ui_text_pause_t ui_text_pause;
     ui_bunker_t ui_bunker;
     ui_price_turret_t ui_price_turret;

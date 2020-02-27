@@ -21,6 +21,12 @@ void check_what_is_it(Index_t *index)
     is_resume(index);
     is_go_menu(index);
     is_exit2(index);
+    is_casu2(index);
+    is_heavy2(index);
+    is_arti2(index);
+    is_flame2(index);
+    is_tesla2(index);
+    //is_upgrade(index);
 }
 
 int button_game_clicked(Index_t *index)

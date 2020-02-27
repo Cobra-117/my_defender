@@ -17,7 +17,7 @@ int is_ui_tower(Index_t *index)
     index->what_is_open != 4) {
         index->what_is_open = 1;
         index->tmp = 1;
-        }
+    }
 }
 
 int is_utility(Index_t *index)
