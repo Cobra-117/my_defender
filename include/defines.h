@@ -24,14 +24,16 @@
 //#define wave_read_interval (0.50);
 
 /*time*/
-#define BALISES_NBR (3)
+#define BALISES_NBR (10)
 #define BAL_READMAP (0)
 #define BAL_MOVE_ENEMIES (1)
 #define BAL_WAVE_BREAK (2)
+#define BAL_DEBUG (9)
 
 #define INTERV_READMAP (500)
 #define INTERV_MOVE_ENEMIES (50)
 #define INTERV_WAVE_BREAK (5000)
+#define INTERV_DEBUG (100)
 
 /*misc*/
 #define FIRST_TILE_Y (2)

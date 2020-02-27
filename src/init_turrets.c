@@ -7,6 +7,16 @@
 
 #include "../include/my.h"
 
+void init_turrets_scale(Index_t *index)
+{
+    sfVector2f scale;
+
+    scale.x = 0.33;
+    scale.y = 0.33;
+
+    sfSprite_setScale(index->turrets.casu_mkI_spr, scale);
+}
+
 void link_turrets_sprites_and_textures(Index_t *index)
 {
     sfSprite_setTexture(index->turrets.arti_mkI_spr,
@@ -74,4 +84,7 @@ void init_turrets(Index_t *index)
     init_turrets_tex(index);
     init_turrets_sprites(index);
     link_turrets_sprites_and_textures(index);
+    init_turrets_origin(index);
+    init_turrets_rects(index);
+    init_turrets_scale(index);
 }
