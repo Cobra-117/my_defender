@@ -44,6 +44,7 @@ void manage_what_is_open(Index_t *index)
 
 int game_main_function(Index_t *index)
 {
+    manage_waves(index);
     manage_enemies(index);
     check_event(index);
     display_first_layers(index);
