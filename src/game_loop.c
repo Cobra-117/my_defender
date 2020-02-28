@@ -58,8 +58,10 @@ int game_main_function(Index_t *index)
     manage_enemies(index);
     check_event(index);
     manage_turrets(index);
+    manage_visual_effects(index);
     display_first_layers(index);
     display_user_interface(index);
+    display_snow(index);
     manage_what_is_open(index);
     sfRenderWindow_display(index->window);
     sfRenderWindow_clear(index->window, sfBlack);

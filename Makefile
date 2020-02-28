@@ -100,6 +100,7 @@ SRCS	=	src/main.c						\
 			src/init_button_utilities.c		\
 			src/init_text_utility.c			\
 			src/info_utility.c				\
+			src/manage_visual_effects.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

@@ -25,6 +25,7 @@ void display_this_line_of_turrets(Index_t *index, int i)
 {
     sfVector2f pos;
     sfSprite *sprite;
+    float rot;
 
     for (int j = 0; j < 33; j++) {
         if (index->turrets_array[i][j].type != 0) {

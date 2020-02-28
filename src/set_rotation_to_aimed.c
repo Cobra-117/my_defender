@@ -18,7 +18,7 @@ float find_rot_quarter(Index_t *index, int y, int x)
         return (0);
     if (dist_x > 0 && dist_y < 0)
         return (3);
-    if (dist_x < 0 && dist_y < 0)
+    if (dist_x < 0 && dist_y <= 0)
         return (2);
     if (dist_x < 0 && dist_y > 0)
         return (1);
@@ -40,7 +40,6 @@ void set_rotation_to_aimed(Index_t *index, int y, int x)
     if (posi_y < 0)
         posi_y = posi_y * (-1);
     dist = (posi_x + posi_y);
-    printf("quarter: %f\n", quarter);
     if (quarter == 0 || quarter == 2)
         angle = 90 * (posi_y / dist) - 90 + (90 * quarter);
     else if (quarter == 1 || quarter == 3)

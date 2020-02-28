@@ -14,8 +14,8 @@ float calc_dist(enemies_list_t *current, int y , int x)
     float dist;
     if (current->type == 0)
         return (999);
-    dist_x = x * 64 - current->coordinates.x;
-    dist_z = y * 64 - current->coordinates.y;
+    dist_x = current->coordinates.x- x * 64;
+    dist_z = current->coordinates.y - y * 64;
     dist = (dist_x + dist_z);
     return (dist);
     //return (1);
@@ -32,7 +32,9 @@ enemies_list_t *find_enemy_to_aim(Index_t *index, int y, int x)
     while (current != NULL)
     {
         cur_dist = calc_dist(current, y, x);
-        if (cur_dist < lowest_dist)
+        cur_dist = cur_dist * (-1);
+        //printf("cur distance: %f \n", cur_dist);
+        if (cur_dist < lowest_dist && cur_dist >= -128)
         {
             lowest_dist = cur_dist;
             closest = current;

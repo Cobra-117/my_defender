@@ -28,11 +28,17 @@
 #define BAL_READMAP (0)
 #define BAL_MOVE_ENEMIES (1)
 #define BAL_WAVE_BREAK (2)
+#define BAL_CHECK_SHOOT (3)
+#define BAL_TURRET_ANIM (4)
+#define BAL_SNOW (5)
 #define BAL_DEBUG (9)
 
 #define INTERV_READMAP (500)
 #define INTERV_MOVE_ENEMIES (50)
 #define INTERV_WAVE_BREAK (5000)
+#define INTERV_CHECK_SHOOT (300)
+#define INTERV_TURRET_ANIM (50)
+#define INTEV_FALL_SNOW (50)
 #define INTERV_DEBUG (100)
 
 /*misc*/
