@@ -16,6 +16,7 @@ void change_skills_colors(Index_t *index);
 void change_ui_tower_colors(Index_t *index);
 void change_utility_colors(Index_t *index);
 void check_text(Index_t *index);
+void check_the_upgrade(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
 
 void display_enemies(Index_t *index);

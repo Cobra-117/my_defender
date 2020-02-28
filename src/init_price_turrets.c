@@ -11,6 +11,11 @@ void init_turrets_value(Index_t *index)
 {
     index->ui_which_turret = 0;
     index->ui_is_upgrade = 0;
+    index->ui_button_skills.casu2_already_upgrade = 0;
+    index->ui_button_skills.heavy2_already_upgrade = 0;
+    index->ui_button_skills.arti2_already_upgrade = 0;
+    index->ui_button_skills.flame2_already_upgrade = 0;
+    index->ui_button_skills.tesla2_already_upgrade = 0;
 }
 
 void init_price_turrets(Index_t *index)

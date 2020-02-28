@@ -92,6 +92,7 @@ SRCS	=	src/main.c						\
 			src/change_price_upgrade.c		\
 			src/buy_upgrade.c				\
 			src/modify_money_upgrade.c		\
+			src/check_the_upgrade.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

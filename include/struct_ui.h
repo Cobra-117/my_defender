@@ -42,6 +42,11 @@ typedef struct ui_button_skills_t
     sfVector2f size_upgrade;
     sfVector2f click_pos_upgrade;
     sfVector2f click_size_upgrade;
+    int casu2_already_upgrade;
+    int heavy2_already_upgrade;
+    int arti2_already_upgrade;
+    int flame2_already_upgrade;
+    int tesla2_already_upgrade;
 }ui_button_skills_t;
 
 typedef struct text_skills_t
