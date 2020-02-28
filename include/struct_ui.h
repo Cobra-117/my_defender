@@ -42,6 +42,11 @@ typedef struct ui_button_skills_t
     sfVector2f size_upgrade;
     sfVector2f click_pos_upgrade;
     sfVector2f click_size_upgrade;
+    int casu2_already_upgrade;
+    int heavy2_already_upgrade;
+    int arti2_already_upgrade;
+    int flame2_already_upgrade;
+    int tesla2_already_upgrade;
 }ui_button_skills_t;
 
 typedef struct text_skills_t
@@ -56,7 +61,30 @@ typedef struct text_skills_t
     sfVector2f pos_flame2;
     sfText *txt_tesla2;
     sfVector2f pos_tesla2;
+    sfText *txt_upgrade;
+    sfVector2f pos_upgrade;
+    sfText *txt_price_upgrade;
+    sfVector2f pos_price_upgrade;
 }text_skills_t;
+
+typedef struct ui_button_utilities_t
+{
+    sfRectangleShape *button_mine;
+    sfVector2f pos_mine;
+    sfVector2f size_mine;
+    sfVector2f click_pos_mine;
+    sfVector2f click_size_mine;
+    sfRectangleShape *button_order;
+    sfVector2f pos_order;
+    sfVector2f size_order;
+    sfVector2f click_pos_order;
+    sfVector2f click_size_order;
+    sfRectangleShape *button_tchernobyl;
+    sfVector2f pos_tchernobyl;
+    sfVector2f size_tchernobyl;
+    sfVector2f click_pos_tchernobyl;
+    sfVector2f click_size_tchernobyl;
+}ui_button_utilities_t;
 
 typedef struct ui_bunker_t
 {
@@ -136,6 +164,16 @@ typedef struct ui_text_pause_t
     sfVector2f pos_exit;
 }ui_text_pause_t;
 
+typedef struct ui_text_utilities_t
+{
+    sfText *txt_mine;
+    sfVector2f pos_mine;
+    sfText *txt_order;
+    sfVector2f pos_order;
+    sfText *txt_tchernobyl;
+    sfVector2f pos_tchernobyl;
+}ui_text_utilities_t;
+
 typedef struct ui_price_turret_t
 {
     int price_casu;
@@ -143,6 +181,11 @@ typedef struct ui_price_turret_t
     int price_arti;
     int price_flamme;
     int price_tesla;
+    int price_casu2;
+    int price_heavy2;
+    int price_arti2;
+    int price_flamme2;
+    int price_tesla2;
 }ui_price_turret_t;
 
 #endif /* !STRUCT_UI_H_ */

@@ -91,6 +91,15 @@ SRCS	=	src/main.c						\
 			src/manage_turrets.c			\
 			src/set_turret_rotation.c		\
 			src/set_rotation_to_aimed.c		\
+			src/init_text_upgrade.c			\
+			src/change_price_upgrade.c		\
+			src/buy_upgrade.c				\
+			src/modify_money_upgrade.c		\
+			src/check_the_upgrade.c			\
+			src/push_utilities.c			\
+			src/init_button_utilities.c		\
+			src/init_text_utility.c			\
+			src/info_utility.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 

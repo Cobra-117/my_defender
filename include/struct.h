@@ -251,8 +251,10 @@ typedef struct Index_t
     ui_text_pause_t ui_text_pause;
     ui_bunker_t ui_bunker;
     ui_price_turret_t ui_price_turret;
+    ui_button_utilities_t ui_button_utilities;
     wave_t wave;
     enemies_list_t *enemies_list;
+    ui_text_utilities_t ui_text_utilities;
     mytime_t time;
     visual_effects_t vis_effects;
     int what_is_open;
@@ -260,6 +262,7 @@ typedef struct Index_t
     int money;
     int light_effect_play;
     int ui_which_turret;
+    int ui_is_upgrade;
     sfVector2f pos_turret;
     turret_obj_t **turrets_array;
 }Index_t;
