@@ -7,6 +7,13 @@
 
 #include "../include/my.h"
 
+void check_text3(Index_t *index)
+{
+    if (index->ui_text.which_text == 13)
+    sfRenderWindow_drawText(index->window, index->
+    ui_text_utilities.txt_tchernobyl, NULL);
+}
+
 void check_text2(Index_t *index)
 {
     if (index->ui_text.which_text == 7)
@@ -21,6 +28,13 @@ void check_text2(Index_t *index)
     if (index->ui_text.which_text == 10)
         sfRenderWindow_drawText(index->window, index->
         text_skills.txt_tesla2, NULL);
+    if (index->ui_text.which_text == 11)
+        sfRenderWindow_drawText(index->window, index->
+        ui_text_utilities.txt_mine, NULL);
+    if (index->ui_text.which_text == 12)
+        sfRenderWindow_drawText(index->window, index->
+        ui_text_utilities.txt_order, NULL);
+    check_text3(index);
 }
 
 void check_text(Index_t *index)

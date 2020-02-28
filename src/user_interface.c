@@ -64,6 +64,8 @@ void all_text(Index_t *index)
     prepare_text_flamme(index);
     prepare_text_tesla(index);
     init_text_casu2(index);
+    init_text_utility(index);
+    init_button_utilities(index);
 }
 
 void init_user_interface(Index_t *index)

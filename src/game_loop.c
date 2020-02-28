@@ -26,6 +26,9 @@ void check_event(Index_t *index)
     push_flame2(index);
     push_tesla2(index);
     push_upgrade(index);
+    push_mine(index);
+    push_order(index);
+    push_tchernobyl(index);
 }
 
 void manage_what_is_open(Index_t *index)
@@ -38,6 +41,7 @@ void manage_what_is_open(Index_t *index)
     if (index->what_is_open == 2) {
         print_ui_utilities(index);
         change_utility_colors(index);
+        check_text(index);
     }
     if (index->what_is_open == 3) {
         print_ui_skills(index);

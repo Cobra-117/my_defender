@@ -7,6 +7,11 @@
 
 #include "../include/my.h"
 
+void check_what_is_it2(Index_t *index)
+{
+    is_upgrade(index);
+}
+
 void check_what_is_it(Index_t *index)
 {
     place_is_valid(index);
@@ -26,7 +31,7 @@ void check_what_is_it(Index_t *index)
     is_arti2(index);
     is_flame2(index);
     is_tesla2(index);
-    is_upgrade(index);
+    check_what_is_it2(index);
 }
 
 int button_game_clicked(Index_t *index)
