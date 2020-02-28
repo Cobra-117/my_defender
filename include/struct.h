@@ -19,14 +19,6 @@ typedef struct mytime_t
     int balises_nbr;
 }mytime_t;
 
-typedef struct turret_obj_t
-{
-    int type;
-    float damage;
-    float range;
-    float rotation;
-}turret_obj_t;
-
 typedef struct enemies_list_t
 {
     sfVector2f coordinates;
@@ -37,6 +29,15 @@ typedef struct enemies_list_t
     struct enemies_list_t *next;
     struct enemies_list_t *last;
 }enemies_list_t;
+
+typedef struct turret_obj_t
+{
+    int type;
+    float damage;
+    float range;
+    float rotation;
+    enemies_list_t *aimed_enemy;
+}turret_obj_t;
 
 typedef struct wave_t
 {

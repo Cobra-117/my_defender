@@ -88,6 +88,9 @@ SRCS	=	src/main.c						\
 			src/push_upgrade.c				\
 			src/init_button_upgrade.c		\
 			src/falling_snow.c				\
+			src/manage_turrets.c			\
+			src/set_turret_rotation.c		\
+			src/set_rotation_to_aimed.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

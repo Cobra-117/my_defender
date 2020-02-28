@@ -80,6 +80,7 @@ sfVector2f get_tile_from_pos(sfVector2f pos);
 int main_menu(sfRenderWindow *window);
 
 void manage_enemies(Index_t *index);
+void manage_turrets(Index_t *index);
 void manage_waves(Index_t *index);
 
 void move_down(Index_t *index, enemies_list_t *current, sfVector2f tile);
@@ -139,6 +140,7 @@ void push_utility(Index_t *index);
 
 void quick_init(Index_t *index);
 void rm_enemy(Index_t *index, enemies_list_t *current);
+void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
 int will_collision_if_move_down(Index_t *index, enemies_list_t *current);

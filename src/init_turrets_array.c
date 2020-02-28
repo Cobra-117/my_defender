@@ -12,6 +12,7 @@ void fill_one_line_of_turrets(Index_t *index, int i)
     index->turrets_array[i] = malloc(sizeof(turret_obj_t) * 33);
     for (int j = 0; j < 33; j++) {
         index->turrets_array[i][j].type = 0;
+        index->turrets_array[i][j].aimed_enemy = NULL;
     }
 }
 
