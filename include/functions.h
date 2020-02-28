@@ -32,6 +32,7 @@ void info_casu2(Index_t *index);
 
 void init_button_casu(Index_t *index);
 void init_button_casu2(Index_t *index);
+void init_button_upgrade(Index_t *index);
 void init_enemies(Index_t *index);
 void init_enemies_list(Index_t *index);
 void init_map(Index_t *index);
@@ -131,6 +132,7 @@ void push_skill(Index_t *index);
 void push_tesla(Index_t *index);
 void push_tesla2(Index_t *index);
 void push_ui_tower(Index_t *index);
+void push_upgrade(Index_t *index);
 void push_utility(Index_t *index);
 
 void quick_init(Index_t *index);

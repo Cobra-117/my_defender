@@ -25,7 +25,7 @@ void check_event(Index_t *index)
     push_arti2(index);
     push_flame2(index);
     push_tesla2(index);
-    //push_upgrade(index);
+    push_upgrade(index);
 }
 
 void manage_what_is_open(Index_t *index)

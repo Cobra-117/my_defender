@@ -49,6 +49,7 @@ void init_ui_buttons(Index_t *index)
     init_skill(index);
     init_button_casu(index);
     init_button_casu2(index);
+    init_button_upgrade(index);
 }
 
 void all_text(Index_t *index)

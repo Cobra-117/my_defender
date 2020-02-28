@@ -19,7 +19,7 @@ void place_turret(Index_t *index, sfVector2f asked_tile)
     can_I_buy_this(index) == 1) {
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].type =
         index->ui_which_turret;
-        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].rotation = 
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].rotation =
         get_turret_optimal_rotation(index, asked_tile);
         printf("place_turrets\n");
     } else {
