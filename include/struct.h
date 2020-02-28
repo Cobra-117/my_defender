@@ -7,6 +7,7 @@
 
 #include "includes.h"
 #include "struct_ui.h"
+#include "struct_sound.h"
 #include "visual_effect_struct.h"
 
 #ifndef STRUCT_H_
@@ -257,6 +258,7 @@ typedef struct Index_t
     ui_text_utilities_t ui_text_utilities;
     mytime_t time;
     visual_effects_t vis_effects;
+    sound_t sound;
     int what_is_open;
     int tmp;
     int money;
