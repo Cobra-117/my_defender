@@ -87,6 +87,7 @@ SRCS	=	src/main.c						\
 			src/is_upgrade.c				\
 			src/push_upgrade.c				\
 			src/init_button_upgrade.c		\
+			src/falling_snow.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 

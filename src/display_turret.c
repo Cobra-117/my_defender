@@ -14,6 +14,10 @@ sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
         sprite  = index->turrets.casu_mkI_spr;
     if (index->turrets_array[x][y].type == 2)
         sprite  = index->turrets.heavy_mkI_spr;
+    if (index->turrets_array[x][y].type == 3)
+        sprite  = index->turrets.arti_mkI_spr;
+    if (index->turrets_array[x][y].type == 4)
+        sprite  = index->turrets.flame_mkI_spr;
     return (sprite);
 }
 

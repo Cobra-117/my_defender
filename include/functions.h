@@ -19,6 +19,7 @@ int compare_time(Index_t *index, int balise_nbr, float interval);
 void display_enemies(Index_t *index);
 void display_first_layers(Index_t *index);
 void display_map(Index_t *index);
+void display_snow(Index_t *index);
 void display_user_interface(Index_t *index);
 
 void free_structs(Index_t *index);
@@ -67,6 +68,7 @@ int is_heavy2(Index_t *index);
 void is_light_effect(Index_t *index);
 int is_resume(Index_t *index);
 int is_skill(Index_t *index);
+void init_snow(visual_effects_t *vis_effect);
 int is_tesla(Index_t *index);
 int is_tesla2(Index_t *index);
 int is_ui_tower(Index_t *index);
