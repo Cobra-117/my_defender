@@ -47,4 +47,8 @@ void print_ui_skills(Index_t *index)
     index->ui_skills.tesla_sk_spr, NULL);
     sfRenderWindow_drawRectangleShape(index->window,
     index->ui_button_skills.button_upgrade, NULL);
+    sfRenderWindow_drawText(index->window,
+    index->text_skills.txt_upgrade, NULL);
+    sfRenderWindow_drawText(index->window,
+    index->text_skills.txt_price_upgrade, NULL);
 }

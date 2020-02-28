@@ -88,6 +88,10 @@ SRCS	=	src/main.c						\
 			src/push_upgrade.c				\
 			src/init_button_upgrade.c		\
 			src/falling_snow.c				\
+			src/init_text_upgrade.c			\
+			src/change_price_upgrade.c		\
+			src/buy_upgrade.c				\
+			src/modify_money_upgrade.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

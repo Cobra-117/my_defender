@@ -56,6 +56,10 @@ typedef struct text_skills_t
     sfVector2f pos_flame2;
     sfText *txt_tesla2;
     sfVector2f pos_tesla2;
+    sfText *txt_upgrade;
+    sfVector2f pos_upgrade;
+    sfText *txt_price_upgrade;
+    sfVector2f pos_price_upgrade;
 }text_skills_t;
 
 typedef struct ui_bunker_t
@@ -143,6 +147,11 @@ typedef struct ui_price_turret_t
     int price_arti;
     int price_flamme;
     int price_tesla;
+    int price_casu2;
+    int price_heavy2;
+    int price_arti2;
+    int price_flamme2;
+    int price_tesla2;
 }ui_price_turret_t;
 
 #endif /* !STRUCT_UI_H_ */
