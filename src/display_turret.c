@@ -32,6 +32,7 @@ void display_this_line_of_turrets(Index_t *index, int i)
             pos.x = j * 64 + 32;
             pos.y = i * 64 + 32;
             sprite = get_the_good_sprite(index, i, j);
+            pos = set_turret_offset(index, j, i, pos);
             sfSprite_setPosition(sprite, pos);
             sfSprite_setRotation(
             sprite, index->turrets_array[i][j].rotation);

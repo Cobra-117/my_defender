@@ -101,6 +101,7 @@ SRCS	=	src/main.c						\
 			src/init_text_utility.c			\
 			src/info_utility.c				\
 			src/manage_visual_effects.c		\
+			src/set_turret_offset.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

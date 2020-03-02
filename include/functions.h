@@ -157,6 +157,8 @@ void push_utility(Index_t *index);
 
 void quick_init(Index_t *index);
 void rm_enemy(Index_t *index, enemies_list_t *current);
+
+sfVector2f set_turret_offset(Index_t *index, int x, int y, sfVector2f pos);
 void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
