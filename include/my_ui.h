@@ -38,6 +38,26 @@ struct button_s {
     sfVector2f size_param;
     sfVector2f click_pos_param;
     sfVector2f click_size_param;
+    sfRectangleShape *button_plus;
+    sfVector2f pos_plus;
+    sfVector2f size_plus;
+    sfVector2f click_pos_plus;
+    sfVector2f click_size_plus;
+    sfRectangleShape *button_minus;
+    sfVector2f pos_minus;
+    sfVector2f size_minus;
+    sfVector2f click_pos_minus;
+    sfVector2f click_size_minus;
+    sfRectangleShape *button_plus2;
+    sfVector2f pos_plus2;
+    sfVector2f size_plus2;
+    sfVector2f click_pos_plus2;
+    sfVector2f click_size_plus2;
+    sfRectangleShape *button_minus2;
+    sfVector2f pos_minus2;
+    sfVector2f size_minus2;
+    sfVector2f click_pos_minus2;
+    sfVector2f click_size_minus2;
     float a;
     float b;
 };
@@ -47,6 +67,8 @@ typedef struct button_s button_t;
 struct image_s {
     sfTexture *text_menu;
     sfSprite *spri_menu;
+    sfTexture *text_settings;
+    sfSprite *spri_settings;
 };
 
 typedef struct image_s image_t;
@@ -65,15 +87,28 @@ struct text_s {
 
 typedef struct text_s text_t;
 
+struct text_settings_s {
+    sfText *txt_music;
+    sfVector2f pos_music;
+    sfText *txt_sound;
+    sfVector2f pos_sound;
+};
+
+typedef struct text_settings_s text_settings_t;
+
 struct menu_s {
     image_t image;
     button_t button;
     text_t text;
+    text_settings_t text_settings;
     int player_choice;
+    sfMusic *music;
+    int volume_music;
 };
 
 typedef struct menu_s menu_t;
 
+int button_settings_clicked(menu_t *menu, sfRenderWindow *window);
 void push_play(menu_t *menu, sfRenderWindow *window);
 void push_exit(menu_t *menu, sfRenderWindow *window);
 void push_htp(menu_t *menu, sfRenderWindow *window);
@@ -82,12 +117,22 @@ void init_button_play(menu_t *menu);
 void init_button_exit(menu_t *menu);
 void init_button_htp(menu_t *menu);
 void init_button_param(menu_t *menu);
+void init_button_settings(menu_t *menu);
+void init_text_settings(menu_t *menu);
 int button_is_clicked(menu_t *menu, sfRenderWindow *window);
 int is_play(menu_t *menu, sfRenderWindow *window);
 int is_exit(menu_t *menu, sfRenderWindow *window);
 int is_htp(menu_t *menu, sfRenderWindow *window);
 int is_param(menu_t *menu, sfRenderWindow *window);
+int is_plus(menu_t *menu, sfRenderWindow *window);
+int is_minus(menu_t *menu, sfRenderWindow *window);
+int main_menu(menu_t *menu, sfRenderWindow *window);
 void prepare_text_play(menu_t *menu);
 void prepare_text_exit(menu_t *menu);
 void prepare_text_htp(menu_t *menu);
 void prepare_text_param(menu_t *menu);
+void push_plus(menu_t *menu, sfRenderWindow *window);
+void push_plus2(menu_t *menu, sfRenderWindow *window);
+void push_minus(menu_t *menu, sfRenderWindow *window);
+void push_minus2(menu_t *menu, sfRenderWindow *window);
+void window_settings(menu_t *menu, sfRenderWindow *window);

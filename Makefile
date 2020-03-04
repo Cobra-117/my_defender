@@ -102,6 +102,11 @@ SRCS	=	src/main.c						\
 			src/info_utility.c				\
 			src/manage_visual_effects.c		\
 			src/set_turret_offset.c			\
+			src/window_settings.c			\
+			src/init_text_settings.c		\
+			src/init_button_settings.c		\
+			src/is_volume.c					\
+			src/push_volume.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 

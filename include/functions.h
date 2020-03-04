@@ -84,7 +84,6 @@ int is_utility(Index_t *index);
 
 void give_utilities_scale(Index_t *index);
 sfVector2f get_tile_from_pos(sfVector2f pos);
-int main_menu(sfRenderWindow *window);
 
 void manage_enemies(Index_t *index);
 void manage_snow(Index_t *index);

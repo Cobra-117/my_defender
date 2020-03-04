@@ -7,12 +7,12 @@
 
 #include "../include/my.h"
 
-sfMusic *init_main_menu_music(void)
+sfMusic *init_main_menu_music(menu_t *menu)
 {
     sfMusic *music = sfMusic_createFromFile("assets/music/main_menu_music.ogg");
 
     sfMusic_setLoop(music, sfTrue);
-    sfMusic_setVolume(music, 50);
+    sfMusic_setVolume(music, menu->volume_music);
     sfMusic_play(music);
 
     return (music);
@@ -69,21 +69,19 @@ void init_text_button(menu_t *menu)
     menu->player_choice = 0;
 }
 
-int main_menu(sfRenderWindow *window)
+int main_menu(menu_t *menu, sfRenderWindow *window)
 {
     sfVideoMode mode = {1920, 1080, 32};
     sfEvent event;
-    menu_t menu;
-    sfMusic *music = init_main_menu_music();
+    menu->music = init_main_menu_music(menu);
 
-    init_text_button(&menu);
-    menu.image.text_menu = sfTexture_createFromFile
+    init_text_button(menu);
+    menu->image.text_menu = sfTexture_createFromFile
     ("assets/UI/game_menu.png", NULL);
-    menu.image.spri_menu = sfSprite_create();
-    while (menu.player_choice == 0) {
-        game_menu(&menu, window);
+    menu->image.spri_menu = sfSprite_create();
+    while (menu->player_choice == 0) {
+        game_menu(menu, window);
         sfRenderWindow_display(window);
     }
-    sfMusic_destroy(music);
-    return (menu.player_choice);
+    return (menu->player_choice);
 }
