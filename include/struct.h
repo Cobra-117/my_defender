@@ -37,6 +37,10 @@ typedef struct turret_obj_t
     float damage;
     float range;
     float rotation;
+    int anim_state;
+    int cycles;
+    float time_shoot;
+    float time_anim;
     enemies_list_t *aimed_enemy;
 }turret_obj_t;
 

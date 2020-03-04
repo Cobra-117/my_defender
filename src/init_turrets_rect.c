@@ -38,8 +38,10 @@ void init_turrets_rects(Index_t *index)
     sfSprite_setTextureRect(index->turrets.heavy_mkI_spr, regular);
     sfSprite_setTextureRect(index->turrets.arti_mkI_spr, regular);
     sfSprite_setTextureRect(index->turrets.flame_mkI_spr, flame);
+    sfSprite_setTextureRect(index->turrets.tesla_mkI_spr, regular);
     sfSprite_setTextureRect(index->turrets.casu_mkII_spr, regular);
     sfSprite_setTextureRect(index->turrets.heavy_mkII_spr, regular);
     sfSprite_setTextureRect(index->turrets.arti_mkII_spr, regular);
-    //sfSprite_setTextureRect(index->turrets.flame_mkII_spr, regular);
+    sfSprite_setTextureRect(index->turrets.flame_mkII_spr, flame);
+    sfSprite_setTextureRect(index->turrets.tesla_mkII_spr, regular);
 }

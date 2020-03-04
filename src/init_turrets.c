@@ -18,10 +18,12 @@ void init_turrets_scale(Index_t *index)
     sfSprite_setScale(index->turrets.heavy_mkI_spr, scale);
     sfSprite_setScale(index->turrets.arti_mkI_spr, scale);
     sfSprite_setScale(index->turrets.flame_mkI_spr, scale);
+    sfSprite_setScale(index->turrets.tesla_mkI_spr, scale);
     sfSprite_setScale(index->turrets.casu_mkII_spr, scale);
     sfSprite_setScale(index->turrets.heavy_mkII_spr, scale);
     sfSprite_setScale(index->turrets.arti_mkII_spr, scale);
     sfSprite_setScale(index->turrets.flame_mkII_spr, scale);
+    sfSprite_setScale(index->turrets.tesla_mkII_spr, scale);
 }
 
 void link_turrets_sprites_and_textures(Index_t *index)

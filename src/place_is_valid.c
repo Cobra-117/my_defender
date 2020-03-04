@@ -7,6 +7,48 @@
 
 #include "../include/my.h"
 
+void set_turret_damage(Index_t *index, sfVector2f asked_tile)
+{
+    int type = index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].type;
+
+    if (type == 1 || type == 6)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
+        CASU_DAMAGE;
+    if (type == 2 || type == 7)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
+        HEAVY_DAMAGE;
+    if (type == 3 || type == 8)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        ARTI_DAMAGE;
+    if (type == 4 || type == 9)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        FLAME_DAMAGE;
+    if (type == 5 || type == 10)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        TESLA_DAMAGE;
+}
+
+void set_turret_range(Index_t *index, sfVector2f asked_tile)
+{
+    int type = index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].type;
+
+    if (type == 1 || type == 6)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        DEFAULT_RANGE;
+    if (type == 2 || type == 7)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        DEFAULT_RANGE;
+    if (type == 3 || type == 8)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        LONG_RANGE;
+    if (type == 4 || type == 9)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        DEFAULT_RANGE;
+    if (type == 5 || type == 10)
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        DEFAULT_RANGE;
+}
+
 int can_I_buy_this(Index_t *index)
 {
     return (1);
@@ -21,6 +63,17 @@ void place_turret(Index_t *index, sfVector2f asked_tile)
         index->ui_which_turret;
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].rotation =
         get_turret_optimal_rotation(index, asked_tile);
+        set_turret_range(index, asked_tile);
+        set_turret_damage(index, asked_tile);
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].cycles = 0;
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
+        anim_state = 0;
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
+        aimed_enemy = NULL;
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
+        time_shoot = 0;
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
+        time_anim = 0;
         printf("place_turrets\n");
     } else {
         printf("*angry minecraft npc sound*\n");

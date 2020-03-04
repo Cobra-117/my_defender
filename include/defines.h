@@ -16,8 +16,24 @@
 #define HEAVY_SPEED (5.0)
 
 #define LIGHT_HEALTH (100);
-#define MEDIUM_HEALTH (200);
+#define MEDIUM_HEALTH (200)
 #define HEAVY_HEALTH (300)
+
+/*turrets values*/
+#define DEFAULT_RANGE (128)
+#define LONG_RANGE (256)
+
+#define CASU_DAMAGE (100)
+#define HEAVY_DAMAGE (200)
+#define ARTI_DAMAGE (200)
+#define FLAME_DAMAGE (400)
+#define TESLA_DAMAGE (100)
+
+#define CASU_FIRE_RATE (1)
+#define HEAV_FIRE_RATE (2)
+#define ARTI_FIRE_RATE (3)
+#define FLAME_FIRE_RATE (3)
+#define TESLA_FIRE_RATE (2)
 
 /*Waves values*/
 #define WAVES_TOTAL_NBR (2)
@@ -36,8 +52,8 @@
 #define INTERV_READMAP (500)
 #define INTERV_MOVE_ENEMIES (50)
 #define INTERV_WAVE_BREAK (5000)
-#define INTERV_CHECK_SHOOT (300)
-#define INTERV_TURRET_ANIM (50)
+#define INTERV_CHECK_SHOOT (2000)
+#define INTERV_TURRET_ANIM (1000)
 #define INTEV_FALL_SNOW (50)
 #define INTERV_DEBUG (100)
 

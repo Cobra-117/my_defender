@@ -7,9 +7,46 @@
 
 #include "../include/my.h"
 
+sfIntRect set_turret_rect(Index_t *index, int x, int y)
+{
+    sfIntRect rect;
+    rect.height = 256;
+    rect.width = 256;
+
+    if (index->turrets_array[y][x].type != 4 ||
+    index->turrets_array[y][x].type != 9) {
+        rect.top = 1;
+        if (index->turrets_array[y][x].anim_state == 0)
+            rect.left = 1;
+        else
+            rect.left = 258;
+    }
+    return (rect);
+}
+
+sfSprite *get_the_good_lvl2_sprite(Index_t *index, int x, int y)
+{
+    sfSprite *sprite;
+
+    if (index->turrets_array[x][y].type == 6)
+        sprite  = index->turrets.casu_mkI_spr;
+    if (index->turrets_array[x][y].type == 7)
+        sprite  = index->turrets.heavy_mkI_spr;
+    if (index->turrets_array[x][y].type == 8)
+        sprite  = index->turrets.arti_mkI_spr;
+    if (index->turrets_array[x][y].type == 9)
+        sprite  = index->turrets.flame_mkI_spr;
+    if (index->turrets_array[x][y].type == 10)
+        sprite  = index->turrets.tesla_mkI_spr;
+    return (sprite);
+}
+
 sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
 {
     sfSprite *sprite;
+
+    if (index->turrets_array[x][y].type > 5)
+        return (get_the_good_lvl2_sprite(index, x, y));
     if (index->turrets_array[x][y].type == 1)
         sprite  = index->turrets.casu_mkI_spr;
     if (index->turrets_array[x][y].type == 2)
@@ -18,6 +55,8 @@ sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
         sprite  = index->turrets.arti_mkI_spr;
     if (index->turrets_array[x][y].type == 4)
         sprite  = index->turrets.flame_mkI_spr;
+    if (index->turrets_array[x][y].type == 5)
+        sprite  = index->turrets.tesla_mkI_spr;
     return (sprite);
 }
 
@@ -36,6 +75,9 @@ void display_this_line_of_turrets(Index_t *index, int i)
             sfSprite_setPosition(sprite, pos);
             sfSprite_setRotation(
             sprite, index->turrets_array[i][j].rotation);
+            if (index->turrets_array[i][j].type != 4 ||
+            index->turrets_array[i][j].type != 9)
+                sfSprite_setTextureRect(sprite, set_turret_rect(index, j, i));
             sfRenderWindow_drawSprite(
             index->window, sprite, NULL);
         }

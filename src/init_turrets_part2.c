@@ -34,7 +34,9 @@ void init_turrets_origin(Index_t *index)
     sfSprite_setOrigin(index->turrets.heavy_mkI_spr, regular_origin);
     sfSprite_setOrigin(index->turrets.arti_mkI_spr, regular_origin);
     sfSprite_setOrigin(index->turrets.flame_mkI_spr, flame_origin);
+    sfSprite_setOrigin(index->turrets.tesla_mkI_spr, regular_origin);
     sfSprite_setOrigin(index->turrets.casu_mkII_spr, regular_origin);
     sfSprite_setOrigin(index->turrets.heavy_mkII_spr, regular_origin);
     sfSprite_setOrigin(index->turrets.arti_mkII_spr, regular_origin);
+    sfSprite_setOrigin(index->turrets.tesla_mkII_spr, flame_origin);
 }

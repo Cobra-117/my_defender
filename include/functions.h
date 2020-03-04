@@ -11,6 +11,7 @@ void add_enemy(Index_t *index, int type);
 int button_game_clicked(Index_t *index);
 void buy_turret(Index_t *index);
 void buy_upgrade(Index_t *index);
+float calc_dist(enemies_list_t *current, int y , int x);
 void change_price_upgrade(Index_t *index);
 void change_skills_colors(Index_t *index);
 void change_ui_tower_colors(Index_t *index);
