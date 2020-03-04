@@ -22,6 +22,7 @@ int is_ui_tower(Index_t *index)
 
 int is_utility(Index_t *index)
 {
+    printf("mpos x : %f\n", index->ui.click_size_utility);//C LA QUE CA BUG LA VALEUR EST PAS INIT
     if (index->ui.coord_mouse_x <= index->ui.click_pos_utility.x +
     index->ui.click_size_utility.x && index->ui.coord_mouse_x >=
     index->ui.click_pos_utility.x && index->ui.coord_mouse_y <=
