@@ -269,6 +269,7 @@ typedef struct Index_t
     int light_effect_play;
     int ui_which_turret;
     int ui_is_upgrade;
+    int upgrading;
     sfVector2f pos_turret;
     turret_obj_t **turrets_array;
 }Index_t;

@@ -81,6 +81,7 @@ int is_tesla(Index_t *index);
 int is_tesla2(Index_t *index);
 int is_ui_tower(Index_t *index);
 int is_upgrade(Index_t *index);
+int is_upgrade2(Index_t *index);
 int is_utility(Index_t *index);
 
 void give_utilities_scale(Index_t *index);
@@ -153,6 +154,7 @@ void push_tesla(Index_t *index);
 void push_tesla2(Index_t *index);
 void push_ui_tower(Index_t *index);
 void push_upgrade(Index_t *index);
+void push_upgrade2(Index_t *index);
 void push_utility(Index_t *index);
 
 void quick_init(Index_t *index);

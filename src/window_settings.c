@@ -41,7 +41,7 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     //push_plus2(menu, index, window);
     //push_minus(menu, index, window);
     //push_minus2(menu, index, window);
-    push_back(menu, window);
+    push_back(menu, index, window);
 }
 
 void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)

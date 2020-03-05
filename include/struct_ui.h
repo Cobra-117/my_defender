@@ -84,6 +84,11 @@ typedef struct ui_button_utilities_t
     sfVector2f size_tchernobyl;
     sfVector2f click_pos_tchernobyl;
     sfVector2f click_size_tchernobyl;
+    sfRectangleShape *button_upgrade2;
+    sfVector2f pos_upgrade2;
+    sfVector2f size_upgrade2;
+    sfVector2f click_pos_upgrade2;
+    sfVector2f click_size_upgrade2;
 }ui_button_utilities_t;
 
 typedef struct ui_bunker_t

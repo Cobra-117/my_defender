@@ -112,11 +112,13 @@ struct menu_s {
 
 typedef struct menu_s menu_t;
 
-int button_settings_clicked(menu_t *menu, Index_t *index, sfRenderWindow *window);
+int button_settings_clicked(menu_t *menu, Index_t *index,
+sfRenderWindow *window);
 void push_play(menu_t *menu, sfRenderWindow *window);
 void push_exit(menu_t *menu, sfRenderWindow *window);
 void push_htp(menu_t *menu, sfRenderWindow *window);
 void push_param(menu_t *menu, sfRenderWindow *window);
+void init_button_back(menu_t *menu);
 void init_button_play(menu_t *menu);
 void init_button_exit(menu_t *menu);
 void init_button_htp(menu_t *menu);
@@ -124,6 +126,7 @@ void init_button_param(menu_t *menu);
 void init_button_settings(menu_t *menu);
 void init_text_settings(menu_t *menu);
 int button_is_clicked(menu_t *menu, sfRenderWindow *window);
+int is_back(menu_t *menu, sfRenderWindow *window);
 int is_play(menu_t *menu, sfRenderWindow *window);
 int is_exit(menu_t *menu, sfRenderWindow *window);
 int is_htp(menu_t *menu, sfRenderWindow *window);
@@ -136,6 +139,7 @@ void prepare_text_play(menu_t *menu);
 void prepare_text_exit(menu_t *menu);
 void prepare_text_htp(menu_t *menu);
 void prepare_text_param(menu_t *menu);
+void push_back(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_plus(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_plus2(menu_t *menu, sfRenderWindow *window);
 void push_minus(menu_t *menu, Index_t *index, sfRenderWindow *window);

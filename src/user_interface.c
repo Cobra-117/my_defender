@@ -83,4 +83,5 @@ void init_user_interface(Index_t *index)
     prepare_bunker(index);
     index->ui.coord_mouse_x = 0;
     index->ui.coord_mouse_y = 0;
+    index->upgrading = 0;
 }

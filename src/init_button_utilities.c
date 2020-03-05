@@ -52,9 +52,29 @@ void init_button_tchernobyl(Index_t *index)
     index->ui_button_utilities.size_tchernobyl);
 }
 
+void init_button_upgrade2(Index_t *index)
+{
+    index->ui_button_utilities.pos_upgrade2.x = 810;
+    index->ui_button_utilities.pos_upgrade2.y = 220;
+    index->ui_button_utilities.size_upgrade2.x = 100;
+    index->ui_button_utilities.size_upgrade2.y = 95;
+    index->ui_button_utilities.click_pos_upgrade2.x = 0;
+    index->ui_button_utilities.click_pos_upgrade2.y = 0;
+    index->ui_button_utilities.button_upgrade2 = sfRectangleShape_create();
+    sfRectangleShape_setPosition(index->ui_button_utilities.button_upgrade2,
+    index->ui_button_utilities.pos_upgrade2);
+    sfRectangleShape_setSize(index->ui_button_utilities.button_upgrade2,
+    index->ui_button_utilities.size_upgrade2);
+    sfTexture *texture = sfTexture_createFromFile
+    ("assets/UI/Red_Square.png", NULL);
+    sfRectangleShape_setTexture(index->ui_button_utilities.button_upgrade2,
+    texture, 0);
+}
+
 void init_button_utilities(Index_t *index)
 {
     init_button_mine(index);
     init_button_order(index);
     init_button_tchernobyl(index);
+    init_button_upgrade2(index);
 }

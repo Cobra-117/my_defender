@@ -7,6 +7,14 @@
 
 #include "../include/my.h"
 
+void check_event2(Index_t *index)
+{
+    push_mine(index);
+    push_order(index);
+    push_tchernobyl(index);
+    push_upgrade2(index);
+}
+
 void check_event(Index_t *index)
 {
     push_ui_tower(index);
@@ -26,9 +34,7 @@ void check_event(Index_t *index)
     push_flame2(index);
     push_tesla2(index);
     push_upgrade(index);
-    push_mine(index);
-    push_order(index);
-    push_tchernobyl(index);
+    check_event2(index);
 }
 
 void manage_what_is_open(Index_t *index)
