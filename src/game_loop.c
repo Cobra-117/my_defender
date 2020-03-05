@@ -7,6 +7,14 @@
 
 #include "../include/my.h"
 
+void check_event2(Index_t *index)
+{
+    push_mine(index);
+    push_order(index);
+    push_tchernobyl(index);
+    push_upgrade2(index);
+}
+
 void check_event(Index_t *index)
 {
     push_ui_tower(index);
@@ -26,9 +34,7 @@ void check_event(Index_t *index)
     push_flame2(index);
     push_tesla2(index);
     push_upgrade(index);
-    push_mine(index);
-    push_order(index);
-    push_tchernobyl(index);
+    check_event2(index);
 }
 
 void manage_what_is_open(Index_t *index)
@@ -54,6 +60,7 @@ void manage_what_is_open(Index_t *index)
 
 int game_main_function(Index_t *index)
 {
+    sfRenderWindow_clear(index->window, sfBlack);
     manage_waves(index);
     manage_enemies(index);
     check_event(index);
@@ -64,11 +71,11 @@ int game_main_function(Index_t *index)
     display_snow(index);
     manage_what_is_open(index);
     sfRenderWindow_display(index->window);
-    sfRenderWindow_clear(index->window, sfBlack);
 }
 
 int game_loop(Index_t *index)
 {
+    sfMusic_destroy(index->sound.music);
     quick_init(index);
     init_user_interface(index);
     while (game_main_function(index) != 1 && index->what_is_open != 5

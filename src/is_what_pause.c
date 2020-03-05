@@ -25,8 +25,10 @@ int is_go_menu(Index_t *index)
     index->ui_pause_button.click_pos_go_menu.x && index->ui.coord_mouse_y <=
     index->ui_pause_button.click_pos_go_menu.y + index->ui_pause_button.
     click_size_go_menu.y && index->ui.coord_mouse_y >= index->ui_pause_button.
-    click_pos_go_menu.y && index->what_is_open == 4)
+    click_pos_go_menu.y && index->what_is_open == 4) {
         index->what_is_open = 5;
+        sfMusic_destroy(index->sound.game);
+    }
 }
 
 int is_exit2(Index_t *index)
