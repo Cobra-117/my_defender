@@ -7,17 +7,27 @@
 
 #include "../include/my.h"
 
+int can_I_shoot(Index_t *index, int y, int x)
+{
+    if (index->turrets_array[y][x].type != 5 &&
+    index->turrets_array[y][x].type != 10 &&
+    index->turrets_array[y][x].type != 4 &&
+    index->turrets_array[y][x].type != 9) {
+        if (index->turrets_array[y][x].aimed_enemy == NULL)
+            return (0);
+    }
+    if (time_to_shoot(index, y, x) != 1)
+        return (0);
+    return (1);
+}
+
 int time_to_anime(Index_t *index, int y, int x)
 {
     sfTime current_time = sfClock_getElapsedTime(index->time.clock);
     float time_float = sfTime_asMilliseconds(current_time);
 
-    printf(" time anime x: %i y: %i\n", x, y);
     if (time_float >= index->turrets_array[y][x].time_anim +
     INTERV_TURRET_ANIM) {
-        printf("time to anim\n:"
-        "time : %f time float: %f\n", index->turrets_array[y][x].time_anim, time_float);
-        printf("x: %i y: %i\n", x, y);
         index->turrets_array[y][x].time_anim = time_float;
         return (1);
     }
@@ -40,20 +50,20 @@ int time_to_shoot(Index_t *index, int y, int x)
     return (0);
 }
 
-void manage_this_turret(Index_t *index, int i, int j)
+void manage_this_turret(Index_t *index, int y, int x)
 {
-    if (index->turrets_array[i][j].type == 0)
+    if (index->turrets_array[y][x].type == 0)
         return;
-    set_turret_rotation(index, i, j);
-    if (time_to_shoot(index, i, j) == 1) {
+    set_turret_rotation(index, y, x);
+    if (can_I_shoot(index, y, x) == 1) {
         //printf("will check shoot at x : %i y: %i\n", j, i);
-        index->turrets_array[i][j].cycles += 1;
-        manage_shoot(index, i, j, index->turrets_array[i][j].type);
+        index->turrets_array[y][x].cycles += 1;
+        manage_shoot(index, y, x, index->turrets_array[y][x].type);
     }
-    if (index->turrets_array[i][j].anim_state == 1 &&
-    time_to_anime(index, i, j == 1)) {
-        printf(" after this x: %i y: %i\n", j, i);
-        reset_shoot_anim(index, i, j);
+    if (index->turrets_array[y][x].anim_state == 1 &&
+    time_to_anime(index, y, x) == 1) {
+        //printf(" after this y: %i x: %i\n", y, x);
+        reset_shoot_anim(index, y, x);
     }
     //manage_turret shoot and animation
     //Toute les x ms, on passe à l'état suivant de l'animation

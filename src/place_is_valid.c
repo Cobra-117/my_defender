@@ -18,13 +18,13 @@ void set_turret_damage(Index_t *index, sfVector2f asked_tile)
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
         HEAVY_DAMAGE;
     if (type == 3 || type == 8)
-        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
         ARTI_DAMAGE;
     if (type == 4 || type == 9)
-        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
         FLAME_DAMAGE;
     if (type == 5 || type == 10)
-        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].range =
+        index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].damage =
         TESLA_DAMAGE;
 }
 

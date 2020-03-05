@@ -27,6 +27,7 @@ void display_this_enemy(enemies_list_t *current, Index_t *index)
         sfRenderWindow_drawSprite(index->window,
         index->enemies.heavy_spr, NULL);
     }
+    display_life_bar(index, current);
 }
 
 void display_enemies(Index_t *index)

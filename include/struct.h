@@ -257,6 +257,7 @@ typedef struct Index_t
     ui_bunker_t ui_bunker;
     ui_price_turret_t ui_price_turret;
     ui_button_utilities_t ui_button_utilities;
+    life_bar_t lifebar;
     wave_t wave;
     enemies_list_t *enemies_list;
     ui_text_utilities_t ui_text_utilities;
