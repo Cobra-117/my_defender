@@ -12,20 +12,20 @@ void my_defender(void)
     Index_t index;
     menu_t menu;
     int user_choice = 0;
-    menu.volume_music = 50;
+    index.sound.volume_music = 50;
+    index.sound.game_volume = 40;
 
     init_structs(&index);
     while (1) {
-        user_choice = main_menu(&menu, index.window);
+        user_choice = main_menu(&menu, &index, index.window);
         if (user_choice == 1) {
-            sfMusic_destroy(menu.music);
             if (game_loop(&index) == -1)
                 break;
         }
         if (user_choice == 2)
             break;
         if (user_choice == 4)
-            window_settings(&menu, index.window);
+            window_settings(&menu, &index, index.window);
     }
     free_structs(&index);
 }

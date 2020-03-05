@@ -7,7 +7,8 @@
 
 #include "../include/my.h"
 
-int button_settings_clicked(menu_t *menu, sfRenderWindow *window)
+int button_settings_clicked(menu_t *menu, Index_t *index,
+sfRenderWindow *window)
 {
     sfEvent event;
 
@@ -19,13 +20,14 @@ int button_settings_clicked(menu_t *menu, sfRenderWindow *window)
             menu->button.b = event.mouseMove.y;
         }
         if (event.type == sfEvtMouseButtonPressed) {
-            is_plus(menu, window);
-            is_minus(menu, window);
+            is_plus(menu, index, window);
+            is_minus(menu, index, window);
+            is_back(menu, window);
         }
     }
 }
 
-void settings_loop(sfRenderWindow *window, menu_t *menu)
+void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
 {
     sfRenderWindow_drawSprite(window, menu->image.spri_settings, NULL);
     sfRenderWindow_drawText(window, menu->text_settings.txt_music, NULL);
@@ -34,13 +36,15 @@ void settings_loop(sfRenderWindow *window, menu_t *menu)
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus2, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus2, NULL);
-    push_plus(menu, window);
-    push_plus2(menu, window);
-    push_minus(menu, window);
-    push_minus2(menu, window);
+    sfRenderWindow_drawRectangleShape(window, menu->button.button_back, NULL);
+    push_plus(menu, index, window);
+    //push_plus2(menu, index, window);
+    push_minus(menu, index, window);
+    //push_minus2(menu, index, window);
+    push_back(menu, window);
 }
 
-void window_settings(menu_t *menu, sfRenderWindow *window)
+void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)
 {
     init_text_settings(menu);
     init_button_settings(menu);
@@ -50,7 +54,7 @@ void window_settings(menu_t *menu, sfRenderWindow *window)
     sfSprite_setTexture(menu->image.spri_settings,
     menu->image.text_settings, sfTrue);
     while (menu->player_choice == 4) {
-        settings_loop(window, menu);
+        settings_loop(window, menu, index);
         sfRenderWindow_display(window);
     }
 }

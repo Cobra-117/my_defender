@@ -19,6 +19,9 @@ typedef struct sound_t
 {
     sound_effects_t effects;
     sfMusic *music;
+    sfMusic *game;
+    float game_volume;
+    float volume_music;
 }sound_t;
 
 #endif /* !STRUCT_SOUND_H_ */

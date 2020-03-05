@@ -26,16 +26,16 @@ void quick_time_init(Index_t *index)
     }
 }
 
-void music_init(sound_t sound)
+void music_init(Index_t *index)
 {
     sfTime time;
     time.microseconds = 5500000;
 
-    sound.music = sfMusic_createFromFile("assets/music/kalinka.ogg");
-    sfMusic_setPlayingOffset(sound.music, time);
-    sfMusic_setVolume(sound.music, 40);
-    sfMusic_setLoop(sound.music, sfTrue);
-    sfMusic_play(sound.music);
+    index->sound.game = sfMusic_createFromFile("assets/music/kalinka.ogg");
+    sfMusic_setPlayingOffset(index->sound.game, time);
+    sfMusic_setVolume(index->sound.game, index->sound.game_volume);
+    sfMusic_setLoop(index->sound.game, sfTrue);
+    sfMusic_play(index->sound.game);
 }
 
 void quick_init(Index_t *index)
@@ -44,5 +44,5 @@ void quick_init(Index_t *index)
     index->wave.fd = open(index->wave.filepath, O_RDONLY);
     index->wave.wave_nbr = 1;
     quick_time_init(index);
-    music_init(index->sound);
+    music_init(index);
 }

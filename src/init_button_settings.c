@@ -84,4 +84,5 @@ void init_button_settings(menu_t *menu)
     init_button_minus1(menu);
     init_button_plus2(menu);
     init_button_minus2(menu);
+    init_button_back(menu);
 }

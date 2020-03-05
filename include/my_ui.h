@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <SFML/System/Export.h>
+#include "struct.h"
 
 struct button_s {
     sfRectangleShape *button_play;
@@ -58,6 +59,11 @@ struct button_s {
     sfVector2f size_minus2;
     sfVector2f click_pos_minus2;
     sfVector2f click_size_minus2;
+    sfRectangleShape *button_back;
+    sfVector2f pos_back;
+    sfVector2f size_back;
+    sfVector2f click_pos_back;
+    sfVector2f click_size_back;
     float a;
     float b;
 };
@@ -102,13 +108,11 @@ struct menu_s {
     text_t text;
     text_settings_t text_settings;
     int player_choice;
-    sfMusic *music;
-    int volume_music;
 };
 
 typedef struct menu_s menu_t;
 
-int button_settings_clicked(menu_t *menu, sfRenderWindow *window);
+int button_settings_clicked(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_play(menu_t *menu, sfRenderWindow *window);
 void push_exit(menu_t *menu, sfRenderWindow *window);
 void push_htp(menu_t *menu, sfRenderWindow *window);
@@ -124,15 +128,16 @@ int is_play(menu_t *menu, sfRenderWindow *window);
 int is_exit(menu_t *menu, sfRenderWindow *window);
 int is_htp(menu_t *menu, sfRenderWindow *window);
 int is_param(menu_t *menu, sfRenderWindow *window);
-int is_plus(menu_t *menu, sfRenderWindow *window);
-int is_minus(menu_t *menu, sfRenderWindow *window);
-int main_menu(menu_t *menu, sfRenderWindow *window);
+int is_plus(menu_t *menu, Index_t *index, sfRenderWindow *window);
+int is_minus(menu_t *menu, Index_t *index, sfRenderWindow *window);
+int main_menu(menu_t *menu, Index_t *index, sfRenderWindow *window);
+sfMusic *init_main_menu_music(Index_t *index);
 void prepare_text_play(menu_t *menu);
 void prepare_text_exit(menu_t *menu);
 void prepare_text_htp(menu_t *menu);
 void prepare_text_param(menu_t *menu);
-void push_plus(menu_t *menu, sfRenderWindow *window);
+void push_plus(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_plus2(menu_t *menu, sfRenderWindow *window);
-void push_minus(menu_t *menu, sfRenderWindow *window);
+void push_minus(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_minus2(menu_t *menu, sfRenderWindow *window);
-void window_settings(menu_t *menu, sfRenderWindow *window);
+void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window);

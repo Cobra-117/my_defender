@@ -108,6 +108,7 @@ SRCS	=	src/main.c						\
 			src/init_button_settings.c		\
 			src/is_volume.c					\
 			src/push_volume.c				\
+			src/init_button_back.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 
