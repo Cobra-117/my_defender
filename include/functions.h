@@ -22,6 +22,7 @@ int compare_time(Index_t *index, int balise_nbr, float interval);
 
 void display_enemies(Index_t *index);
 void display_first_layers(Index_t *index);
+void display_life_bar(Index_t *index, enemies_list_t *current);
 void display_map(Index_t *index);
 void display_snow(Index_t *index);
 void display_user_interface(Index_t *index);

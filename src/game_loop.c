@@ -60,6 +60,7 @@ void manage_what_is_open(Index_t *index)
 
 int game_main_function(Index_t *index)
 {
+    sfRenderWindow_clear(index->window, sfBlack);
     manage_waves(index);
     manage_enemies(index);
     check_event(index);
@@ -70,7 +71,6 @@ int game_main_function(Index_t *index)
     display_snow(index);
     manage_what_is_open(index);
     sfRenderWindow_display(index->window);
-    sfRenderWindow_clear(index->window, sfBlack);
 }
 
 int game_loop(Index_t *index)

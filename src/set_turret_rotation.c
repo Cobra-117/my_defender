@@ -15,7 +15,7 @@ float calc_dist(enemies_list_t *current, int y , int x)
 
     if (current->type == 0)
         return (999);
-    dist_x = current->coordinates.x- x * 64;
+    dist_x = current->coordinates.x - x * 64;
     dist_z = current->coordinates.y - y * 64;
     dist = (dist_x + dist_z);
     return (dist);
@@ -51,8 +51,7 @@ void set_turret_rotation(Index_t *index, int y, int x)
     enemies_list_t *closest;
 
     //printf("this function\n");
-    if (index->turrets_array[y][x].type != 5 &&
-    index->turrets_array[y][x].type != 10) {
+    if (1 == 1) {
         if ((index->turrets_array[y][x].type == 4 ||
         index->turrets_array[y][x].type == 9))
             return;

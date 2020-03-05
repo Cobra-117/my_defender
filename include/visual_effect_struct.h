@@ -10,7 +10,6 @@
 #ifndef VISUAL_EFFECT_STRUCT_H_
 #define VISUAL_EFFECT_STRUCT_H_
 
-
 typedef struct falling_snow_t
 {
     sfTexture *texture;

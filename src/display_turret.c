@@ -29,15 +29,15 @@ sfSprite *get_the_good_lvl2_sprite(Index_t *index, int x, int y)
     sfSprite *sprite;
 
     if (index->turrets_array[x][y].type == 6)
-        sprite  = index->turrets.casu_mkI_spr;
+        sprite  = index->turrets.casu_mkII_spr;
     if (index->turrets_array[x][y].type == 7)
-        sprite  = index->turrets.heavy_mkI_spr;
+        sprite  = index->turrets.heavy_mkII_spr;
     if (index->turrets_array[x][y].type == 8)
-        sprite  = index->turrets.arti_mkI_spr;
+        sprite  = index->turrets.arti_mkII_spr;
     if (index->turrets_array[x][y].type == 9)
-        sprite  = index->turrets.flame_mkI_spr;
+        sprite  = index->turrets.flame_mkII_spr;
     if (index->turrets_array[x][y].type == 10)
-        sprite  = index->turrets.tesla_mkI_spr;
+        sprite  = index->turrets.tesla_mkII_spr;
     return (sprite);
 }
 

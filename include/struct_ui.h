@@ -10,6 +10,14 @@
 #ifndef STRUCT_UI_H_
 #define STRUCT_UI_H_
 
+typedef struct life_bar_t
+{
+    sfTexture *red_tex;
+    sfSprite *red_spr;
+    sfTexture *green_tex;
+    sfSprite *green_spr;
+}life_bar_t;
+
 typedef struct ui_button_skills_t
 {
     sfRectangleShape *button_casu2;

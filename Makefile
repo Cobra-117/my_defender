@@ -108,6 +108,8 @@ SRCS	=	src/main.c						\
 			src/init_button_settings.c		\
 			src/is_volume.c					\
 			src/push_volume.c				\
+			src/shoot_tesla.c				\
+			src/display_life_bar.c			\
 			src/init_button_back.c			\
 			src/push_upgrade2.c				\
 			src/is_upgrade2.c				\
