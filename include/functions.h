@@ -47,6 +47,7 @@ void init_money_life(Index_t *index);
 void init_obj(Index_t *index);
 void init_price_turrets(Index_t *index);
 void init_skill(Index_t *index);
+sfSound *init_sound(Index_t *index);
 void init_structs(Index_t *index);
 void init_text_casu2(Index_t *index);
 void init_text_upgrade(Index_t *index);

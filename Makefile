@@ -112,6 +112,7 @@ SRCS	=	src/main.c						\
 			src/push_upgrade2.c				\
 			src/is_upgrade2.c				\
 			src/upgrading.c					\
+			src/init_sound.c				\
 
 OBJ 	=	$(SRCS.c= .o)
 

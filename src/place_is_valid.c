@@ -100,4 +100,5 @@ void place_is_valid(Index_t *index)
 
     place_turret(index, asked_tile);
     printf("placeisvalid\n");
+    sfSound_play(index->sound.effects.no);
 }
