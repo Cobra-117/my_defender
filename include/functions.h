@@ -20,6 +20,7 @@ void check_text(Index_t *index);
 void check_the_upgrade(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
 
+void display_bunker(Index_t *index);
 void display_enemies(Index_t *index);
 void display_first_layers(Index_t *index);
 void display_life_bar(Index_t *index, enemies_list_t *current);
@@ -90,6 +91,7 @@ void give_utilities_scale(Index_t *index);
 sfVector2f get_tile_from_pos(sfVector2f pos);
 
 void manage_enemies(Index_t *index);
+int manage_shoot_cycles(Index_t *index, int x, int y);
 void manage_snow(Index_t *index);
 void manage_turrets(Index_t *index);
 void manage_visual_effects(Index_t *index);
@@ -165,6 +167,8 @@ void rm_enemy(Index_t *index, enemies_list_t *current);
 sfVector2f set_turret_offset(Index_t *index, int x, int y, sfVector2f pos);
 void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
+
+int time_to_anime_tesla(Index_t *index, int y, int x);
 
 int will_collision_if_move_down(Index_t *index, enemies_list_t *current);
 int will_collision_if_move_forward(Index_t *index, enemies_list_t *current);

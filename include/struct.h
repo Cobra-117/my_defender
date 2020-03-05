@@ -271,6 +271,7 @@ typedef struct Index_t
     int ui_which_turret;
     int ui_is_upgrade;
     int upgrading;
+    int bunker_life;
     sfVector2f pos_turret;
     turret_obj_t **turrets_array;
 }Index_t;

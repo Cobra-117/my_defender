@@ -32,6 +32,7 @@ void move_this_enemy(Index_t *index, enemies_list_t *current)
     current_case = get_tile_from_pos(current->coordinates);
     if (current->coordinates.y >= 800 + 64 ||
     current->coordinates.x >= 1920 + 64) {
+        index->bunker_life -= current->type;
         rm_enemy(index, current);
         return;
     }

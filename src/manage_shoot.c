@@ -25,16 +25,17 @@ void manage_shoot(Index_t *index, int i, int j, int type)
     }
     if (index->turrets_array[i][j].type == 5 ||
     index->turrets_array[i][j].type == 10) {
+        printf("pan pan TESLA\n");
         shoot_tesla(index, i, j);
         return;
     }
-    //printf("type: %i \n", index->turrets_array[i][j].aimed_enemy->type);
     if (calc_dist(index->turrets_array[i][j].aimed_enemy, i, j) >=
     -index->turrets_array[i][j].range) {
-        index->turrets_array[i][j].aimed_enemy->life -= 30;
+        index->turrets_array[i][j].aimed_enemy->life -=
+        index->turrets_array[i][j].damage;
+        index->turrets_array[i][j].cycles = 0;
         set_regular_shoot_anim(index, i, j);
         printf("pan pan!\n");
-        //printf("pan pan!\n x: %i y: %i\n", j, i);
     }
     if (index->turrets_array[i][j].aimed_enemy->life <= 0)
         rm_enemy(index, index->turrets_array[i][j].aimed_enemy);

@@ -31,4 +31,5 @@ void init_structs(Index_t *index)
     init_time(index);
     init_snow(&index->vis_effects);
     init_life_bar(index);
+    index->bunker_life = BUNKER_LIFE;
 }

@@ -76,6 +76,7 @@ void place_turret(Index_t *index, sfVector2f asked_tile)
         time_anim = 0;
         printf("place_turrets\n");
     } else {
+        sfSound_play(index->sound.effects.no);
         printf("*angry minecraft npc sound*\n");
     }
 }
@@ -99,6 +100,4 @@ void place_is_valid(Index_t *index)
     //if power, power and return;
 
     place_turret(index, asked_tile);
-    printf("placeisvalid\n");
-    sfSound_play(index->sound.effects.no);
 }
