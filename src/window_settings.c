@@ -37,9 +37,9 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus2, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus2, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_back, NULL);
-    push_plus(menu, index, window);
+    //push_plus(menu, index, window);
     //push_plus2(menu, index, window);
-    push_minus(menu, index, window);
+    //push_minus(menu, index, window);
     //push_minus2(menu, index, window);
     push_back(menu, window);
 }
