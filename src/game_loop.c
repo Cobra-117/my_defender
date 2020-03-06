@@ -64,6 +64,7 @@ int game_main_function(Index_t *index)
     manage_waves(index);
     manage_enemies(index);
     check_event(index);
+    manage_power(index);
     manage_turrets(index);
     manage_visual_effects(index);
     display_first_layers(index);

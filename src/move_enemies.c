@@ -48,6 +48,8 @@ void move_enemies(Index_t *index)
 {
     enemies_list_t *current;
 
+    if (index->game_effects.blizzard == sfTrue)
+        return;
     current = *(&index->enemies_list);
     while (current->next != NULL)
     {

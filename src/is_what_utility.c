@@ -16,6 +16,7 @@ int is_mine(Index_t *index)
     click_size_mine.y && index->ui.coord_mouse_y >= index->ui_button_utilities.
     click_pos_mine.y && index->what_is_open == 2) {
         index->game_effects.blizzard = sfTrue;
+        compare_time(index, BAL_BLIZZARD, INTERV_BLIZZARD);
     }
 }
 

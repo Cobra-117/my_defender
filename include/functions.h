@@ -21,6 +21,7 @@ void check_text(Index_t *index);
 void check_the_upgrade(Index_t *index);
 int compare_time(Index_t *index, int balise_nbr, float interval);
 
+void destroy_turrets(Index_t *index);
 void display_bunker(Index_t *index);
 void display_enemies(Index_t *index);
 void display_first_layers(Index_t *index);
@@ -96,6 +97,7 @@ sfVector2f get_tile_from_pos(sfVector2f pos);
 
 void manage_enemies(Index_t *index);
 void make_game_music_created(Index_t *index);
+void manage_power(Index_t *index);
 int manage_shoot_cycles(Index_t *index, int x, int y);
 void manage_snow(Index_t *index);
 void manage_turrets(Index_t *index);
