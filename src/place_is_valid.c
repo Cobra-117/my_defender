@@ -58,7 +58,7 @@ void place_turret(Index_t *index, sfVector2f asked_tile)
 {
     if (index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].type == 0 &&
     index->map.map_array[(int)asked_tile.y][(int)asked_tile.x] == 't' &&
-    can_I_buy_this(index) == 1) {
+    buy_turret(index) != -1) {
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].type =
         index->ui_which_turret;
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].rotation =

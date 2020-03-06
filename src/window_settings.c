@@ -34,6 +34,8 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     sfRenderWindow_drawSprite(window, menu->image.spri_settings, NULL);
     sfRenderWindow_drawText(window, menu->text_settings.txt_music, NULL);
     sfRenderWindow_drawText(window, menu->text_settings.txt_sound, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_value_music, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_value_sound, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus2, NULL);
@@ -48,8 +50,8 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
 
 void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)
 {
-    sfMusic_destroy(index->sound.music);
-    init_text_settings(menu);
+    sfMusic_stop(index->sound.music);
+    init_text_settings(menu, index);
     init_button_settings(menu);
     menu->image.text_settings = sfTexture_createFromFile
     ("assets/UI/game_menu.png", NULL);

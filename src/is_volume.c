@@ -18,6 +18,8 @@ int is_plus(menu_t *menu, Index_t *index, sfRenderWindow *window)
         if (index->sound.volume_music < 100) {
             index->sound.volume_music++;
             sfMusic_setVolume(index->sound.music, index->sound.volume_music);
+            sfText_setString(menu->text_settings.txt_value_music,
+            my_nbr_to_str(index->sound.volume_music));
         }
 }
 
@@ -32,6 +34,8 @@ int is_plus2(menu_t *menu, Index_t *index, sfRenderWindow *window)
         if (index->sound.game_volume < 100) {
             index->sound.game_volume++;
             sfMusic_setVolume(index->sound.game, index->sound.game_volume);
+            sfText_setString(menu->text_settings.txt_value_sound,
+            my_nbr_to_str(index->sound.game_volume));
         }
 }
 
@@ -46,6 +50,8 @@ int is_minus(menu_t *menu, Index_t *index, sfRenderWindow *window)
         if (index->sound.volume_music > 0) {
             index->sound.volume_music--;
             sfMusic_setVolume(index->sound.music, index->sound.volume_music);
+            sfText_setString(menu->text_settings.txt_value_music,
+            my_nbr_to_str(index->sound.volume_music));
         }
 }
 
@@ -60,6 +66,8 @@ int is_minus2(menu_t *menu, Index_t *index, sfRenderWindow *window)
         if (index->sound.game_volume > 0) {
             index->sound.game_volume--;
             sfMusic_setVolume(index->sound.game, index->sound.game_volume);
+            sfText_setString(menu->text_settings.txt_value_sound,
+            my_nbr_to_str(index->sound.game_volume));
         }
 }
 

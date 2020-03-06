@@ -30,5 +30,10 @@ void init_price_turrets(Index_t *index)
     index->ui_price_turret.price_arti2 = 700;
     index->ui_price_turret.price_flamme2 = 800;
     index->ui_price_turret.price_tesla2 = 800;
+    index->ui_price_turret.price_casu_upgrade = 100;
+    index->ui_price_turret.price_heavy_upgrade = 250;
+    index->ui_price_turret.price_arti_upgrade = 175;
+    index->ui_price_turret.price_flamme_upgrade = 200;
+    index->ui_price_turret.price_tesla_upgrade = 200;
     init_turrets_value(index);
 }

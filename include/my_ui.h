@@ -98,6 +98,10 @@ struct text_settings_s {
     sfVector2f pos_music;
     sfText *txt_sound;
     sfVector2f pos_sound;
+    sfText *txt_value_music;
+    sfVector2f pos_value_music;
+    sfText *txt_value_sound;
+    sfVector2f pos_value_sound;
 };
 
 typedef struct text_settings_s text_settings_t;
@@ -124,7 +128,7 @@ void init_button_exit(menu_t *menu);
 void init_button_htp(menu_t *menu);
 void init_button_param(menu_t *menu);
 void init_button_settings(menu_t *menu);
-void init_text_settings(menu_t *menu);
+void init_text_settings(menu_t *menu, Index_t *index);
 int button_is_clicked(menu_t *menu, sfRenderWindow *window);
 int is_back(menu_t *menu, sfRenderWindow *window);
 int is_play(menu_t *menu, sfRenderWindow *window);
