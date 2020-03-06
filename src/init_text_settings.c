@@ -53,7 +53,7 @@ void init_text_value_game_music(menu_t *menu, Index_t *index)
 {
     menu->text_settings.txt_value_sound = sfText_create();
     sfText_setString(menu->text_settings.txt_value_sound,
-    my_nbr_to_str(index->sound.game_volume));
+    my_nbr_to_str(index->sound.effects.volume_effects));
     menu->text.font = sfFont_createFromFile("assets/UI/arial_font.TTF");
     sfText_setFont(menu->text_settings.txt_value_sound, menu->text.font);
     sfText_setColor(menu->text_settings.txt_value_sound, sfWhite);
