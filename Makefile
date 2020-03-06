@@ -121,6 +121,7 @@ SRCS	=	src/main.c						\
 			src/upgrade_turrets.c			\
 			src/modify_upgrade_turrets.c	\
 			src/is_what_utility.c			\
+			src/are_we_in_the_menu.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 
