@@ -15,6 +15,20 @@ int is_plus(menu_t *menu, Index_t *index, sfRenderWindow *window)
     menu->button.click_pos_plus.y + menu->button.
     click_size_plus.y && menu->button.b >= menu->button.
     click_pos_plus.y)
+        if (index->sound.volume_music < 100) {
+            index->sound.volume_music++;
+            sfMusic_setVolume(index->sound.music, index->sound.volume_music);
+        }
+}
+
+int is_plus2(menu_t *menu, Index_t *index, sfRenderWindow *window)
+{
+    if (menu->button.a <= menu->button.click_pos_plus2.x +
+    menu->button.click_size_plus2.x && menu->button.a >=
+    menu->button.click_pos_plus2.x && menu->button.b <=
+    menu->button.click_pos_plus2.y + menu->button.
+    click_size_plus2.y && menu->button.b >= menu->button.
+    click_pos_plus2.y)
         if (index->sound.game_volume < 100) {
             index->sound.game_volume++;
             sfMusic_setVolume(index->sound.game, index->sound.game_volume);
@@ -29,8 +43,22 @@ int is_minus(menu_t *menu, Index_t *index, sfRenderWindow *window)
     menu->button.click_pos_minus.y + menu->button.
     click_size_minus.y && menu->button.b >= menu->button.
     click_pos_minus.y)
+        if (index->sound.volume_music > 0) {
+            index->sound.volume_music--;
+            sfMusic_setVolume(index->sound.music, index->sound.volume_music);
+        }
+}
+
+int is_minus2(menu_t *menu, Index_t *index, sfRenderWindow *window)
+{
+    if (menu->button.a <= menu->button.click_pos_minus2.x +
+    menu->button.click_size_minus2.x && menu->button.a >=
+    menu->button.click_pos_minus2.x && menu->button.b <=
+    menu->button.click_pos_minus2.y + menu->button.
+    click_size_minus2.y && menu->button.b >= menu->button.
+    click_pos_minus2.y)
         if (index->sound.game_volume > 0) {
-            index->sound.game_volume -= 1;
+            index->sound.game_volume--;
             sfMusic_setVolume(index->sound.game, index->sound.game_volume);
         }
 }

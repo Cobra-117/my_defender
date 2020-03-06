@@ -91,6 +91,7 @@ void give_utilities_scale(Index_t *index);
 sfVector2f get_tile_from_pos(sfVector2f pos);
 
 void manage_enemies(Index_t *index);
+void make_game_music_created(Index_t *index);
 int manage_shoot_cycles(Index_t *index, int x, int y);
 void manage_snow(Index_t *index);
 void manage_turrets(Index_t *index);
@@ -169,6 +170,7 @@ void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
 int time_to_anime_tesla(Index_t *index, int y, int x);
+void upgrading(Index_t *index);
 
 int will_collision_if_move_down(Index_t *index, enemies_list_t *current);
 int will_collision_if_move_forward(Index_t *index, enemies_list_t *current);

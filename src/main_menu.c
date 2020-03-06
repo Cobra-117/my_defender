@@ -76,6 +76,7 @@ int main_menu(menu_t *menu, Index_t *index, sfRenderWindow *window)
 
     init_text_button(menu);
     index->sound.music = init_main_menu_music(index);
+    make_game_music_created(index);
     menu->image.text_menu = sfTexture_createFromFile
     ("assets/UI/game_menu.png", NULL);
     menu->image.spri_menu = sfSprite_create();
