@@ -7,6 +7,13 @@
 
 #include "../include/my.h"
 
+void init_game_effects(Index_t *index)
+{
+    index->game_effects.blizzard = sfFalse;
+    index->game_effects.chernobyl = sfFalse;
+    index->game_effects.order = sfFalse;
+}
+
 void init_life_bar(Index_t *index)
 {
     index->lifebar.red_tex =
@@ -31,5 +38,6 @@ void init_structs(Index_t *index)
     init_time(index);
     init_snow(&index->vis_effects);
     init_life_bar(index);
+    init_game_effects(index);
     index->bunker_life = BUNKER_LIFE;
 }

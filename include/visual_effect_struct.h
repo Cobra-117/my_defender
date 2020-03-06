@@ -16,6 +16,9 @@ typedef struct falling_snow_t
     sfSprite *sprite;
     sfVector2f pos_1;
     sfVector2f pos_2;
+    sfImage *white_img;
+    sfTexture *white_tex;
+    sfSprite *white_spr;
 }falling_snow_t;
 
 typedef struct visual_effects_t

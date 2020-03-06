@@ -13,6 +13,13 @@
 #ifndef STRUCT_H_
 #define STRUCT_H_
 
+typedef struct game_effects_t
+{
+    sfBool blizzard;
+    sfBool chernobyl;
+    sfBool order;
+}game_effects_t;
+
 typedef struct mytime_t
 {
     sfClock *clock;
@@ -274,6 +281,7 @@ typedef struct Index_t
     int bunker_life;
     sfVector2f pos_turret;
     turret_obj_t **turrets_array;
+    game_effects_t game_effects;
 }Index_t;
 
 

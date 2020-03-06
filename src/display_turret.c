@@ -10,10 +10,12 @@
 sfIntRect set_turret_rect(Index_t *index, int x, int y)
 {
     sfIntRect rect;
+    sfIntRect Flamerect;
     rect.height = 256;
     rect.width = 256;
 
-    if (index->turrets_array[y][x].type != 4 ||
+
+    if (index->turrets_array[y][x].type != 4 &&
     index->turrets_array[y][x].type != 9) {
         rect.top = 1;
         if (index->turrets_array[y][x].anim_state == 0)
@@ -75,7 +77,7 @@ void display_this_line_of_turrets(Index_t *index, int i)
             sfSprite_setPosition(sprite, pos);
             sfSprite_setRotation(
             sprite, index->turrets_array[i][j].rotation);
-            if (index->turrets_array[i][j].type != 4 ||
+            if (index->turrets_array[i][j].type != 4 &&
             index->turrets_array[i][j].type != 9)
                 sfSprite_setTextureRect(sprite, set_turret_rect(index, j, i));
             sfRenderWindow_drawSprite(

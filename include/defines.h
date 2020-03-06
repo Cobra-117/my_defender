@@ -47,6 +47,9 @@
 #define BAL_CHECK_SHOOT (3)
 #define BAL_TURRET_ANIM (4)
 #define BAL_SNOW (5)
+#define BAL_BLIZZARD (6)
+#define BAL_ORDER (7)
+#define BAL_FREEZE (8)
 #define BAL_DEBUG (9)
 
 #define INTERV_READMAP (500)
@@ -56,6 +59,8 @@
 #define INTERV_TURRET_ANIM (400)
 #define INTERV_TESLA_ANIM (200)
 #define INTEV_FALL_SNOW (50)
+#define INTERV_BLIZZARD (5000)
+#define INTERV_FREEZE (1000)
 #define INTERV_DEBUG (100)
 
 /*misc*/
