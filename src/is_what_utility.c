@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-int info_mine(Index_t *index)
+int is_mine(Index_t *index)
 {
     if (index->ui.coord_mouse_x <= index->ui_button_utilities.click_pos_mine.x +
     index->ui_button_utilities.click_size_mine.x && index->ui.coord_mouse_x >=
@@ -15,7 +15,7 @@ int info_mine(Index_t *index)
     index->ui_button_utilities.click_pos_mine.y + index->ui_button_utilities.
     click_size_mine.y && index->ui.coord_mouse_y >= index->ui_button_utilities.
     click_pos_mine.y && index->what_is_open == 2) {
-        index->game_effect.blizzard = sfTrue;
+        index->game_effects.blizzard = sfTrue;
     }
 }
 
@@ -28,7 +28,7 @@ int is_order(Index_t *index)
     .y + index->ui_button_utilities.click_size_order.y && index->ui.
     coord_mouse_y >= index->ui_button_utilities.click_pos_order.y &&
     index->what_is_open == 2) {
-        index->game_effect.order = sfTrue;
+        index->game_effects.order = sfTrue;
     }
 }
 
@@ -41,6 +41,6 @@ int is_tchernobyl(Index_t *index)
     ui_button_utilities.click_pos_tchernobyl.y + index->ui_button_utilities.
     click_size_tchernobyl.y && index->ui.coord_mouse_y >= index->
     ui_button_utilities.click_pos_tchernobyl.y && index->what_is_open == 2) {
-        index->game_effect.chernobyl = sfTrue;
+        index->game_effects.chernobyl = sfTrue;
     }
 }

@@ -11,6 +11,9 @@ void check_what_is_it2(Index_t *index)
 {
     is_upgrade(index);
     is_upgrade2(index);
+    is_order(index);
+    is_mine(index);
+    is_tchernobyl(index);
     if (index->upgrading == 1)
         upgrading(index);
 }

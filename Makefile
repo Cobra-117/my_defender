@@ -120,6 +120,7 @@ SRCS	=	src/main.c						\
 			src/make_game_music_created.c	\
 			src/upgrade_turrets.c			\
 			src/modify_upgrade_turrets.c	\
+			src/is_what_utility.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 
