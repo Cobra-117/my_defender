@@ -75,7 +75,7 @@ void place_turret(Index_t *index, sfVector2f asked_tile)
         index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
         time_anim = 0;
         printf("place_turrets\n");
-    } else {
+    } else if (are_we_in_the_menu(index) == -1) {
         sfSound_play(index->sound.effects.no);
         printf("*angry minecraft npc sound*\n");
     }

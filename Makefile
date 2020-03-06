@@ -123,6 +123,7 @@ SRCS	=	src/main.c						\
 			src/is_what_utility.c			\
 			src/manage_powers.c				\
 			src/reset_game_state.c			\
+			src/are_we_in_the_menu.c		\
 
 OBJ 	=	$(SRCS.c= .o)
 

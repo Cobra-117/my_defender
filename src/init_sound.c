@@ -7,14 +7,33 @@
 
 #include "../include/my.h"
 
-sfSound *init_sound(Index_t *index)
+void set_volume_sound(Index_t *index)
 {
-    sfSound *sound = sfSound_create();
-    sfSoundBuffer *buffer =
+    sfSound_setVolume(index->sound.effects.no,
+    index->sound.effects.volume_effects);
+}
+
+void set_buffer_sound(Index_t *index)
+{
+    sfSound_setBuffer(index->sound.effects.no, index->sound.effects.buffer);
+}
+
+void create_buffer_sound(Index_t *index)
+{
+    index->sound.effects.buffer =
     sfSoundBuffer_createFromFile("assets/sounds/no.ogg");
+}
 
-    sfSound_setBuffer(sound, buffer);
-    sfSound_setVolume(sound, 100);
+void create_sound(Index_t *index)
+{
+    index->sound.effects.no = sfSound_create();
+}
 
-    return (sound);
+void init_sound(Index_t *index)
+{
+    create_sound(index);
+    create_buffer_sound(index);
+    set_buffer_sound(index);
+    set_volume_sound(index);
+    index->sound.effects.volume_effects = 100;
 }
