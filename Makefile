@@ -125,6 +125,8 @@ SRCS	=	src/main.c						\
 			src/reset_game_state.c			\
 			src/are_we_in_the_menu.c		\
 			src/get_score.c					\
+			src/is_game_finished.c			\
+			src/quick_free.c 				\
 
 OBJ 	=	$(SRCS.c= .o)
 

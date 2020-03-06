@@ -60,6 +60,8 @@ void manage_what_is_open(Index_t *index)
 
 int game_main_function(Index_t *index)
 {
+    int game_result = 0;
+
     sfRenderWindow_clear(index->window, sfBlack);
     manage_waves(index);
     manage_enemies(index);
@@ -72,6 +74,10 @@ int game_main_function(Index_t *index)
     display_snow(index);
     manage_what_is_open(index);
     sfRenderWindow_display(index->window);
+    game_result = is_game_finished(index);
+    if (game_result != 0)
+        return (game_result);
+    return (0);
 }
 
 int game_loop(Index_t *index)
@@ -79,8 +85,13 @@ int game_loop(Index_t *index)
     sfMusic_destroy(index->sound.music);
     quick_init(index);
     init_user_interface(index);
-    while (game_main_function(index) != 1 && index->what_is_open != 5
-    && index->what_is_open != 6);
+    while (index->what_is_open != 5
+    && index->what_is_open != 6) {
+        if (game_main_function(index) != 0)
+            break;
+    }
+    quick_free(index);
+    //fonction free
     if (index->what_is_open == 6)
         return (-1);
 }

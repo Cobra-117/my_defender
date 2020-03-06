@@ -31,6 +31,7 @@ void display_map(Index_t *index);
 void display_snow(Index_t *index);
 void display_user_interface(Index_t *index);
 
+void empty_enemies_list(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
 int game_loop(Index_t *index);
@@ -78,6 +79,7 @@ int is_casu2(Index_t *index);
 int is_exit2(Index_t *index);
 int is_flamme(Index_t *index);
 int is_flame2(Index_t *index);
+int is_game_finished(Index_t *index);
 int is_go_menu(Index_t *index);
 int is_heavy(Index_t *index);
 int is_heavy2(Index_t *index);
@@ -177,6 +179,7 @@ void push_upgrade(Index_t *index);
 void push_upgrade2(Index_t *index);
 void push_utility(Index_t *index);
 
+void quick_free(Index_t *index);
 void quick_init(Index_t *index);
 void rm_enemy(Index_t *index, enemies_list_t *current);
 
