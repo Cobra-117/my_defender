@@ -8,6 +8,7 @@
 #include "struct.h"
 #include "includes.h"
 void add_enemy(Index_t *index, int type);
+int are_we_in_the_menu(Index_t *index);
 int button_game_clicked(Index_t *index);
 int buy_turret(Index_t *index);
 void buy_upgrade(Index_t *index);
@@ -68,6 +69,8 @@ void init_utility(Index_t *index);
 void init_wave(Index_t *index);
 void init_window(Index_t *index);
 
+char *int_to_string(int i);
+
 int is_arti(Index_t *index);
 int is_arti2(Index_t *index);
 int is_casu(Index_t *index);
@@ -94,6 +97,7 @@ int is_utility(Index_t *index);
 
 void give_utilities_scale(Index_t *index);
 sfVector2f get_tile_from_pos(sfVector2f pos);
+void get_score(Index_t *index);
 
 void manage_enemies(Index_t *index);
 void make_game_music_created(Index_t *index);

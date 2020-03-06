@@ -7,7 +7,7 @@
 
 #include "../include/my.h"
 
-int get_nbr_len(int i)
+int get_nbr_len_sp(int i)
 {
     int size;
 
@@ -18,7 +18,7 @@ int get_nbr_len(int i)
 
 char *my_nbr_to_str(int i)
 {
-    int size = get_nbr_len(i);
+    int size = get_nbr_len_sp(i);
     char *str = malloc(sizeof(char) * size + 1);
 
     if (i == 0)
