@@ -25,7 +25,6 @@ void manage_shoot(Index_t *index, int i, int j, int type)
     }
     if (index->turrets_array[i][j].type == 5 ||
     index->turrets_array[i][j].type == 10) {
-        printf("pan pan TESLA\n");
         shoot_tesla(index, i, j);
         return;
     }
@@ -33,9 +32,13 @@ void manage_shoot(Index_t *index, int i, int j, int type)
     -index->turrets_array[i][j].range) {
         index->turrets_array[i][j].aimed_enemy->life -=
         index->turrets_array[i][j].damage;
+        if (index->game_effects.order == sfTrue) {
+            index->turrets_array[i][j].aimed_enemy->life -=
+            index->turrets_array[i][j].damage * 4;
+            printf("ORDER DAMAGE CYKA BLYAT\n");
+        }
         index->turrets_array[i][j].cycles = 0;
         set_regular_shoot_anim(index, i, j);
-        printf("pan pan!\n");
     }
     if (index->turrets_array[i][j].aimed_enemy->life <= 0)
         rm_enemy(index, index->turrets_array[i][j].aimed_enemy);

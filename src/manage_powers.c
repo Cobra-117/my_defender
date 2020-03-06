@@ -20,4 +20,11 @@ void manage_power(Index_t *index)
         destroy_turrets(index);
         index->game_effects.chernobyl = sfFalse;
     }
+    if (index->game_effects.order == sfTrue) {
+        if (compare_time(index, BAL_ORDER, INTERV_ORDER) == 1) {
+            index->game_effects.order = sfFalse;
+            sfSound_stop(index->sound.effects.anthem);
+            sfMusic_play(index->sound.game);
+        }
+    }
 }

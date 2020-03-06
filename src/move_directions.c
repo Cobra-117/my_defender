@@ -25,6 +25,8 @@ float get_path_dir(Index_t *index, enemies_list_t *current, sfVector2f tile)
 
 void move_forward(Index_t *index, enemies_list_t *current, sfVector2f tile)
 {
+    int advancement = 0;
+
     if (index->map.map_array[(int)tile.y][(int)tile.x + 1] == 'x') {
         if (current->coordinates.x >= tile.x * 64 + 32) {
             current->coordinates.x = tile.x * 64 + 32;
@@ -32,8 +34,11 @@ void move_forward(Index_t *index, enemies_list_t *current, sfVector2f tile)
             return;
         }
     }
-    if (will_collision_if_move_forward(index, current) == 0)
-        current->coordinates.x += current->speed;
+    while ((will_collision_if_move_forward(index, current) == 0) &&
+    advancement <= current->speed) {
+        current->coordinates.x += 1;
+        advancement++;
+    }
 }
 
 void move_backward(Index_t *index, enemies_list_t *current, sfVector2f tile)
@@ -51,6 +56,8 @@ void move_backward(Index_t *index, enemies_list_t *current, sfVector2f tile)
 
 void move_up(Index_t *index, enemies_list_t *current, sfVector2f tile)
 {
+    int advancement = 0;
+
     if (index->map.map_array[(int)tile.y - 1][(int)tile.x] == 'x') {
         if (current->coordinates.y <= tile.y * 64 + 32) {
             current->coordinates.y = tile.y * 64 + 32;
@@ -58,12 +65,19 @@ void move_up(Index_t *index, enemies_list_t *current, sfVector2f tile)
             return;
         }
     }
-    if (will_collision_if_move_up(index, current) == 0)
-        current->coordinates.y -= current->speed;
+    while ((will_collision_if_move_up(index, current) == 0) &&
+    advancement <= current->speed) {
+        current->coordinates.y -= 1;
+        advancement++;
+    }
+    /*if (will_collision_if_move_up(index, current) == 0)
+        current->coordinates.y -= current->speed;*/
 }
 
 void move_down(Index_t *index, enemies_list_t *current, sfVector2f tile)
 {
+    int advancement = 0;
+
     if (index->map.map_array[(int)tile.y + 1][(int)tile.x] == 'x') {
         if (current->coordinates.y >= tile.y * 64 + 32) {
             current->coordinates.y = tile.y * 64 + 32;
@@ -71,6 +85,11 @@ void move_down(Index_t *index, enemies_list_t *current, sfVector2f tile)
             return;
         }
     }
-    if (will_collision_if_move_down(index, current) == 0)
-        current->coordinates.y += current->speed;
+    while ((will_collision_if_move_down(index, current) == 0) &&
+    advancement <= current->speed) {
+        current->coordinates.y += 1;
+        advancement++;
+    }
+    /*if (will_collision_if_move_down(index, current) == 0)
+        current->coordinates.y += current->speed;*/
 }

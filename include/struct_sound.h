@@ -13,7 +13,11 @@
 typedef struct sound_effects_t
 {
     sfSound *no;
-    sfSoundBuffer *buffer;
+    sfSoundBuffer *no_buffer;
+    sfSound *upgrade;
+    sfSoundBuffer *upgrade_buffer;
+    sfSound *anthem;
+    sfSoundBuffer *anthem_buffer;
     float volume_effects;
 }sound_effects_t;
 

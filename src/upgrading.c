@@ -21,5 +21,6 @@ void upgrading(Index_t *index)
         index->turrets_array[(int)pos.y][(int)pos.x].damage *=
         DAMAGE_MULTIPLICATOR;
         index->upgrading = 0;
+        sfSound_play(index->sound.effects.upgrade);
     }
 }

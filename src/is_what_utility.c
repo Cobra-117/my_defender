@@ -22,6 +22,9 @@ int is_mine(Index_t *index)
 
 int is_order(Index_t *index)
 {
+    sfTime time = sfClock_getElapsedTime(index->time.clock);
+    float time_f  = sfTime_asMilliseconds(time);
+
     if (index->ui.coord_mouse_x <= index->ui_button_utilities.
     click_pos_order.x + index->ui_button_utilities.click_size_order.x &&
     index->ui.coord_mouse_x >= index->ui_button_utilities.click_pos_order.x
@@ -30,6 +33,9 @@ int is_order(Index_t *index)
     coord_mouse_y >= index->ui_button_utilities.click_pos_order.y &&
     index->what_is_open == 2) {
         index->game_effects.order = sfTrue;
+        index->time.balises[BAL_ORDER] = time_f;
+        sfMusic_pause(index->sound.game);
+        sfSound_play(index->sound.effects.anthem);
     }
 }
 

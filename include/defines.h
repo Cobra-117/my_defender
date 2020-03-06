@@ -64,6 +64,7 @@
 #define INTERV_BLIZZARD (5000)
 #define INTERV_FREEZE (1000)
 #define INTERV_DEBUG (100)
+#define INTERV_ORDER (10000)
 
 /*misc*/
 #define FIRST_TILE_Y (2)

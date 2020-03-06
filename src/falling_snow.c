@@ -53,7 +53,7 @@ void display_snow(Index_t *index)
     index->vis_effects.snow.sprite, NULL);
     if (compare_time(index, BAL_BLIZZARD, INTERV_BLIZZARD) == 1)
         index->game_effects.blizzard = sfFalse;
-    if (index->game_effects.blizzard == 1) {
+    if (index->game_effects.blizzard == sfTrue) {
         blizzard_effect(index);
     }
 }
