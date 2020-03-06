@@ -117,6 +117,9 @@ SRCS	=	src/main.c						\
 			src/init_sound.c				\
 			src/manage_shoot_cycles.c		\
 			src/manage_bunker.c				\
+			src/make_game_music_created.c	\
+			src/upgrade_turrets.c			\
+			src/modify_upgrade_turrets.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 

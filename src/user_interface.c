@@ -21,7 +21,6 @@ void display_user_interface(Index_t *index)
     sfRenderWindow_drawText(index->window, index->ui_text.txt_skill, NULL);
     sfRenderWindow_drawText(index->window, index->ui_text.txt_money, NULL);
     sfRenderWindow_drawSprite(index->window, index->ui_info.money_spr, NULL);
-    sfRenderWindow_drawSprite(index->window, index->ui_info.life_spr, NULL);
     sfRenderWindow_drawSprite(index->window, index->ui_bunker.bunker_spr, NULL);
 }
 

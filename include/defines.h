@@ -35,6 +35,8 @@
 #define FLAME_FIRE_RATE (3)
 #define TESLA_FIRE_RATE (2)
 
+#define DAMAGE_MULTIPLICATOR (1.5)
+
 /*Waves values*/
 #define WAVES_TOTAL_NBR (2)
 //#define wave_read_interval (0.50);

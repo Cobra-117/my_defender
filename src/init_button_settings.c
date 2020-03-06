@@ -11,7 +11,7 @@ void init_button_minus1(menu_t *menu)
 {
     menu->button.a = -1;
     menu->button.b = -1;
-    menu->button.pos_minus.x = 700;
+    menu->button.pos_minus.x = 550;
     menu->button.pos_minus.y = 480;
     menu->button.size_minus.x = 100;
     menu->button.size_minus.y = 100;
@@ -29,7 +29,7 @@ void init_button_plus1(menu_t *menu)
 {
     menu->button.a = -1;
     menu->button.b = -1;
-    menu->button.pos_plus.x = 1220;
+    menu->button.pos_plus.x = 1320;
     menu->button.pos_plus.y = 480;
     menu->button.size_plus.x = 100;
     menu->button.size_plus.y = 100;
@@ -46,7 +46,7 @@ void init_button_minus2(menu_t *menu)
 {
     menu->button.a = -1;
     menu->button.b = -1;
-    menu->button.pos_minus2.x = 700;
+    menu->button.pos_minus2.x = 550;
     menu->button.pos_minus2.y = 680;
     menu->button.size_minus2.x = 100;
     menu->button.size_minus2.y = 100;
@@ -64,7 +64,7 @@ void init_button_plus2(menu_t *menu)
 {
     menu->button.a = -1;
     menu->button.b = -1;
-    menu->button.pos_plus2.x = 1220;
+    menu->button.pos_plus2.x = 1320;
     menu->button.pos_plus2.y = 680;
     menu->button.size_plus2.x = 100;
     menu->button.size_plus2.y = 100;

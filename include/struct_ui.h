@@ -113,10 +113,6 @@ typedef struct ui_info_t
     sfSprite *money_spr;
     sfVector2f pos_money;
     sfVector2f scale_money;
-    sfTexture *life_tex;
-    sfSprite *life_spr;
-    sfVector2f pos_life;
-    sfVector2f scale_life;
 }ui_info_t;
 
 typedef struct ui_button_turret_t
@@ -199,6 +195,11 @@ typedef struct ui_price_turret_t
     int price_arti2;
     int price_flamme2;
     int price_tesla2;
+    int price_casu_upgrade;
+    int price_heavy_upgrade;
+    int price_arti_upgrade;
+    int price_flamme_upgrade;
+    int price_tesla_upgrade;
 }ui_price_turret_t;
 
 #endif /* !STRUCT_UI_H_ */

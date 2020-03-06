@@ -9,8 +9,9 @@
 #include "includes.h"
 void add_enemy(Index_t *index, int type);
 int button_game_clicked(Index_t *index);
-void buy_turret(Index_t *index);
+int buy_turret(Index_t *index);
 void buy_upgrade(Index_t *index);
+int buy_upgrade_turret(Index_t *index, sfVector2f pos);
 float calc_dist(enemies_list_t *current, int y , int x);
 void change_price_upgrade(Index_t *index);
 void change_skills_colors(Index_t *index);
@@ -91,6 +92,7 @@ void give_utilities_scale(Index_t *index);
 sfVector2f get_tile_from_pos(sfVector2f pos);
 
 void manage_enemies(Index_t *index);
+void make_game_music_created(Index_t *index);
 int manage_shoot_cycles(Index_t *index, int x, int y);
 void manage_snow(Index_t *index);
 void manage_turrets(Index_t *index);
@@ -102,16 +104,21 @@ void move_up(Index_t *index, enemies_list_t *current, sfVector2f tile);
 void move_enemies(Index_t *index);
 void move_forward(Index_t *index, enemies_list_t *current, sfVector2f tile);
 
-void modify_money_arti(Index_t *index);
-void modify_money_casu(Index_t *index);
-void modify_money_flamme(Index_t *index);
-void modify_money_heavy(Index_t *index);
-void modify_money_tesla(Index_t *index);
+int modify_money_arti(Index_t *index);
+int modify_money_casu(Index_t *index);
+int modify_money_flamme(Index_t *index);
+int modify_money_heavy(Index_t *index);
+int modify_money_tesla(Index_t *index);
 void modify_money_upgrade1(Index_t *index);
 void modify_money_upgrade2(Index_t *index);
 void modify_money_upgrade3(Index_t *index);
 void modify_money_upgrade4(Index_t *index);
 void modify_money_upgrade5(Index_t *index);
+int modify_upgrade_casu(Index_t *index);
+int modify_upgrade_heavy(Index_t *index);
+int modify_upgrade_arti(Index_t *index);
+int modify_upgrade_flamme(Index_t *index);
+int modify_upgrade_tesla(Index_t *index);
 void my_defender(void);
 char *my_nbr_to_str(int i);
 void place_is_valid(Index_t *index);
@@ -169,6 +176,7 @@ void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
 int time_to_anime_tesla(Index_t *index, int y, int x);
+void upgrading(Index_t *index);
 
 int will_collision_if_move_down(Index_t *index, enemies_list_t *current);
 int will_collision_if_move_forward(Index_t *index, enemies_list_t *current);
