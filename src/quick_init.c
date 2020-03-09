@@ -42,6 +42,7 @@ void quick_init(Index_t *index)
     index->wave.filepath = fill_string("assets/waves/wave_1");
     index->wave.fd = open(index->wave.filepath, O_RDONLY);
     index->wave.wave_nbr = 1;
+    index->money = 1000;
     quick_time_init(index);
     music_init(index);
     init_enemies_list(index);
