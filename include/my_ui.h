@@ -102,6 +102,10 @@ struct text_settings_s {
     sfVector2f pos_value_music;
     sfText *txt_value_sound;
     sfVector2f pos_value_sound;
+    sfText *txt_plus;
+    sfVector2f pos_plus;
+    sfText *txt_minus;
+    sfVector2f pos_minus;
 };
 
 typedef struct text_settings_s text_settings_t;

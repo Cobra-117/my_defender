@@ -129,6 +129,9 @@ SRCS	=	src/main.c						\
 			src/quick_free.c 				\
 			src/shoot_flames.c				\
 			src/free_sound.c				\
+			src/buy_powers.c				\
+			src/modify_money_power.c		\
+			src/init_text_plus.c			\
 
 OBJ 	=	$(SRCS.c= .o)
 

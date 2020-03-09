@@ -278,6 +278,7 @@ typedef struct Index_t
     int light_effect_play;
     int ui_which_turret;
     int ui_is_upgrade;
+    int ui_which_power;
     int upgrading;
     int bunker_life;
     sfVector2f pos_turret;

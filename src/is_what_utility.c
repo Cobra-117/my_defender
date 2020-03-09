@@ -15,8 +15,11 @@ int is_mine(Index_t *index)
     index->ui_button_utilities.click_pos_mine.y + index->ui_button_utilities.
     click_size_mine.y && index->ui.coord_mouse_y >= index->ui_button_utilities.
     click_pos_mine.y && index->what_is_open == 2) {
-        index->game_effects.blizzard = sfTrue;
-        compare_time(index, BAL_BLIZZARD, INTERV_BLIZZARD);
+        index->ui_which_power = 1;
+        if (buy_power(index) != -1) {
+            index->game_effects.blizzard = sfTrue;
+            compare_time(index, BAL_BLIZZARD, INTERV_BLIZZARD);
+        }
     }
 }
 
@@ -32,10 +35,13 @@ int is_order(Index_t *index)
     .y + index->ui_button_utilities.click_size_order.y && index->ui.
     coord_mouse_y >= index->ui_button_utilities.click_pos_order.y &&
     index->what_is_open == 2) {
-        index->game_effects.order = sfTrue;
-        index->time.balises[BAL_ORDER] = time_f;
-        sfMusic_pause(index->sound.game);
-        sfSound_play(index->sound.effects.anthem);
+        index->ui_which_power = 2;
+        if (buy_power(index) != -1) {
+            index->game_effects.order = sfTrue;
+            index->time.balises[BAL_ORDER] = time_f;
+            sfMusic_pause(index->sound.game);
+            sfSound_play(index->sound.effects.anthem);
+        }
     }
 }
 
@@ -48,6 +54,8 @@ int is_tchernobyl(Index_t *index)
     ui_button_utilities.click_pos_tchernobyl.y + index->ui_button_utilities.
     click_size_tchernobyl.y && index->ui.coord_mouse_y >= index->
     ui_button_utilities.click_pos_tchernobyl.y && index->what_is_open == 2) {
-        index->game_effects.chernobyl = sfTrue;
+        index->ui_which_power = 3;
+        if (buy_power(index) != -1)
+            index->game_effects.chernobyl = sfTrue;
     }
 }

@@ -10,7 +10,7 @@
 void init_tex_ui_utilities(Index_t *index)
 {
     index->ui_utilities.mine_ui_tex =
-    sfTexture_createFromFile("assets/UI/Mine.png", NULL);
+    sfTexture_createFromFile("assets/UI/Flocon.png", NULL);
     index->ui_utilities.order_ui_tex =
     sfTexture_createFromFile("assets/UI/Order_227.png", NULL);
     index->ui_utilities.tchernobyl_ui_tex =

@@ -181,6 +181,8 @@ typedef struct ui_text_utilities_t
     sfVector2f pos_order;
     sfText *txt_tchernobyl;
     sfVector2f pos_tchernobyl;
+    sfText *txt_upgrade;
+    sfVector2f pos_upgrade;
 }ui_text_utilities_t;
 
 typedef struct ui_price_turret_t
@@ -200,6 +202,9 @@ typedef struct ui_price_turret_t
     int price_arti_upgrade;
     int price_flamme_upgrade;
     int price_tesla_upgrade;
+    int price_mine;
+    int price_order;
+    int price_chernobyl;
 }ui_price_turret_t;
 
 #endif /* !STRUCT_UI_H_ */

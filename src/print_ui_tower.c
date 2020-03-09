@@ -32,6 +32,8 @@ void print_ui_utilities(Index_t *index)
     index->ui_utilities.tchernobyl_ui_spr, NULL);
     sfRenderWindow_drawRectangleShape(index->window,
     index->ui_button_utilities.button_upgrade2, NULL);
+    sfRenderWindow_drawText(index->window,
+    index->ui_text_utilities.txt_upgrade, NULL);
 }
 
 void print_ui_skills(Index_t *index)
