@@ -62,7 +62,7 @@ int game_main_function(Index_t *index)
 {
     int game_result = 0;
 
-    sfRenderWindow_clear(index->window, sfBlack);
+    sfRenderWindow_clear(index->window, sfWhite);
     manage_waves(index);
     manage_enemies(index);
     check_event(index);

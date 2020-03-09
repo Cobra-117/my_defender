@@ -10,6 +10,7 @@
 void add_enemy(Index_t *index, int type);
 int are_we_in_the_menu(Index_t *index);
 int button_game_clicked(Index_t *index);
+int buy_power(Index_t *index);
 int buy_turret(Index_t *index);
 void buy_upgrade(Index_t *index);
 int buy_upgrade_turret(Index_t *index, sfVector2f pos);
@@ -120,8 +121,11 @@ void move_forward(Index_t *index, enemies_list_t *current, sfVector2f tile);
 
 int modify_money_arti(Index_t *index);
 int modify_money_casu(Index_t *index);
+int modify_money_chernobyl(Index_t *index);
 int modify_money_flamme(Index_t *index);
 int modify_money_heavy(Index_t *index);
+int modify_money_mine(Index_t *index);
+int modify_money_order(Index_t *index);
 int modify_money_tesla(Index_t *index);
 void modify_money_upgrade1(Index_t *index);
 void modify_money_upgrade2(Index_t *index);

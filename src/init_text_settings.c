@@ -70,4 +70,6 @@ void init_text_settings(menu_t *menu, Index_t *index)
     init_text_game(menu);
     init_text_value_music(menu, index);
     init_text_value_game_music(menu, index);
+    init_text_plus(menu);
+    init_text_minus(menu);
 }
