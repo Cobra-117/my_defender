@@ -12,11 +12,9 @@ sfMusic *init_main_menu_music(Index_t *index)
     index->sound.music =
     sfMusic_createFromFile("assets/music/main_menu_music.ogg");
 
-    sfMusic_setLoop(index->sound.music ,sfTrue);
+    sfMusic_setLoop(index->sound.music, sfTrue);
     sfMusic_setVolume(index->sound.music, index->sound.volume_music);
     sfMusic_play(index->sound.music);
-
-    //return (music);
 }
 
 int button_is_clicked(menu_t *menu, sfRenderWindow *window)

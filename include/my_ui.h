@@ -106,6 +106,12 @@ struct text_settings_s {
     sfVector2f pos_plus;
     sfText *txt_minus;
     sfVector2f pos_minus;
+    sfText *txt_plus2;
+    sfVector2f pos_plus2;
+    sfText *txt_minus2;
+    sfVector2f pos_minus2;
+    sfText *txt_go_home;
+    sfVector2f pos_go_home;
 };
 
 typedef struct text_settings_s text_settings_t;
@@ -132,6 +138,11 @@ void init_button_exit(menu_t *menu);
 void init_button_htp(menu_t *menu);
 void init_button_param(menu_t *menu);
 void init_button_settings(menu_t *menu);
+void init_text_go_home(menu_t *menu);
+void init_text_minus(menu_t *menu);
+void init_text_minus2(menu_t *menu);
+void init_text_plus(menu_t *menu);
+void init_text_plus2(menu_t *menu);
 void init_text_settings(menu_t *menu, Index_t *index);
 int button_is_clicked(menu_t *menu, sfRenderWindow *window);
 int is_back(menu_t *menu, sfRenderWindow *window);
