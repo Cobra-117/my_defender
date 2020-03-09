@@ -38,7 +38,7 @@
 #define DAMAGE_MULTIPLICATOR (1.5)
 
 /*Waves values*/
-#define WAVES_TOTAL_NBR (2)
+#define WAVES_TOTAL_NBR (3)
 //#define wave_read_interval (0.50);
 
 /*time*/
@@ -68,5 +68,5 @@
 
 /*misc*/
 #define FIRST_TILE_Y (2)
-#define BUNKER_LIFE (10)
+#define BUNKER_LIFE (1)
 #endif /* !DEFINES_H_ */

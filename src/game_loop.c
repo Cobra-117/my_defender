@@ -90,7 +90,6 @@ int game_loop(Index_t *index)
             break;
     }
     quick_free(index);
-    //fonction free
     if (index->what_is_open == 6)
         return (-1);
 }

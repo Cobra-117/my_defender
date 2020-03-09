@@ -129,6 +129,7 @@ SRCS	=	src/main.c						\
 			src/quick_free.c 				\
 			src/shoot_flames.c				\
 			src/free_sound.c				\
+			src/display_and_store_score.c	\
 
 OBJ 	=	$(SRCS.c= .o)
 

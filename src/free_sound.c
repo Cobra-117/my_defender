@@ -28,6 +28,7 @@ void free_sound(Index_t *index)
     free_sound_effects(index);
     free_sound_buffers(index);
     sfMusic_destroy(index->sound.game);
+    sfMusic_destroy(index->sound.music);
     /*if (index->sound.game != NULL)
         sfMusic_destroy(index->sound.game);*/
 }

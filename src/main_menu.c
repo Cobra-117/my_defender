@@ -86,6 +86,6 @@ int main_menu(menu_t *menu, Index_t *index, sfRenderWindow *window)
         game_menu(menu, window);
         sfRenderWindow_display(window);
     }
-    sfMusic_destroy(index->sound.music);
+    sfMusic_pause(index->sound.music);
     return (menu->player_choice);
 }

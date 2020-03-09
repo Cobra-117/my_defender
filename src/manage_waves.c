@@ -28,9 +28,12 @@ void manage_waves(Index_t *index)
 {
     if (index->wave.end == 0 ||
     (index->enemies_list->type != 0 || index->enemies_list->next != NULL)) {
+        if (index->wave.wave_nbr >= WAVES_TOTAL_NBR)
+            index->wave.wave_nbr = 999;
         return;
     }
     if (index->wave.wave_nbr >= WAVES_TOTAL_NBR) {
+        index->wave.wave_nbr = 999;
         return;
     }
     if (wave_break(index) != 1)

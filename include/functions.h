@@ -192,6 +192,7 @@ sfVector2f set_turret_offset(Index_t *index, int x, int y, sfVector2f pos);
 void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
+void score(Index_t *index);
 void shoot_flame(Index_t *index, int i, int j);
 int time_to_anime_tesla(Index_t *index, int y, int x);
 void upgrading(Index_t *index);

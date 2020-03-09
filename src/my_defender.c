@@ -16,6 +16,7 @@ void my_defender(void)
     index.sound.game_volume = 50;
 
     init_structs(&index);
+    score(&index);
     while (1) {
         user_choice = main_menu(&menu, &index, index.window);
         if (user_choice == 1) {
