@@ -50,5 +50,6 @@ void free_objs(Index_t *index)
     destroy_enemies(index);
     destroy_turrets_tex(index);
     destroy_turrets_spr(index);
+    sfRenderWindow_close(index->window);
     sfRenderWindow_destroy(index->window);
 }

@@ -10,9 +10,7 @@
 int can_I_shoot(Index_t *index, int y, int x)
 {
     if (index->turrets_array[y][x].type != 5 &&
-    index->turrets_array[y][x].type != 10 &&
-    index->turrets_array[y][x].type != 4 &&
-    index->turrets_array[y][x].type != 9) {
+    index->turrets_array[y][x].type != 10) {
         if (index->turrets_array[y][x].aimed_enemy == NULL)
             return (0);
     }
@@ -46,8 +44,7 @@ int time_to_shoot(Index_t *index, int y, int x)
         index->turrets_array[y][x].time_shoot = time_float;
         index->turrets_array[y][x].time_anim = time_float;
         index->turrets_array[y][x].cycles += 1;
-        printf("time anim has been set as %f \n", index->turrets_array[y][x].time_anim);
-        printf("x: %i y: %i\n", x, y);
+
         return (1);
     }
     return (0);

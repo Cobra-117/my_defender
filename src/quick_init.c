@@ -31,7 +31,6 @@ void music_init(Index_t *index)
     sfTime time;
     time.microseconds = 5500000;
 
-    index->sound.game = sfMusic_createFromFile("assets/music/kalinka.ogg");
     sfMusic_setPlayingOffset(index->sound.game, time);
     sfMusic_setVolume(index->sound.game, index->sound.game_volume);
     sfMusic_setLoop(index->sound.game, sfTrue);
@@ -45,4 +44,5 @@ void quick_init(Index_t *index)
     index->wave.wave_nbr = 1;
     quick_time_init(index);
     music_init(index);
+    init_enemies_list(index);
 }

@@ -82,7 +82,6 @@ int game_main_function(Index_t *index)
 
 int game_loop(Index_t *index)
 {
-    sfMusic_destroy(index->sound.music);
     quick_init(index);
     init_user_interface(index);
     while (index->what_is_open != 5

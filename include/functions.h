@@ -32,8 +32,11 @@ void display_snow(Index_t *index);
 void display_user_interface(Index_t *index);
 
 void empty_enemies_list(Index_t *index);
+
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
+void free_sound(Index_t *index);
+
 int game_loop(Index_t *index);
 float get_turret_optimal_rotation(Index_t *index, sfVector2f pos);
 void give_turrets_scale(Index_t *index);
@@ -181,12 +184,15 @@ void push_utility(Index_t *index);
 
 void quick_free(Index_t *index);
 void quick_init(Index_t *index);
+void reset_shoot_anim(Index_t *index, int i, int j);
 void rm_enemy(Index_t *index, enemies_list_t *current);
 
+void set_regular_shoot_anim(Index_t *index, int i, int j);
 sfVector2f set_turret_offset(Index_t *index, int x, int y, sfVector2f pos);
 void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
+void shoot_flame(Index_t *index, int i, int j);
 int time_to_anime_tesla(Index_t *index, int y, int x);
 void upgrading(Index_t *index);
 

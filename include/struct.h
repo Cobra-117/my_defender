@@ -34,6 +34,7 @@ typedef struct enemies_list_t
     int type;
     float rotation;
     float speed;
+    sfBool freeze;
     struct enemies_list_t *next;
     struct enemies_list_t *last;
 }enemies_list_t;

@@ -9,13 +9,14 @@
 
 sfMusic *init_main_menu_music(Index_t *index)
 {
-    sfMusic *music = sfMusic_createFromFile("assets/music/main_menu_music.ogg");
+    index->sound.music =
+    sfMusic_createFromFile("assets/music/main_menu_music.ogg");
 
-    sfMusic_setLoop(music, sfTrue);
-    sfMusic_setVolume(music, index->sound.volume_music);
-    sfMusic_play(music);
+    sfMusic_setLoop(index->sound.music ,sfTrue);
+    sfMusic_setVolume(index->sound.music, index->sound.volume_music);
+    sfMusic_play(index->sound.music);
 
-    return (music);
+    //return (music);
 }
 
 int button_is_clicked(menu_t *menu, sfRenderWindow *window)
@@ -75,7 +76,7 @@ int main_menu(menu_t *menu, Index_t *index, sfRenderWindow *window)
     sfEvent event;
 
     init_text_button(menu);
-    index->sound.music = init_main_menu_music(index);
+    init_main_menu_music(index);
     init_sound(index);
     make_game_music_created(index);
     menu->image.text_menu = sfTexture_createFromFile
@@ -85,5 +86,6 @@ int main_menu(menu_t *menu, Index_t *index, sfRenderWindow *window)
         game_menu(menu, window);
         sfRenderWindow_display(window);
     }
+    sfMusic_destroy(index->sound.music);
     return (menu->player_choice);
 }

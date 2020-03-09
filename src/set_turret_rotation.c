@@ -52,9 +52,6 @@ void set_turret_rotation(Index_t *index, int y, int x)
 
     //printf("this function\n");
     if (1 == 1) {
-        if ((index->turrets_array[y][x].type == 4 ||
-        index->turrets_array[y][x].type == 9))
-            return;
         //(index->turrets_array[y][x].aimed_enemy) =//
         closest = find_enemy_to_aim(index, y, x);
         index->turrets_array[y][x].aimed_enemy = closest;

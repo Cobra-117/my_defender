@@ -32,7 +32,7 @@
 #define CASU_FIRE_RATE (2)
 #define HEAVY_FIRE_RATE (2)
 #define ARTI_FIRE_RATE (4)
-#define FLAME_FIRE_RATE (3)
+#define FLAME_FIRE_RATE (4)
 #define TESLA_FIRE_RATE (2)
 
 #define DAMAGE_MULTIPLICATOR (1.5)

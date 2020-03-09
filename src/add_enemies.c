@@ -16,6 +16,7 @@ void fill_data(enemies_list_t *current, int type)
     current->coordinates = coordinates;
     current->rotation = 90;
     current->type = type;
+    current->freeze = sfFalse;
     if (type == 1) {
         current->speed = LIGHT_SPEED;
         current->life = LIGHT_HEALTH;

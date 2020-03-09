@@ -50,4 +50,5 @@ void init_sound(Index_t *index)
     create_buffer_sound(index);
     set_buffer_sound(index);
     set_volume_sound(index);
+    index->sound.game = sfMusic_createFromFile("assets/music/kalinka.ogg");
 }
