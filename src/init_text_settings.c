@@ -10,7 +10,7 @@
 void init_text_game(menu_t *menu)
 {
     menu->text_settings.txt_sound = sfText_create();
-    sfText_setString(menu->text_settings.txt_sound, "Music Game Volume");
+    sfText_setString(menu->text_settings.txt_sound, "Sounds Game Volume");
     sfText_setFont(menu->text_settings.txt_sound, menu->text.font);
     sfText_setColor(menu->text_settings.txt_sound, sfWhite);
     sfText_setCharacterSize(menu->text_settings.txt_sound, 50);
@@ -23,7 +23,7 @@ void init_text_game(menu_t *menu)
 void init_text_music(menu_t *menu)
 {
     menu->text_settings.txt_music = sfText_create();
-    sfText_setString(menu->text_settings.txt_music, "Music Menu Volume");
+    sfText_setString(menu->text_settings.txt_music, "Musics Game Volume");
     menu->text.font = sfFont_createFromFile("assets/UI/arial_font.TTF");
     sfText_setFont(menu->text_settings.txt_music, menu->text.font);
     sfText_setColor(menu->text_settings.txt_music, sfWhite);
@@ -72,4 +72,7 @@ void init_text_settings(menu_t *menu, Index_t *index)
     init_text_value_game_music(menu, index);
     init_text_plus(menu);
     init_text_minus(menu);
+    init_text_plus2(menu);
+    init_text_minus2(menu);
+    init_text_go_home(menu);
 }

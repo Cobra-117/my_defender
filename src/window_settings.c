@@ -36,13 +36,16 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     sfRenderWindow_drawText(window, menu->text_settings.txt_sound, NULL);
     sfRenderWindow_drawText(window, menu->text_settings.txt_value_music, NULL);
     sfRenderWindow_drawText(window, menu->text_settings.txt_value_sound, NULL);
-    sfRenderWindow_drawText(window, menu->text_settings.txt_plus, NULL);
-    sfRenderWindow_drawText(window, menu->text_settings.txt_minus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_plus2, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_minus2, NULL);
     sfRenderWindow_drawRectangleShape(window, menu->button.button_back, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_plus, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_minus, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_plus2, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_minus2, NULL);
+    sfRenderWindow_drawText(window, menu->text_settings.txt_go_home, NULL);
     push_plus(menu, index, window);
     push_plus2(menu, index, window);
     push_minus(menu, index, window);
