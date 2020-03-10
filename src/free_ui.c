@@ -81,8 +81,6 @@ void free_text(Index_t *index)
     sfText_destroy(index->ui_text.txt_tesla);
     sfText_destroy(index->ui_text.txt_tower);
     sfText_destroy(index->ui_text.txt_utility);
-    sfFont_destroy(index->ui_text.font);
-    sfFont_destroy(index->ui_text.font2);
 }
 
 void free_ui(Index_t *index)
@@ -91,4 +89,7 @@ void free_ui(Index_t *index)
     destroy_rectangles(index);
     destroy_ui_sprites(index);
     destroy_ui_textures(index);
+    sfFont_destroy(index->ui_text.font);
+    sfFont_destroy(index->ui_text.font2);
+    sfClock_destroy(index->time.clock);
 }
