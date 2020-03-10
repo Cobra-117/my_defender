@@ -14,8 +14,6 @@ int can_I_shoot(Index_t *index, int y, int x)
         if (index->turrets_array[y][x].aimed_enemy == NULL)
             return (0);
     }
-    /*if (time_to_shoot(index, y, x) != 1)
-        return (0);*/
     if (manage_shoot_cycles(index, x, y) != 1)
         return (0);
     return (1);
@@ -57,14 +55,12 @@ void manage_this_turret(Index_t *index, int y, int x)
     set_turret_rotation(index, y, x);
     time_to_shoot(index, y, x);
     if (can_I_shoot(index, y, x) == 1) {
-        //printf("will check shoot at x : %i y: %i\n", j, i);
         manage_shoot(index, y, x, index->turrets_array[y][x].type);
     }
     if (index->turrets_array[y][x].type != 5 &&
     index->turrets_array[y][x].type != 10) {
         if (index->turrets_array[y][x].anim_state == 1 &&
         time_to_anime(index, y, x) == 1) {
-            //printf(" after this y: %i x: %i\n", y, x);
             reset_shoot_anim(index, y, x);
         }
     } else {
@@ -81,5 +77,4 @@ void manage_turrets(Index_t *index)
             manage_this_turret(index, i, j);
         }
     }
-    //printf("end function\n");
 }

@@ -11,4 +11,5 @@ void free_structs(Index_t *index)
 {
     free_objs(index);
     free_sound(index);
+    free_ui(index);
 }

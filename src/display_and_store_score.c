@@ -34,7 +34,7 @@ void store_score(Index_t *index)
     int fd = open("assets/score.txt", O_RDWR);
     char *buff = malloc(sizeof(char) * 100);
 
-    read(fd, buff, 1000);
+    read(fd, buff, 99);
     write(fd, int_to_string(index->money),
     my_strlen(int_to_string(index->money)));
     write(fd, "\n", 1);
@@ -72,16 +72,9 @@ void score(Index_t *index)
 
     for (int i = 0; i < 5; i++) {
         scoreboard[i] = get_one_score(index, fd);
-        printf("line int: %i \n", scoreboard[i]);
     }
     close (fd);
     scoreboard = sort_score(index, scoreboard);
-    for (int i = 0; i < 5; i++) {
-        printf("sorted line int: %i \n", scoreboard[i]);
-    }
-    for (int i = 0; i <= 5; i++) {
-        if (4 > scoreboard[i])
-            store_score(index);
-    }
+    store_score(index);
     //display menu here
 }

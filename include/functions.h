@@ -37,6 +37,7 @@ void empty_enemies_list(Index_t *index);
 void free_structs(Index_t *index);
 void free_objs(Index_t *index);
 void free_sound(Index_t *index);
+void free_ui(Index_t *index);
 
 int game_loop(Index_t *index);
 float get_turret_optimal_rotation(Index_t *index, sfVector2f pos);
