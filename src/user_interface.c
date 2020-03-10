@@ -65,6 +65,7 @@ void all_text(Index_t *index)
     init_text_casu2(index);
     init_text_utility(index);
     init_button_utilities(index);
+    init_text_score_board(index);
 }
 
 void init_user_interface(Index_t *index)
