@@ -19,6 +19,8 @@ void destroy_ui_textures(Index_t *index)
     sfTexture_destroy(index->ui_skills.heavy_sk_tex);
     sfTexture_destroy(index->ui_skills.flame_sk_tex);
     sfTexture_destroy(index->ui_skills.tesla_sk_tex);
+    sfTexture_destroy(index->lifebar.green_tex);
+    sfTexture_destroy(index->lifebar.red_tex);
 }
 
 void destroy_ui_sprites(Index_t *index)
@@ -33,6 +35,8 @@ void destroy_ui_sprites(Index_t *index)
     sfSprite_destroy(index->ui_skills.heavy_sk_spr);
     sfSprite_destroy(index->ui_skills.flame_sk_spr);
     sfSprite_destroy(index->ui_skills.tesla_sk_spr);
+    sfSprite_destroy(index->lifebar.green_spr);
+    sfSprite_destroy(index->lifebar.red_spr);
 }
 
 void destroy_rectangles(Index_t *index)
@@ -56,17 +60,34 @@ void destroy_rectangles(Index_t *index)
     sfRectangleShape_destroy(index->ui_pause_button.button_go_menu);
 }
 
-void free_life_bar(Index_t *index)
+void free_text(Index_t *index)
 {
-    sfSprite_destroy(index->lifebar.green_spr);
-    sfSprite_destroy(index->lifebar.red_spr);
-    sfTexture_destroy(index->lifebar.green_tex);
-    sfTexture_destroy(index->lifebar.red_tex);
+    sfText_destroy(index->text_skills.txt_casu2);
+    sfText_destroy(index->text_skills.txt_heavy2);
+    sfText_destroy(index->text_skills.txt_arti2);
+    sfText_destroy(index->text_skills.txt_flame2);
+    sfText_destroy(index->text_skills.txt_tesla2);
+    sfText_destroy(index->text_skills.txt_upgrade);
+    sfText_destroy(index->text_skills.txt_price_upgrade);
+    sfText_destroy(index->ui_text_utilities.txt_mine);
+    sfText_destroy(index->ui_text_utilities.txt_order);
+    sfText_destroy(index->ui_text_utilities.txt_tchernobyl);
+    sfText_destroy(index->ui_text_utilities.txt_upgrade);
+    sfText_destroy(index->ui_text.txt_arti);
+    sfText_destroy(index->ui_text.txt_casu);
+    sfText_destroy(index->ui_text.txt_flamme);
+    sfText_destroy(index->ui_text.txt_money);
+    sfText_destroy(index->ui_text.txt_skill);
+    sfText_destroy(index->ui_text.txt_tesla);
+    sfText_destroy(index->ui_text.txt_tower);
+    sfText_destroy(index->ui_text.txt_utility);
+    sfFont_destroy(index->ui_text.font);
+    sfFont_destroy(index->ui_text.font2);
 }
 
 void free_ui(Index_t *index)
 {
-    free_life_bar(index);
+    free_text(index);
     destroy_rectangles(index);
     destroy_ui_sprites(index);
     destroy_ui_textures(index);
