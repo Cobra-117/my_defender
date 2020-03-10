@@ -75,6 +75,16 @@ struct image_s {
     sfSprite *spri_menu;
     sfTexture *text_settings;
     sfSprite *spri_settings;
+    sfTexture *text_htp;
+    sfSprite *spri_htp;
+    sfTexture *text_htp1;
+    sfSprite *spri_htp1;
+    sfTexture *text_htp2;
+    sfSprite *spri_htp2;
+    sfTexture *text_htp3;
+    sfSprite *spri_htp3;
+    sfTexture *text_htp4;
+    sfSprite *spri_htp4;
 };
 
 typedef struct image_s image_t;
@@ -122,6 +132,7 @@ struct menu_s {
     text_t text;
     text_settings_t text_settings;
     int player_choice;
+    int which_htp;
 };
 
 typedef struct menu_s menu_t;
@@ -138,6 +149,7 @@ void init_button_exit(menu_t *menu);
 void init_button_htp(menu_t *menu);
 void init_button_param(menu_t *menu);
 void init_button_settings(menu_t *menu);
+void init_htp(menu_t *menu);
 void init_text_go_home(menu_t *menu);
 void init_text_minus(menu_t *menu);
 void init_text_minus2(menu_t *menu);
@@ -165,4 +177,5 @@ void push_plus(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_plus2(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_minus(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void push_minus2(menu_t *menu, Index_t *index, sfRenderWindow *window);
+void window_htp(menu_t *menu, Index_t *index, sfRenderWindow *window);
 void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window);
