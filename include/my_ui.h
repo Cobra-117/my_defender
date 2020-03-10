@@ -77,6 +77,8 @@ struct image_s {
     sfSprite *spri_settings;
     sfTexture *text_htp;
     sfSprite *spri_htp;
+    sfTexture *text_htp01;
+    sfSprite *spri_htp01;
     sfTexture *text_htp1;
     sfSprite *spri_htp1;
     sfTexture *text_htp2;
