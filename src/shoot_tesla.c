@@ -20,6 +20,15 @@ int time_to_anime_tesla(Index_t *index, int y, int x)
     return (0);
 }
 
+void tesla_shoot_one(Index_t *index, int y, int x, enemies_list_t *current)
+{
+    if (current->life <= 0) {
+        index->money += 100 *
+        index->turrets_array[y][x].aimed_enemy->type;
+        rm_enemy(index, current);
+    }
+}
+
 void tesla_range_damage(Index_t *index, int y, int x)
 {
     enemies_list_t *current;
@@ -32,9 +41,7 @@ void tesla_range_damage(Index_t *index, int y, int x)
         if ((dist < 0 && (dist * -1) <= DEFAULT_RANGE) ||
         (dist >= 0 && dist <= DEFAULT_RANGE)) {
             current->life -= index->turrets_array[y][x].damage;
-            if (current->life <= 0)
-                rm_enemy(index, current);
-
+            tesla_shoot_one(index, y, x, current);
         }
         current = current->next;
     }

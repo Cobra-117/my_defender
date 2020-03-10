@@ -30,6 +30,8 @@ void regular_shoot(Index_t *index, int i, int j, int type)
         set_regular_shoot_anim(index, i, j);
     }
     if (index->turrets_array[i][j].aimed_enemy->life <= 0) {
+        index->money += 30000;
+        printf("BOOOM SOUND\n");
         rm_enemy(index, index->turrets_array[i][j].aimed_enemy);
         sfSound_play(index->sound.effects.boom);
     }
