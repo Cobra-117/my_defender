@@ -21,8 +21,6 @@ int will_collision_if_move_forward(Index_t *index, enemies_list_t *current)
         }
         if (element->coordinates.x - enemy_pos.x <= 1 + 64 &&
         element->coordinates.y - enemy_pos.y <= 1 + 64) {
-            //printf("can't move due to enemy at x %f y %f\n",
-            //element->coordinates.x, element->coordinates.y);
             return (1);
         }
         element = element->next;

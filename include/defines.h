@@ -11,7 +11,7 @@
 #define DEFINES_H_
 
 /*tank values*/
-#define LIGHT_SPEED (15.0)
+#define LIGHT_SPEED (10)
 #define MEDIUM_SPEED (7.5)
 #define HEAVY_SPEED (5.0)
 
@@ -24,15 +24,15 @@
 #define LONG_RANGE (256)
 
 #define CASU_DAMAGE (100)
-#define HEAVY_DAMAGE (200)
-#define ARTI_DAMAGE (200)
-#define FLAME_DAMAGE (400)
-#define TESLA_DAMAGE (100)
+#define HEAVY_DAMAGE (300)
+#define ARTI_DAMAGE (400)
+#define FLAME_DAMAGE (0)
+#define TESLA_DAMAGE (200)
 
-#define CASU_FIRE_RATE (2)
+#define CASU_FIRE_RATE (1)
 #define HEAVY_FIRE_RATE (2)
 #define ARTI_FIRE_RATE (4)
-#define FLAME_FIRE_RATE (4)
+#define FLAME_FIRE_RATE (3)
 #define TESLA_FIRE_RATE (2)
 
 #define DAMAGE_MULTIPLICATOR (1.5)
