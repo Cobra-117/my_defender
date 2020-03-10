@@ -169,6 +169,16 @@ typedef struct ui_text_t
     sfVector2f pos_flamme;
     sfText *txt_tesla;
     sfVector2f pos_tesla;
+    sfText *txt_score_board1;
+    sfVector2f pos_score_board1;
+    sfText *txt_score_board2;
+    sfVector2f pos_score_board2;
+    sfText *txt_score_board3;
+    sfVector2f pos_score_board3;
+    sfText *txt_score_board4;
+    sfVector2f pos_score_board4;
+    sfText *txt_score_board5;
+    sfVector2f pos_score_board5;
 }ui_text_t;
 
 typedef struct ui_turrets_t

@@ -20,23 +20,23 @@ void init_turrets_value(Index_t *index)
 
 void init_price_turrets(Index_t *index)
 {
-    index->ui_price_turret.price_casu = 200;
-    index->ui_price_turret.price_heavy = 500;
-    index->ui_price_turret.price_arti = 350;
-    index->ui_price_turret.price_flamme = 400;
-    index->ui_price_turret.price_tesla = 400;
-    index->ui_price_turret.price_casu2 = 500;
-    index->ui_price_turret.price_heavy2 = 1000;
-    index->ui_price_turret.price_arti2 = 700;
-    index->ui_price_turret.price_flamme2 = 800;
-    index->ui_price_turret.price_tesla2 = 800;
-    index->ui_price_turret.price_casu_upgrade = 100;
-    index->ui_price_turret.price_heavy_upgrade = 250;
-    index->ui_price_turret.price_arti_upgrade = 175;
-    index->ui_price_turret.price_flamme_upgrade = 200;
-    index->ui_price_turret.price_tesla_upgrade = 200;
+    index->ui_price_turret.price_casu = 100;
+    index->ui_price_turret.price_heavy = 200;
+    index->ui_price_turret.price_arti = 300;
+    index->ui_price_turret.price_flamme = 300;
+    index->ui_price_turret.price_tesla = 500;
+    index->ui_price_turret.price_casu2 = 100;
+    index->ui_price_turret.price_heavy2 = 200;
+    index->ui_price_turret.price_arti2 = 300;
+    index->ui_price_turret.price_flamme2 = 300;
+    index->ui_price_turret.price_tesla2 = 500;
+    index->ui_price_turret.price_casu_upgrade = 150;
+    index->ui_price_turret.price_heavy_upgrade = 300;
+    index->ui_price_turret.price_arti_upgrade = 450;
+    index->ui_price_turret.price_flamme_upgrade = 450;
+    index->ui_price_turret.price_tesla_upgrade = 750;
     index->ui_price_turret.price_mine = 300;
-    index->ui_price_turret.price_order = 500;
-    index->ui_price_turret.price_chernobyl = 800;
+    index->ui_price_turret.price_order = 800;
+    index->ui_price_turret.price_chernobyl = 500;
     init_turrets_value(index);
 }
