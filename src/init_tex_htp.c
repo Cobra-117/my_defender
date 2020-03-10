@@ -13,6 +13,8 @@ void link_htp_sprites_and_textures(menu_t *menu)
     menu->image.text_htp01, sfTrue);
     sfSprite_setTexture(menu->image.spri_htp1,
     menu->image.text_htp1, sfTrue);
+    sfSprite_setTexture(menu->image.spri_htp2,
+    menu->image.text_htp2, sfTrue);
     sfSprite_setTexture(menu->image.spri_htp3,
     menu->image.text_htp3, sfTrue);
     sfSprite_setTexture(menu->image.spri_htp4,
@@ -23,6 +25,7 @@ void init_htp_sprites(menu_t *menu)
 {
     menu->image.spri_htp01 = sfSprite_create();
     menu->image.spri_htp1 = sfSprite_create();
+    menu->image.spri_htp2 = sfSprite_create();
     menu->image.spri_htp3 = sfSprite_create();
     menu->image.spri_htp4 = sfSprite_create();
 }
@@ -33,6 +36,8 @@ void init_htp_tex(menu_t *menu)
     sfTexture_createFromFile("assets/UI/How_to_play01.png", NULL);
     menu->image.text_htp1 =
     sfTexture_createFromFile("assets/UI/How_to_play1.png", NULL);
+    menu->image.text_htp2 =
+    sfTexture_createFromFile("assets/UI/How_to_play2.png", NULL);
     menu->image.text_htp3 =
     sfTexture_createFromFile("assets/UI/How_to_play3.png", NULL);
     menu->image.text_htp4 =

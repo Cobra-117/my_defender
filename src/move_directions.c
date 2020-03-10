@@ -70,8 +70,6 @@ void move_up(Index_t *index, enemies_list_t *current, sfVector2f tile)
         current->coordinates.y -= 1;
         advancement++;
     }
-    /*if (will_collision_if_move_up(index, current) == 0)
-        current->coordinates.y -= current->speed;*/
 }
 
 void move_down(Index_t *index, enemies_list_t *current, sfVector2f tile)

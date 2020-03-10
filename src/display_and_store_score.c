@@ -76,5 +76,5 @@ void score(Index_t *index)
     close (fd);
     scoreboard = sort_score(index, scoreboard);
     store_score(index);
-    display_score_board(index);
+    display_score_board(index, scoreboard);
 }
