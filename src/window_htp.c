@@ -25,7 +25,7 @@ sfRenderWindow *window)
             if (event.key.code == sfKeyEscape)
                 menu->player_choice = 1;
         }
-        if (menu->which_htp > 4)
+        if (menu->which_htp > 5)
             menu->which_htp = 0;
     }
 }
@@ -35,10 +35,12 @@ void htp_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     if (menu->which_htp == 0)
         sfRenderWindow_drawSprite(window, menu->image.spri_htp, NULL);
     if (menu->which_htp == 1)
+        sfRenderWindow_drawSprite(window, menu->image.spri_htp01, NULL);
+    if (menu->which_htp == 2)
         sfRenderWindow_drawSprite(window, menu->image.spri_htp1, NULL);
-    if (menu->which_htp == 3)
-        sfRenderWindow_drawSprite(window, menu->image.spri_htp3, NULL);
     if (menu->which_htp == 4)
+        sfRenderWindow_drawSprite(window, menu->image.spri_htp3, NULL);
+    if (menu->which_htp == 5)
         sfRenderWindow_drawSprite(window, menu->image.spri_htp4, NULL);
     button_htp_clicked(menu, index, window);
 }
