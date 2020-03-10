@@ -12,8 +12,6 @@ void destroy_ui_textures(Index_t *index)
     sfTexture_destroy(index->ui_bunker.bunker_tex);
     sfTexture_destroy(index->ui_info.money_tex);
     sfTexture_destroy(index->ui.tex_socle);
-    sfTexture_destroy(index->misc_objs.mine_tex);
-    sfTexture_destroy(index->ui_utilities.barb_ui_tex);
     sfTexture_destroy(index->ui_utilities.mine_ui_tex);
     sfTexture_destroy(index->ui_utilities.tchernobyl_ui_tex);
     sfTexture_destroy(index->ui_skills.arti_sk_tex);
@@ -28,8 +26,6 @@ void destroy_ui_sprites(Index_t *index)
     sfSprite_destroy(index->ui_bunker.bunker_spr);
     sfSprite_destroy(index->ui_info.money_spr);
     sfSprite_destroy(index->ui.spri_socle);
-    sfSprite_destroy(index->misc_objs.mine_spr);
-    sfSprite_destroy(index->ui_utilities.barb_ui_spr);
     sfSprite_destroy(index->ui_utilities.mine_ui_spr);
     sfSprite_destroy(index->ui_utilities.tchernobyl_ui_spr);
     sfSprite_destroy(index->ui_skills.arti_sk_spr);

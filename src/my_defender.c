@@ -24,6 +24,8 @@ void my_defender(void)
         }
         if (user_choice == 2)
             break;
+        if (user_choice == 3)
+            window_htp(&menu, &index, index.window);
         if (user_choice == 4)
             window_settings(&menu, &index, index.window);
     }
