@@ -18,6 +18,10 @@ typedef struct sound_effects_t
     sfSoundBuffer *upgrade_buffer;
     sfSound *anthem;
     sfSoundBuffer *anthem_buffer;
+    sfSound *place;
+    sfSoundBuffer *place_buffer;
+    sfSound *boom;
+    sfSoundBuffer *boom_buffer;
     float volume_effects;
 }sound_effects_t;
 

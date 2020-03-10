@@ -133,6 +133,7 @@ SRCS	=	src/main.c						\
 			src/buy_powers.c				\
 			src/modify_money_power.c		\
 			src/init_text_plus.c			\
+			src/free_ui.c					\
 
 OBJ 	=	$(SRCS.c= .o)
 

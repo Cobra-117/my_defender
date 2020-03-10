@@ -10,13 +10,11 @@
 void reset_shoot_anim(Index_t *index, int i, int j)
 {
     index->turrets_array[i][j].anim_state = 0;
-    printf("RESET ANIM\n");
 }
 
 void set_regular_shoot_anim(Index_t *index, int i, int j)
 {
     index->turrets_array[i][j].anim_state = 1;
-    printf("SET ANIM\n");
 }
 
 void regular_shoot(Index_t *index, int i, int j, int type)
@@ -31,8 +29,10 @@ void regular_shoot(Index_t *index, int i, int j, int type)
         index->turrets_array[i][j].cycles = 0;
         set_regular_shoot_anim(index, i, j);
     }
-    if (index->turrets_array[i][j].aimed_enemy->life <= 0)
+    if (index->turrets_array[i][j].aimed_enemy->life <= 0) {
         rm_enemy(index, index->turrets_array[i][j].aimed_enemy);
+        sfSound_play(index->sound.effects.boom);
+    }
 }
 
 void manage_shoot(Index_t *index, int i, int j, int type)

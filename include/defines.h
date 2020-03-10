@@ -68,5 +68,5 @@
 
 /*misc*/
 #define FIRST_TILE_Y (2)
-#define BUNKER_LIFE (1)
+#define BUNKER_LIFE (10)
 #endif /* !DEFINES_H_ */

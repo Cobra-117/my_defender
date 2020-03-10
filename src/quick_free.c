@@ -11,9 +11,6 @@ void quick_free(Index_t *index)
 {
     destroy_turrets(index);
     empty_enemies_list(index);
-    //free(index->enemies_list);
     index->bunker_life = BUNKER_LIFE;
     sfMusic_stop(index->sound.game);
-    //sfMusic_stop
-    //music
 }
