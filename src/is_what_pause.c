@@ -43,3 +43,14 @@ int is_exit2(Index_t *index)
         quick_free(index);
     }
 }
+
+int is_win(Index_t *index)
+{
+    if (index->ui.coord_mouse_x <= index->ui_pause_button.click_pos_win.x +
+    index->ui_pause_button.click_size_win.x && index->ui.coord_mouse_x >=
+    index->ui_pause_button.click_pos_win.x && index->ui.coord_mouse_y <=
+    index->ui_pause_button.click_pos_win.y + index->ui_pause_button.
+    click_size_win.y && index->ui.coord_mouse_y >= index->ui_pause_button.
+    click_pos_win.y && index->what_is_open == 100)
+        index->what_is_open = 1;
+}

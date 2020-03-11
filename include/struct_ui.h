@@ -161,6 +161,11 @@ typedef struct ui_pause_button_t
     sfVector2f size_exit;
     sfVector2f click_pos_exit;
     sfVector2f click_size_exit;
+    sfRectangleShape *button_win;
+    sfVector2f pos_win;
+    sfVector2f size_win;
+    sfVector2f click_pos_win;
+    sfVector2f click_size_win;
 }ui_pause_button_t;
 
 typedef struct ui_text_pause_t

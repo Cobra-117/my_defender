@@ -33,3 +33,12 @@ void push_exit2(Index_t *index)
     (index->ui_pause_button.button_exit);
     button_game_clicked(index);
 }
+
+void push_win(Index_t *index)
+{
+    index->ui_pause_button.click_pos_win = sfRectangleShape_getPosition
+    (index->ui_pause_button.button_win);
+    index->ui_pause_button.click_size_win = sfRectangleShape_getSize
+    (index->ui_pause_button.button_win);
+    button_win_clicked(index);
+}
