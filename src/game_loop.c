@@ -83,7 +83,6 @@ int game_main_function(Index_t *index)
 int game_loop(Index_t *index)
 {
     quick_init(index);
-    init_user_interface(index);
     while (index->what_is_open != 5
     && index->what_is_open != 6) {
         if (game_main_function(index) != 0)

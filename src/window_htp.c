@@ -37,14 +37,30 @@ void htp_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     if (menu->which_htp == 1)
         sfRenderWindow_drawSprite(window, menu->image.spri_htp01, NULL);
     if (menu->which_htp == 2)
-        sfRenderWindow_drawSprite(window, menu->image.spri_htp1, NULL);
-    if (menu->which_htp == 3)
-        sfRenderWindow_drawSprite(window, menu->image.spri_htp2, NULL);
-    if (menu->which_htp == 4)
-        sfRenderWindow_drawSprite(window, menu->image.spri_htp3, NULL);
-    if (menu->which_htp == 5)
         sfRenderWindow_drawSprite(window, menu->image.spri_htp4, NULL);
+    if (menu->which_htp == 3)
+        sfRenderWindow_drawSprite(window, menu->image.spri_htp1, NULL);
+    if (menu->which_htp == 4)
+        sfRenderWindow_drawSprite(window, menu->image.spri_htp2, NULL);
+    if (menu->which_htp == 5)
+        sfRenderWindow_drawSprite(window, menu->image.spri_htp3, NULL);
     button_htp_clicked(menu, index, window);
+}
+
+void free_htp_menu(menu_t *menu)
+{
+    free(menu->image.spri_htp);
+    free(menu->image.spri_htp01);
+    free(menu->image.spri_htp1);
+    free(menu->image.spri_htp2);
+    free(menu->image.spri_htp3);
+    free(menu->image.spri_htp4);
+    free(menu->image.text_htp);
+    free(menu->image.text_htp01);
+    free(menu->image.text_htp1);
+    free(menu->image.text_htp2);
+    free(menu->image.text_htp3);
+    free(menu->image.text_htp4);
 }
 
 void window_htp(menu_t *menu, Index_t *index, sfRenderWindow *window)
@@ -60,4 +76,5 @@ void window_htp(menu_t *menu, Index_t *index, sfRenderWindow *window)
         htp_loop(window, menu, index);
         sfRenderWindow_display(window);
     }
+    free_htp_menu(menu);
 }
