@@ -97,6 +97,7 @@ void init_snow(visual_effects_t *vis_effect);
 int is_tchernobyl(Index_t *index);
 int is_tesla(Index_t *index);
 int is_tesla2(Index_t *index);
+int is_there_one_living_enemy(Index_t *index);
 int is_ui_tower(Index_t *index);
 int is_upgrade(Index_t *index);
 int is_upgrade2(Index_t *index);

@@ -13,7 +13,7 @@ int will_collision_if_move_forward(Index_t *index, enemies_list_t *current)
     enemies_list_t *element;
 
     element = (*&index->enemies_list);
-    while (element->next != NULL)
+    while (element != NULL)
     {
         if (element->coordinates.x == enemy_pos.x &&
         element->coordinates.y == enemy_pos.y) {
@@ -34,7 +34,7 @@ int will_collision_if_move_up(Index_t *index, enemies_list_t *current)
     enemies_list_t *element;
 
     element = (*&index->enemies_list);
-    while (element->next != NULL)
+    while (element != NULL)
     {
         if (element->coordinates.x == enemy_pos.x &&
         element->coordinates.y == enemy_pos.y) {
@@ -55,13 +55,13 @@ int will_collision_if_move_down(Index_t *index, enemies_list_t *current)
     enemies_list_t *element;
 
     element = (*&index->enemies_list);
-    while (element->next != NULL)
+    while (element != NULL)
     {
         if (element->coordinates.x == enemy_pos.x &&
         element->coordinates.y == enemy_pos.y) {
             return (0);
         }
-        if (element->coordinates.x - enemy_pos.x <= 1 + 64 &&
+        if (element->coordinates.x - enemy_pos.x == 0 &&
         element->coordinates.y - enemy_pos.y <= 1 + 64) {
             return (1);
         }

@@ -49,7 +49,7 @@ typedef struct turret_obj_t
     int cycles;
     float time_shoot;
     float time_anim;
-    enemies_list_t *aimed_enemy;
+    enemies_list_t **aimed_enemy;
 }turret_obj_t;
 
 typedef struct wave_t

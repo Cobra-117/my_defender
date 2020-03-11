@@ -82,9 +82,11 @@ int game_main_function(Index_t *index)
 
 int game_loop(Index_t *index)
 {
+    printf("launch game\n");
     quick_init(index);
     while (index->what_is_open != 5
     && index->what_is_open != 6) {
+        printf("game main function\n");
         if (game_main_function(index) != 0)
             break;
     }

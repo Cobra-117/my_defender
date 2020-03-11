@@ -9,7 +9,6 @@
 
 void chernobyl(Index_t *index)
 {
-    printf("ALLAHU AKBAR\n");
     empty_enemies_list(index);
 }
 

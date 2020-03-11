@@ -19,28 +19,28 @@ void set_regular_shoot_anim(Index_t *index, int i, int j)
 
 void regular_shoot(Index_t *index, int i, int j, int type)
 {
-    if (calc_dist(index->turrets_array[i][j].aimed_enemy, i, j) >=
+    if (calc_dist(index->turrets_array[i][j].aimed_enemy[0], i, j) >=
     -index->turrets_array[i][j].range) {
-        index->turrets_array[i][j].aimed_enemy->life -=
+        index->turrets_array[i][j].aimed_enemy[0]->life -=
         index->turrets_array[i][j].damage;
         if (index->game_effects.order == sfTrue)
-            index->turrets_array[i][j].aimed_enemy->life -=
+            index->turrets_array[i][j].aimed_enemy[0]->life -=
             index->turrets_array[i][j].damage * 4;
         index->turrets_array[i][j].cycles = 0;
         set_regular_shoot_anim(index, i, j);
     }
-    if (index->turrets_array[i][j].aimed_enemy->life <= 0) {
+    if (index->turrets_array[i][j].aimed_enemy[0]->life <= 0) {
         index->money += 30000;
-        printf("BOOOM SOUND\n");
-        rm_enemy(index, index->turrets_array[i][j].aimed_enemy);
+        rm_enemy(index, index->turrets_array[i][j].aimed_enemy[0]);
         sfSound_play(index->sound.effects.boom);
+        index->turrets_array[i][j].aimed_enemy[0] = NULL;
     }
 }
 
 void manage_shoot(Index_t *index, int i, int j, int type)
 {
-    if (index->turrets_array[i][j].aimed_enemy == NULL ||
-    index->turrets_array[i][j].aimed_enemy->type == 0)
+    if (index->turrets_array[i][j].aimed_enemy[0] == NULL ||
+    index->turrets_array[i][j].aimed_enemy[0]->type == 0)
         return;
     if (index->turrets_array[i][j].type == 5 ||
     index->turrets_array[i][j].type == 10) {

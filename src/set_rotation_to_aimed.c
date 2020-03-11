@@ -10,9 +10,9 @@
 float find_rot_quarter(Index_t *index, int y, int x)
 {
     float dist_x = x * 64 -
-    index->turrets_array[y][x].aimed_enemy->coordinates.x;
+    index->turrets_array[y][x].aimed_enemy[0]->coordinates.x;
     float dist_y = y * 64 -
-    index->turrets_array[y][x].aimed_enemy->coordinates.y;
+    index->turrets_array[y][x].aimed_enemy[0]->coordinates.y;
 
     if (dist_x > 0 && dist_y > 0)
         return (0);
@@ -31,9 +31,9 @@ void set_rotation_to_aimed(Index_t *index, int y, int x)
     float angle = 0;
     float dist = 0;
     float posi_x = x * 64 -
-    index->turrets_array[y][x].aimed_enemy->coordinates.x;
+    index->turrets_array[y][x].aimed_enemy[0]->coordinates.x;
     float posi_y = y * 64 -
-    index->turrets_array[y][x].aimed_enemy->coordinates.y;
+    index->turrets_array[y][x].aimed_enemy[0]->coordinates.y;
 
     if (posi_x < 0)
         posi_x = posi_x * (-1);
