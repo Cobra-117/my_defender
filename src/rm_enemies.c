@@ -13,8 +13,7 @@ void rm_enemy(Index_t *index, enemies_list_t *current)
     enemies_list_t *temp;
 
     previous = &(*index->enemies_list);
-    if (previous->coordinates.x ==
-    current->coordinates.x &&
+    if (previous->coordinates.x == current->coordinates.x &&
     previous->coordinates.y == current->coordinates.y) {
         current->coordinates.y = 5000;
         current->coordinates.x = 5000;

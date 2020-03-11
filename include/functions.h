@@ -30,6 +30,7 @@ void display_first_layers(Index_t *index);
 void display_life_bar(Index_t *index, enemies_list_t *current);
 void display_map(Index_t *index);
 void display_snow(Index_t *index);
+void display_turrets(Index_t *index);
 void display_user_interface(Index_t *index);
 
 void empty_enemies_list(Index_t *index);
@@ -61,6 +62,7 @@ void init_skill(Index_t *index);
 void init_sound(Index_t *index);
 void init_structs(Index_t *index);
 void init_text_casu2(Index_t *index);
+void init_text_score_board(Index_t *index);
 void init_text_upgrade(Index_t *index);
 void init_text_utility(Index_t *index);
 void init_time(Index_t *index);
@@ -110,6 +112,7 @@ void get_score(Index_t *index);
 void manage_enemies(Index_t *index);
 void make_game_music_created(Index_t *index);
 void manage_power(Index_t *index);
+void manage_shoot(Index_t *index, int i, int j, int type);
 int manage_shoot_cycles(Index_t *index, int x, int y);
 void manage_snow(Index_t *index);
 void manage_turrets(Index_t *index);
@@ -194,12 +197,14 @@ void reset_shoot_anim(Index_t *index, int i, int j);
 void rm_enemy(Index_t *index, enemies_list_t *current);
 
 void set_regular_shoot_anim(Index_t *index, int i, int j);
+void set_rotation_to_aimed(Index_t *index, int y, int x);
 sfVector2f set_turret_offset(Index_t *index, int x, int y, sfVector2f pos);
 void set_turret_rotation(Index_t *index, int y, int x);
 void set_utilities_scale(Index_t *index);
 
 void score(Index_t *index);
 void shoot_flame(Index_t *index, int i, int j);
+void shoot_tesla(Index_t *index, int y, int x);
 int time_to_anime_tesla(Index_t *index, int y, int x);
 void upgrading(Index_t *index);
 

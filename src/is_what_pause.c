@@ -27,7 +27,6 @@ int is_go_menu(Index_t *index)
     click_size_go_menu.y && index->ui.coord_mouse_y >= index->ui_pause_button.
     click_pos_go_menu.y && index->what_is_open == 4) {
         index->what_is_open = 5;
-        //sfMusic_destroy(index->sound.game);
     }
 }
 
