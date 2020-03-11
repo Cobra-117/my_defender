@@ -26,6 +26,7 @@ void tesla_shoot_one(Index_t *index, int y, int x, enemies_list_t *current)
         index->money += 100 *
         index->turrets_array[y][x].aimed_enemy[0]->type;
         rm_enemy(index, current);
+        sfSound_play(index->sound.effects.boom);
     }
 }
 

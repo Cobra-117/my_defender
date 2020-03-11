@@ -16,10 +16,9 @@ void my_defender(void)
     init_structs(&index);
     while (1) {
         user_choice = main_menu(&menu, &index, index.window);
-        if (user_choice == 1) {
+        if (user_choice == 1)
             if (game_loop(&index) == -1)
                 break;
-        }
         if (user_choice == 2)
             break;
         if (user_choice == 3)

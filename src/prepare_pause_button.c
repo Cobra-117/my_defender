@@ -64,10 +64,30 @@ void init_exit_button(Index_t *index)
     button_exit, texture, 0);
 }
 
+void init_win_button(Index_t *index)
+{
+    index->ui.coord_mouse_x = -1;
+    index->ui.coord_mouse_y = -1;
+    index->ui_pause_button.pos_win.x = 820;
+    index->ui_pause_button.pos_win.y = 850;
+    index->ui_pause_button.size_win.x = 300;
+    index->ui_pause_button.size_win.y = 90;
+    index->ui_pause_button.button_win = sfRectangleShape_create();
+    sfRectangleShape_setPosition(index->ui_pause_button.button_win,
+    index->ui_pause_button.pos_win);
+    sfRectangleShape_setSize(index->ui_pause_button.button_win,
+    index->ui_pause_button.size_win);
+    sfTexture *texture = sfTexture_createFromFile
+    ("assets/UI/Red_Square.png", NULL);
+    sfRectangleShape_setTexture(index->ui_pause_button.
+    button_win, texture, 0);
+}
+
 void prepare_pause_button(Index_t *index)
 {
     init_resume_button(index);
     init_go_menu_button(index);
     init_exit_button(index);
+    init_win_button(index);
     prepare_text_pause(index);
 }

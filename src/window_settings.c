@@ -53,6 +53,19 @@ void settings_loop(sfRenderWindow *window, menu_t *menu, Index_t *index)
     push_back(menu, index, window);
 }
 
+void free_settings(menu_t *menu)
+{
+    free(menu->text_settings.txt_music);
+    free(menu->text_settings.txt_sound);
+    free(menu->text_settings.txt_value_music);
+    free(menu->text_settings.txt_value_sound);
+    free(menu->text_settings.txt_plus);
+    free(menu->text_settings.txt_minus);
+    free(menu->text_settings.txt_plus2);
+    free(menu->text_settings.txt_minus2);
+    free(menu->text_settings.txt_go_home);
+}
+
 void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)
 {
     sfMusic_stop(index->sound.music);
@@ -67,4 +80,5 @@ void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)
         settings_loop(window, menu, index);
         sfRenderWindow_display(window);
     }
+    //free_settings(menu);
 }

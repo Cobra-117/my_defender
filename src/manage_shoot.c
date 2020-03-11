@@ -19,8 +19,7 @@ void set_regular_shoot_anim(Index_t *index, int i, int j)
 
 void regular_shoot(Index_t *index, int i, int j, int type)
 {
-    if (calc_dist(index->turrets_array[i][j].aimed_enemy[0], i, j) >=
-    -index->turrets_array[i][j].range) {
+    if (type != 0) {
         index->turrets_array[i][j].aimed_enemy[0]->life -=
         index->turrets_array[i][j].damage;
         if (index->game_effects.order == sfTrue)

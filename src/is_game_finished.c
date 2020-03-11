@@ -24,12 +24,12 @@ int is_there_one_living_enemy(Index_t *index)
 int is_game_finished(Index_t *index)
 {
     if (index->bunker_life <= 0) {
-        printf("game is finished\n");
+        printf("game is finished bunker life\n");
         return (2);
     }
     if (index->wave.wave_nbr > WAVES_TOTAL_NBR && index->wave.end == 1 &&
     (index->enemies_list->type == 0 && is_there_one_living_enemy(index) == 0)) {
-        printf("game is finished\n");
+        printf("game is finished no more enemys\n");
         return (1);
     }
     return (0);

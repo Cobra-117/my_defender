@@ -57,6 +57,11 @@ void set_turret_rotation(Index_t *index, int y, int x)
     float dist_x;
     enemies_list_t *closest;
 
+    if (index->turrets_array[y][x].aimed_enemy[0] != NULL &&
+    calc_dist(index->turrets_array[y][x].aimed_enemy[0], y, x) >=
+    index->turrets_array[y][x].range) {
+        index->turrets_array[y][x].aimed_enemy[0] = NULL;
+    }
     if (index->turrets_array[y][x].aimed_enemy[0] == NULL) {
         closest = find_enemy_to_aim(index, y, x);
         index->turrets_array[y][x].aimed_enemy[0] = closest;
