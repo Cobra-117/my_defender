@@ -10,8 +10,8 @@
 void make_game_music_created(Index_t *index)
 {
     sfTime time;
-    time.microseconds = 5500000;
 
+    time.microseconds = 5500000;
     index->sound.game = sfMusic_createFromFile("assets/music/kalinka.ogg");
     sfMusic_setPlayingOffset(index->sound.game, time);
     sfMusic_setVolume(index->sound.game, index->sound.game_volume);

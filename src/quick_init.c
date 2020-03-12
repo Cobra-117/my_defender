@@ -29,8 +29,8 @@ void quick_time_init(Index_t *index)
 void music_init(Index_t *index)
 {
     sfTime time;
-    time.microseconds = 5500000;
 
+    time.microseconds = 5500000;
     sfMusic_setPlayingOffset(index->sound.game, time);
     sfMusic_setVolume(index->sound.game, index->sound.game_volume);
     sfMusic_setLoop(index->sound.game, sfTrue);

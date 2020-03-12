@@ -10,6 +10,7 @@
 void init_text_price_upgrade(Index_t *index)
 {
     int price = 0;
+
     index->text_skills.txt_price_upgrade = sfText_create();
     sfText_setString(index->text_skills.txt_price_upgrade,
     my_nbr_to_str(price));

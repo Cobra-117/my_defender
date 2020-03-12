@@ -13,7 +13,6 @@ void init_turrets_scale(Index_t *index)
 
     scale.x = 0.33;
     scale.y = 0.33;
-
     sfSprite_setScale(index->turrets.casu_mkI_spr, scale);
     sfSprite_setScale(index->turrets.heavy_mkI_spr, scale);
     sfSprite_setScale(index->turrets.arti_mkI_spr, scale);

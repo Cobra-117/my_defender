@@ -28,6 +28,5 @@ void check_the_upgrade(Index_t *index)
     if (index->ui_which_turret == 10 && index->ui_button_skills.
     tesla2_already_upgrade == 1)
         sfText_setString(index->text_skills.txt_price_upgrade,
-        "Already\nupgrade");
-    //switch case
+        "Already\nupgrade");//switch case
 }

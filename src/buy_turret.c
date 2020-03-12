@@ -9,7 +9,7 @@
 
 int second_buy_turret(Index_t *index)
 {
-    switch(index->ui_which_turret) {
+    switch (index->ui_which_turret) {
     case 4:
         if (modify_money_flamme(index) == -1)
             return (-1);
@@ -24,7 +24,7 @@ int second_buy_turret(Index_t *index)
 
 int buy_turret(Index_t *index)
 {
-    switch(index->ui_which_turret) {
+    switch (index->ui_which_turret) {
     case 1:
         if (modify_money_casu(index) == -1)
             return (-1);

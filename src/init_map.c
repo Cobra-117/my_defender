@@ -17,6 +17,7 @@ void fill_one_line(Index_t *index, int fd, int i)
 void fill_map_array(Index_t *index)
 {
     int fd = open("assets/map/map01", O_RDONLY);
+
     if (fd == -1)
         exit (64);
     index->map.map_array = malloc(sizeof(char *) * 19);

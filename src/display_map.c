@@ -16,7 +16,8 @@ void display_one_line_path(Index_t *index, int y)
         pos.y = y * 64;
         if (index->map.map_array[y][x] == 'o') {
             sfSprite_setPosition(index->map.path_spr, pos);
-            sfRenderWindow_drawSprite(index->window, index->map.path_spr, NULL);
+            sfRenderWindow_drawSprite
+            (index->window, index->map.path_spr, NULL);
         }
     }
 }
@@ -30,7 +31,8 @@ void display_one_line_snow(Index_t *index, int y)
         pos.y = y * 64;
         if (index->map.map_array[y][x] == 'x') {
             sfSprite_setPosition(index->map.snow_spr, pos);
-            sfRenderWindow_drawSprite(index->window, index->map.snow_spr, NULL);
+            sfRenderWindow_drawSprite
+            (index->window, index->map.snow_spr, NULL);
         }
     }
 }

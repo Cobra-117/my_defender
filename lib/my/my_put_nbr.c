@@ -15,7 +15,6 @@ int  my_putnbr(int n)
         my_putchar('2');
         n = 147483648;
     }
-
     if (n < 10 && n >= 0){
         my_putchar(48+n);
     }
@@ -23,7 +22,6 @@ int  my_putnbr(int n)
         my_putchar('-');
         n = n *(-1);
         my_putnbr(n);
-
     }
     else {
         my_putnbr(n / 10);

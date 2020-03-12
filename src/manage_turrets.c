@@ -42,7 +42,6 @@ int time_to_shoot(Index_t *index, int y, int x)
         index->turrets_array[y][x].time_shoot = time_float;
         index->turrets_array[y][x].time_anim = time_float;
         index->turrets_array[y][x].cycles += 1;
-
         return (1);
     }
     return (0);

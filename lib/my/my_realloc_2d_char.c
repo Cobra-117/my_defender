@@ -12,7 +12,6 @@ int get_charray_size(char **array)
     int i = 0;
 
     for (i = 0; array[i] != NULL; i++) {
-
     }
     return (i);
 }

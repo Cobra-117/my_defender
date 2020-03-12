@@ -22,7 +22,6 @@ void init_enemies_scale_and_origin(Index_t *index)
     sfSprite_setOrigin(index->enemies.med_spr, origin);
     sfSprite_setScale(index->enemies.light_spr, scale);
     sfSprite_setOrigin(index->enemies.light_spr, origin);
-
 }
 
 void link_enemies_sprites_and_textures(Index_t *index)

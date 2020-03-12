@@ -11,13 +11,13 @@
 #define DEFINES_H_
 
 /*tank values*/
-#define LIGHT_SPEED (10)
-#define MEDIUM_SPEED (7.5)
-#define HEAVY_SPEED (5.0)
+#define LIGHT_SPEED (12)
+#define MEDIUM_SPEED (8)
+#define HEAVY_SPEED (6)
 
-#define LIGHT_HEALTH (300);
-#define MEDIUM_HEALTH (600)
-#define HEAVY_HEALTH (800)
+#define LIGHT_HEALTH (600)
+#define MEDIUM_HEALTH (900)
+#define HEAVY_HEALTH (1500)
 
 /*turrets values*/
 #define DEFAULT_RANGE (128)
@@ -32,14 +32,13 @@
 #define CASU_FIRE_RATE (1)
 #define HEAVY_FIRE_RATE (2)
 #define ARTI_FIRE_RATE (4)
-#define FLAME_FIRE_RATE (3)
-#define TESLA_FIRE_RATE (2)
+#define FLAME_FIRE_RATE (5)
+#define TESLA_FIRE_RATE (3)
 
 #define DAMAGE_MULTIPLICATOR (1.5)
 
 /*Waves values*/
-#define WAVES_TOTAL_NBR (7)
-//#define wave_read_interval (0.50);
+#define WAVES_TOTAL_NBR (6)
 
 /*time*/
 #define BALISES_NBR (10)
