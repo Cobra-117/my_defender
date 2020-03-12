@@ -10,8 +10,8 @@
 void prepare_text_casu(Index_t *index)
 {
     index->ui_text.txt_casu = sfText_create();
-    sfText_setString(index->ui_text.txt_casu, "Popular turret\nPrice: 200\n"
-    "Range: 3\ndammage: 2\nSpecial effect: none\n"
+    sfText_setString(index->ui_text.txt_casu, "Popular turret\nPrice: 100\n"
+    "Range: short\ndammage: 100\nSpecial effect: none\n"
     "Low efficiency but low cost: USSR = proletariat power!");
     index->ui_text.font2 = sfFont_createFromFile("assets/UI/Normal.TTF");
     sfText_setFont(index->ui_text.txt_casu, index->ui_text.font2);
@@ -25,8 +25,8 @@ void prepare_text_casu(Index_t *index)
 void prepare_text_heavy(Index_t *index)
 {
     index->ui_text.txt_heavy = sfText_create();
-    sfText_setString(index->ui_text.txt_heavy, "\"Big Borris\"\nPrice: 500\n"
-    "Range: 4\ndammage: 5\nSpecial effect: none\n"
+    sfText_setString(index->ui_text.txt_heavy, "\"Big Borris\"\nPrice: 200\n"
+    "Range: short\ndammage: 300\nSpecial effect: none\n"
     "As big as my faith in the communism");
     sfText_setFont(index->ui_text.txt_heavy, index->ui_text.font2);
     sfText_setColor(index->ui_text.txt_heavy, sfWhite);
@@ -39,8 +39,8 @@ void prepare_text_heavy(Index_t *index)
 void prepare_text_arti(Index_t *index)
 {
     index->ui_text.txt_arti = sfText_create();
-    sfText_setString(index->ui_text.txt_arti, "Artillery\nPrice: 350\n"
-    "Range: 8\ndammage: 3\nSpecial effect: none\n"
+    sfText_setString(index->ui_text.txt_arti, "Artillery\nPrice: 300\n"
+    "Range: long\ndammage: 400\nSpecial effect: none\n"
     "Can shoot potato up to 300m in case of emergency!");
     sfText_setFont(index->ui_text.txt_arti, index->ui_text.font2);
     sfText_setColor(index->ui_text.txt_arti, sfWhite);
@@ -53,8 +53,8 @@ void prepare_text_arti(Index_t *index)
 void prepare_text_flamme(Index_t *index)
 {
     index->ui_text.txt_flamme = sfText_create();
-    sfText_setString(index->ui_text.txt_flamme, "Pussyfeu turret\nPrice: 400\n"
-    "Range: 4\ndammage: 4\nSpecial effect: slow enemies\n"
+    sfText_setString(index->ui_text.txt_flamme, "Pussyfeu turret\nPrice: 300\n"
+    "Range: short\ndammage: 0\nSpecial effect: slow enemies\n"
     "ENTIRELY POWERED WITH SOVIET VODKA!!!");
     sfText_setFont(index->ui_text.txt_flamme, index->ui_text.font2);
     sfText_setColor(index->ui_text.txt_flamme, sfWhite);
@@ -68,7 +68,7 @@ void prepare_text_tesla(Index_t *index)
 {
     index->ui_text.txt_tesla = sfText_create();
     sfText_setString(index->ui_text.txt_tesla, "Tazer turret\nPrice: 500\n"
-    "Range: 4\ndammage: 4\nSpecial effect: yet to define\n"
+    "Range: short\ndammage: 200\nSpecial effect: yet to define\n"
     "Isn't it ironic to stop Blitzkrieg with lighting?");
     sfText_setFont(index->ui_text.txt_tesla, index->ui_text.font2);
     sfText_setColor(index->ui_text.txt_tesla, sfWhite);
