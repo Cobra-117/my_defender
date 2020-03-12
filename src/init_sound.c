@@ -57,7 +57,6 @@ void create_sound(Index_t *index)
 
 void init_sound(Index_t *index)
 {
-    index->sound.effects.volume_effects = 100;
     create_sound(index);
     create_buffer_sound(index);
     set_buffer_sound(index);
