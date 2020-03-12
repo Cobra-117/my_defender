@@ -35,8 +35,8 @@ void init_price_turrets(Index_t *index)
     index->ui_price_turret.price_arti_upgrade = 450;
     index->ui_price_turret.price_flamme_upgrade = 450;
     index->ui_price_turret.price_tesla_upgrade = 750;
-    index->ui_price_turret.price_mine = 300;
-    index->ui_price_turret.price_order = 800;
-    index->ui_price_turret.price_chernobyl = 500;
+    index->ui_price_turret.price_mine = 500;
+    index->ui_price_turret.price_order = 1000;
+    index->ui_price_turret.price_chernobyl = 3000;
     init_turrets_value(index);
 }

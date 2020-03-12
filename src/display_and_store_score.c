@@ -65,7 +65,7 @@ int get_one_score(Index_t *index, int fd)
     return (my_getnbr(line));
 }
 
-void score(Index_t *index)
+void score(Index_t *index, int i)
 {
     int *scoreboard = malloc(sizeof(int) * 5);
     int fd = open("assets/score.txt", O_RDONLY);
@@ -76,5 +76,8 @@ void score(Index_t *index)
     close (fd);
     scoreboard = sort_score(index, scoreboard);
     store_score(index);
-    display_score_board(index, scoreboard);
+    if (i == 1)
+        display_score_board(index, scoreboard);
+    else
+        display_loser(index, scoreboard);
 }

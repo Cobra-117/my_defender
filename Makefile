@@ -140,6 +140,7 @@ SRCS	=	src/main.c						\
 			src/init_text_score_board.c		\
 			src/win.c						\
 			src/init_score_winner.c			\
+			src/loser.c						\
 
 OBJ 	=	$(SRCS.c= .o)
 

@@ -11,7 +11,7 @@ void init_text_tchernobyl(Index_t *index)
 {
     index->ui_text_utilities.txt_tchernobyl = sfText_create();
     sfText_setString(index->ui_text_utilities.txt_tchernobyl, "Destroy "
-    "everything in the map");
+    "everything in the map\nPrice: 3000");
     sfText_setFont(index->ui_text_utilities.txt_tchernobyl,
     index->ui_text.font2);
     sfText_setColor(index->ui_text_utilities.txt_tchernobyl, sfWhite);
@@ -26,7 +26,7 @@ void init_text_order(Index_t *index)
 {
     index->ui_text_utilities.txt_order = sfText_create();
     sfText_setString(index->ui_text_utilities.txt_order, "Increase damage's"
-    " turrets");
+    " turrets\nPrice: 1000");
     sfText_setFont(index->ui_text_utilities.txt_order, index->ui_text.font2);
     sfText_setColor(index->ui_text_utilities.txt_order, sfWhite);
     sfText_setCharacterSize(index->ui_text_utilities.txt_order, 22);
@@ -40,7 +40,7 @@ void init_text_mine(Index_t *index)
 {
     index->ui_text_utilities.txt_mine = sfText_create();
     sfText_setString(index->ui_text_utilities.txt_mine, "Produce a blizzard"
-    " that freeze all ennemies");
+    " that freeze all ennemies\nPrice: 500");
     sfText_setFont(index->ui_text_utilities.txt_mine, index->ui_text.font2);
     sfText_setColor(index->ui_text_utilities.txt_mine, sfWhite);
     sfText_setCharacterSize(index->ui_text_utilities.txt_mine, 22);

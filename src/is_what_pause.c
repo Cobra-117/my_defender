@@ -50,6 +50,6 @@ int is_win(Index_t *index)
     index->ui_pause_button.click_pos_win.x && index->ui.coord_mouse_y <=
     index->ui_pause_button.click_pos_win.y + index->ui_pause_button.
     click_size_win.y && index->ui.coord_mouse_y >= index->ui_pause_button.
-    click_pos_win.y && index->what_is_open == 100)
+    click_pos_win.y && index->what_is_open == 100 || index->what_is_open == 200)
         index->what_is_open = 5;
 }

@@ -94,7 +94,9 @@ int game_loop(Index_t *index)
             break;
     }
     if (game_res == 1)
-        score(index);
+        score(index, game_res);
+    else
+        score(index, game_res);
     quick_free(index);
     if (index->what_is_open == 6)
         return (-1);
