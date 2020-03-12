@@ -29,7 +29,7 @@ void regular_shoot(Index_t *index, int i, int j, int type)
         set_regular_shoot_anim(index, i, j);
     }
     if (index->turrets_array[i][j].aimed_enemy[0]->life <= 0) {
-        index->money += 75 * index->turrets_array[i][j].aimed_enemy[0]->type;
+        index->money += 100;
         rm_enemy(index, index->turrets_array[i][j].aimed_enemy[0]);
         sfSound_play(index->sound.effects.boom);
         index->turrets_array[i][j].aimed_enemy[0] = NULL;

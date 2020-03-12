@@ -15,9 +15,9 @@
 #define MEDIUM_SPEED (8)
 #define HEAVY_SPEED (6)
 
-#define LIGHT_HEALTH (400)
-#define MEDIUM_HEALTH (700)
-#define HEAVY_HEALTH (1000)
+#define LIGHT_HEALTH (600)
+#define MEDIUM_HEALTH (900)
+#define HEAVY_HEALTH (1500)
 
 /*turrets values*/
 #define DEFAULT_RANGE (128)
@@ -38,8 +38,7 @@
 #define DAMAGE_MULTIPLICATOR (1.5)
 
 /*Waves values*/
-#define WAVES_TOTAL_NBR (7)
-//#define wave_read_interval (0.50);
+#define WAVES_TOTAL_NBR (6)
 
 /*time*/
 #define BALISES_NBR (10)
