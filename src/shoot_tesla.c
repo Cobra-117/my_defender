@@ -54,7 +54,7 @@ void shoot_tesla(Index_t *index, int y, int x)
     if (index->turrets_array[y][x].aimed_enemy[0]->type <= 0) {
         sfSound_play(index->sound.effects.boom);
         rm_enemy(index, index->turrets_array[y][x].aimed_enemy[0]);
-        index->money += 100 * index->turrets_array[y][x].aimed_enemy[0]->type;
+        index->money += 75 * index->turrets_array[y][x].aimed_enemy[0]->type;
     }
     index->turrets_array[y][x].cycles = 0;
     set_regular_shoot_anim(index, y, x);
