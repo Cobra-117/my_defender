@@ -40,6 +40,7 @@ void manage_waves(Index_t *index)
         return;
     index->wave.end = 0;
     index->wave.filepath[18] += 1;
+    index->money += 300;
     close(index->wave.fd);
     index->wave.wave_nbr += 1;
     index->wave.fd = open(index->wave.filepath, O_RDONLY);
