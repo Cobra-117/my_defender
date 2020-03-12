@@ -26,4 +26,5 @@ void buy_upgrade(Index_t *index)
         modify_money_upgrade5(index);
         break;
     }
+    //switch case
 }

@@ -29,4 +29,5 @@ void check_the_upgrade(Index_t *index)
     tesla2_already_upgrade == 1)
         sfText_setString(index->text_skills.txt_price_upgrade,
         "Already\nupgrade");
+    //switch case
 }

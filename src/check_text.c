@@ -35,6 +35,7 @@ void check_text2(Index_t *index)
         sfRenderWindow_drawText(index->window, index->
         ui_text_utilities.txt_order, NULL);
     check_text3(index);
+    //switch case
 }
 
 void check_text(Index_t *index)
@@ -58,5 +59,5 @@ void check_text(Index_t *index)
         sfRenderWindow_drawText(index->window, index->
         text_skills.txt_casu2, NULL);
     check_text2(index);
+    //Switch case
 }
-//Switch case

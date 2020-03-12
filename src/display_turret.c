@@ -38,6 +38,7 @@ sfSprite *get_the_good_lvl2_sprite(Index_t *index, int x, int y)
     if (index->turrets_array[x][y].type == 10)
         sprite  = index->turrets.tesla_mkII_spr;
     return (sprite);
+    //switch case
 }
 
 sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
@@ -57,6 +58,7 @@ sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
     if (index->turrets_array[x][y].type == 5)
         sprite  = index->turrets.tesla_mkI_spr;
     return (sprite);
+    //switch case
 }
 
 void display_this_line_of_turrets(Index_t *index, int i)
