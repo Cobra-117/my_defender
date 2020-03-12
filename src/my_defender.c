@@ -12,8 +12,8 @@ void my_defender(void)
     Index_t index;
     menu_t menu;
     int user_choice = 0;
-    index.sound.effects.volume_effects = 100;
 
+    index.sound.effects.volume_effects = 100;
     init_structs(&index);
     while (1) {
         user_choice = main_menu(&menu, &index, index.window);

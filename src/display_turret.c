@@ -11,10 +11,9 @@ sfIntRect set_turret_rect(Index_t *index, int x, int y)
 {
     sfIntRect rect;
     sfIntRect Flamerect;
+
     rect.height = 256;
     rect.width = 256;
-
-
     rect.top = 1;
     if (index->turrets_array[y][x].anim_state == 0)
         rect.left = 1;
@@ -25,40 +24,38 @@ sfIntRect set_turret_rect(Index_t *index, int x, int y)
 
 sfSprite *get_the_good_lvl2_sprite(Index_t *index, int x, int y)
 {
-    sfSprite *sprite;
-
-    if (index->turrets_array[x][y].type == 6)
-        sprite  = index->turrets.casu_mkII_spr;
-    if (index->turrets_array[x][y].type == 7)
-        sprite  = index->turrets.heavy_mkII_spr;
-    if (index->turrets_array[x][y].type == 8)
-        sprite  = index->turrets.arti_mkII_spr;
-    if (index->turrets_array[x][y].type == 9)
-        sprite  = index->turrets.flame_mkII_spr;
-    if (index->turrets_array[x][y].type == 10)
-        sprite  = index->turrets.tesla_mkII_spr;
-    return (sprite);
-    //switch case
+    switch (index->turrets_array[x][y].type)
+    {
+    case 6:
+        return (index->turrets.casu_mkII_spr);
+    case 7:
+        return (index->turrets.heavy_mkII_spr);
+    case 8:
+        return (index->turrets.arti_mkII_spr);
+    case 9:
+        return (index->turrets.flame_mkII_spr);
+    case 10:
+        return (index->turrets.tesla_mkII_spr);
+    }
 }
 
 sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
 {
-    sfSprite *sprite;
-
     if (index->turrets_array[x][y].type > 5)
         return (get_the_good_lvl2_sprite(index, x, y));
-    if (index->turrets_array[x][y].type == 1)
-        sprite  = index->turrets.casu_mkI_spr;
-    if (index->turrets_array[x][y].type == 2)
-        sprite  = index->turrets.heavy_mkI_spr;
-    if (index->turrets_array[x][y].type == 3)
-        sprite  = index->turrets.arti_mkI_spr;
-    if (index->turrets_array[x][y].type == 4)
-        sprite  = index->turrets.flame_mkI_spr;
-    if (index->turrets_array[x][y].type == 5)
-        sprite  = index->turrets.tesla_mkI_spr;
-    return (sprite);
-    //switch case
+    switch (index->turrets_array[x][y].type)
+    {
+    case 1:
+        return (index->turrets.casu_mkI_spr);
+    case 2:
+        return (index->turrets.heavy_mkI_spr);
+    case 3:
+        return (index->turrets.arti_mkI_spr);
+    case 4:
+        return (index->turrets.flame_mkI_spr);
+    case 5:
+        return (index->turrets.tesla_mkI_spr);
+    }
 }
 
 void display_this_line_of_turrets(Index_t *index, int i)

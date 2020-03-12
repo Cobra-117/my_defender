@@ -70,7 +70,6 @@ void give_position_skills(Index_t *index)
 
 void prepare_ui_skills(Index_t *index)
 {
-
     init_tex_ui_skills(index);
     init_spri__ui_skills(index);
     spri_to_tex_skills(index);

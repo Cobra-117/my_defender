@@ -89,9 +89,7 @@ void place_is_valid(Index_t *index)
     mouse_pos.x = index->ui.coord_mouse_x;
     mouse_pos.y = index->ui.coord_mouse_y;
     asked_tile = get_tile_from_pos(mouse_pos);
-
     if (index->ui_which_turret == 0)
         return;
-
     place_turret(index, asked_tile);
 }

@@ -10,9 +10,9 @@
 sfVector2f get_tile_from_pos(sfVector2f pos)
 {
     sfVector2f tile;
+
     tile.x = 0;
     tile.y = 0;
-
     for (int i = 0; pos.x > 64; pos.x = pos.x - 64) {
         tile.x += 1;
     }

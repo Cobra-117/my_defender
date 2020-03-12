@@ -29,4 +29,4 @@ void change_price_upgrade(Index_t *index)
         sfText_setString(index->text_skills.txt_price_upgrade,
         my_nbr_to_str(index->ui_price_turret.price_tesla2));
     }
-}//switch case
+}
