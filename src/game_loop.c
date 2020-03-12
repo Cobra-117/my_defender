@@ -73,6 +73,8 @@ int game_main_function(Index_t *index)
     display_user_interface(index);
     display_snow(index);
     manage_what_is_open(index);
+    sfText_setString(index->ui_text.txt_money,
+    my_nbr_to_str(index->money));
     sfRenderWindow_display(index->window);
     game_result = is_game_finished(index);
     if (game_result != 0)

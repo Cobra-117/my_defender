@@ -66,8 +66,8 @@ void init_text_now_score(Index_t *index)
     sfText_setString(index->ui_text.txt_now_score, "Return Menu");
     sfText_setFont(index->ui_text.txt_now_score, index->ui_text.font2);
     sfText_setColor(index->ui_text.txt_now_score, sfWhite);
-    sfText_setCharacterSize(index->ui_text.txt_now_score, 40);
-    index->ui_text.pos_now_score.x = 150;
+    sfText_setCharacterSize(index->ui_text.txt_now_score, 60);
+    index->ui_text.pos_now_score.x = 180;
     index->ui_text.pos_now_score.y = 600;
     sfText_setPosition(index->ui_text.txt_now_score, index->
     ui_text.pos_now_score);

@@ -56,4 +56,5 @@ void init_text_score_board(Index_t *index)
     init_text_win(index);
     init_text_back_win(index);
     init_text_now_score(index);
+    init_text_score_win(index);
 }

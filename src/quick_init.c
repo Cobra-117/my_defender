@@ -46,4 +46,5 @@ void quick_init(Index_t *index)
     quick_time_init(index);
     music_init(index);
     init_enemies_list(index);
+    init_user_interface(index);
 }

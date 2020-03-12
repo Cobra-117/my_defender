@@ -9,15 +9,21 @@
 
 void buy_upgrade(Index_t *index)
 {
-    if (index->ui_which_turret == 6)
+    switch (index->ui_which_turret) {
+    case 6:
         modify_money_upgrade1(index);
-    if (index->ui_which_turret == 7)
+        break;
+    case 7:
         modify_money_upgrade2(index);
-    if (index->ui_which_turret == 8)
+        break;
+    case 8:
         modify_money_upgrade3(index);
-    if (index->ui_which_turret == 9)
+        break;
+    case 9:
         modify_money_upgrade4(index);
-    if (index->ui_which_turret == 10)
+        break;
+    case 10:
         modify_money_upgrade5(index);
-    //mettre un switch case
+        break;
+    }
 }
