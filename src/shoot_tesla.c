@@ -24,8 +24,9 @@ void tesla_shoot_one(Index_t *index, int y, int x, enemies_list_t *current)
 {
     if (current->life <= 0) {
         index->money += 100 *
-        index->turrets_array[y][x].aimed_enemy->type;
+        index->turrets_array[y][x].aimed_enemy[0]->type;
         rm_enemy(index, current);
+        sfSound_play(index->sound.effects.boom);
     }
 }
 
@@ -50,9 +51,9 @@ void tesla_range_damage(Index_t *index, int y, int x)
 void shoot_tesla(Index_t *index, int y, int x)
 {
     tesla_range_damage(index, y, x);
-    if (index->turrets_array[y][x].aimed_enemy->type <= 0) {
+    if (index->turrets_array[y][x].aimed_enemy[0]->type <= 0) {
         sfSound_play(index->sound.effects.boom);
-        rm_enemy(index, index->turrets_array[y][x].aimed_enemy);
+        rm_enemy(index, index->turrets_array[y][x].aimed_enemy[0]);
     }
     index->turrets_array[y][x].cycles = 0;
     set_regular_shoot_anim(index, y, x);

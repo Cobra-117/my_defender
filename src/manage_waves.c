@@ -27,7 +27,7 @@ int wave_break(Index_t *index)
 void manage_waves(Index_t *index)
 {
     if (index->wave.end == 0 ||
-    (index->enemies_list->type != 0 || index->enemies_list->next != NULL)) {
+    (is_there_one_living_enemy(index) == 1)) {
         if (index->wave.wave_nbr >= WAVES_TOTAL_NBR)
             index->wave.wave_nbr = 999;
         return;

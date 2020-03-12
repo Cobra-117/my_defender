@@ -41,4 +41,6 @@ void init_structs(Index_t *index)
     init_game_effects(index);
     init_user_interface(index);
     index->bunker_life = BUNKER_LIFE;
+    index->sound.volume_music = 50;
+    index->sound.game_volume = 50;
 }

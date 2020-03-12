@@ -61,7 +61,9 @@ void set_turrret_values(Index_t *index, sfVector2f asked_tile)
     index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
     anim_state = 0;
     index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    aimed_enemy = NULL;
+    aimed_enemy = malloc(sizeof(enemies_list_t *) * 2);
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
+    aimed_enemy[0] = NULL;
     index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
     time_shoot = 0;
     index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
@@ -88,7 +90,6 @@ void place_is_valid(Index_t *index)
     mouse_pos.y = index->ui.coord_mouse_y;
     asked_tile = get_tile_from_pos(mouse_pos);
 
-    printf("turret: %i \n", index->ui_which_turret);
     if (index->ui_which_turret == 0)
         return;
 

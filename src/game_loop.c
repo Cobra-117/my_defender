@@ -82,13 +82,17 @@ int game_main_function(Index_t *index)
 
 int game_loop(Index_t *index)
 {
+    int game_res = 0;
+
     quick_init(index);
     while (index->what_is_open != 5
     && index->what_is_open != 6) {
-        if (game_main_function(index) != 0)
+        game_res = game_main_function(index);
+        if (game_res)
             break;
     }
-    score(index);
+    if (game_res == 1)
+        score(index);
     quick_free(index);
     if (index->what_is_open == 6)
         return (-1);

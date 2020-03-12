@@ -59,3 +59,4 @@ void check_text(Index_t *index)
         text_skills.txt_casu2, NULL);
     check_text2(index);
 }
+//Switch case

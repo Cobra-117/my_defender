@@ -30,10 +30,9 @@ void empty_enemies_list(Index_t *index)
     enemies_list_t *current;
 
     current = &(*index->enemies_list);
-    while (current->next != NULL && current->type != 0)
+    while (current != NULL)
     {
-        rm_enemy(index, current->next);
-        current = &(*index->enemies_list);
+        rm_enemy(index, current);
+        current = current->next;
     }
-    rm_enemy(index, current);
 }

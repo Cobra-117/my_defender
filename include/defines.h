@@ -38,7 +38,7 @@
 #define DAMAGE_MULTIPLICATOR (1.5)
 
 /*Waves values*/
-#define WAVES_TOTAL_NBR (1)
+#define WAVES_TOTAL_NBR (3)
 //#define wave_read_interval (0.50);
 
 /*time*/
@@ -56,7 +56,7 @@
 
 #define INTERV_READMAP (500)
 #define INTERV_MOVE_ENEMIES (50)
-#define INTERV_WAVE_BREAK (5000)
+#define INTERV_WAVE_BREAK (3000)
 #define INTERV_CHECK_SHOOT (1000)
 #define INTERV_TURRET_ANIM (400)
 #define INTERV_TESLA_ANIM (200)
