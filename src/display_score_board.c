@@ -28,7 +28,7 @@ char *my_strcat_custom(char *a, char *b, char *c)
     return (res);
 }
 
-int button_win_clicked(Index_t *index)
+void button_win_clicked(Index_t *index)
 {
     sfEvent event;
 
