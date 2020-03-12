@@ -40,6 +40,13 @@ void check_what_is_it(Index_t *index)
     check_what_is_it2(index);
 }
 
+void escape_pressed(Index_t *index, sfEvent event)
+{
+    if (event.type == sfEvtKeyPressed)
+        if (event.key.code == sfKeyEscape)
+            index->what_is_open = 4;
+}
+
 int button_game_clicked(Index_t *index)
 {
     sfEvent event;
@@ -54,8 +61,6 @@ int button_game_clicked(Index_t *index)
         }
         if (event.type == sfEvtMouseButtonPressed)
             check_what_is_it(index);
-        if (event.type == sfEvtKeyPressed)
-            if (event.key.code == sfKeyEscape)
-                index->what_is_open = 4;
-    }///Quatre indentations
+        escape_pressed(index, event);
+    }
 }

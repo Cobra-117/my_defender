@@ -185,6 +185,8 @@ typedef struct ui_text_t
     sfVector2f pos_win;
     sfText *txt_back_win;
     sfVector2f pos_back_win;
+    sfText *txt_score_win;
+    sfVector2f pos_score_win;
 }ui_text_t;
 
 typedef struct ui_turrets_t

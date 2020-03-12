@@ -103,6 +103,8 @@ void display_score_board(Index_t *index, int *scoreboard)
     make_the_scoreboard(index, scoreboard);
     while (index->what_is_open == 100) {
         win_loop(index, scoreboard);
+        sfRenderWindow_drawText(index->window,
+        index->ui_text.txt_score_win, NULL);
         push_win(index);
         sfRenderWindow_display(index->window);
     }

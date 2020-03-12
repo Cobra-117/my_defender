@@ -80,5 +80,4 @@ void window_settings(menu_t *menu, Index_t *index, sfRenderWindow *window)
         settings_loop(window, menu, index);
         sfRenderWindow_display(window);
     }
-    //free_settings(menu);
 }

@@ -76,5 +76,4 @@ void window_htp(menu_t *menu, Index_t *index, sfRenderWindow *window)
         htp_loop(window, menu, index);
         sfRenderWindow_display(window);
     }
-    //free_htp_menu(menu);
 }
