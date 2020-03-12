@@ -14,4 +14,5 @@ void quick_free(Index_t *index)
     index->bunker_life = BUNKER_LIFE;
     index->wave.wave_nbr = 0;
     sfMusic_stop(index->sound.game);
+    quick_free_ui(index);
 }
