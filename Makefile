@@ -149,7 +149,8 @@ CFLAGS	=	-Wall -O0 -Wextra
 all:	$(NAME)
 
 $(NAME):library $(OBJS)
-	gcc -o $(NAME) $(SRCS) $(OBJ) -L lib/my -l my -l csfml-graphics -l csfml-system -l csfml-audio -g3
+	gcc -o $(NAME) $(SRCS) $(OBJ) -L lib/my -l my \
+	-l csfml-graphics -l csfml-system -l csfml-audio -g3
 library:
 	make -C ./lib/my
 $(OBJ) :
