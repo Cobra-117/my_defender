@@ -72,6 +72,8 @@ void manage_this_turret(Index_t *index, int y, int x)
 
 void manage_turrets(Index_t *index)
 {
+    if (index->what_is_open == 4)
+        return;
     for (int i = 0; i < 19; i++) {
         for (int j = 0; j < 33; j++) {
             manage_this_turret(index, i, j);
