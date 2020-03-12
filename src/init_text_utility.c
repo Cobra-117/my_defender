@@ -18,8 +18,8 @@ void init_text_tchernobyl(Index_t *index)
     sfText_setCharacterSize(index->ui_text_utilities.txt_tchernobyl, 22);
     index->ui_text_utilities.pos_tchernobyl.x = 650;
     index->ui_text_utilities.pos_tchernobyl.y = 255;
-    sfText_setPosition(index->ui_text_utilities.txt_tchernobyl, index->
-    ui_text_utilities.pos_tchernobyl);
+    sfText_setPosition(index->ui_text_utilities.txt_tchernobyl,
+    index->ui_text_utilities.pos_tchernobyl);
 }
 
 void init_text_order(Index_t *index)
@@ -32,8 +32,8 @@ void init_text_order(Index_t *index)
     sfText_setCharacterSize(index->ui_text_utilities.txt_order, 22);
     index->ui_text_utilities.pos_order.x = 650;
     index->ui_text_utilities.pos_order.y = 255;
-    sfText_setPosition(index->ui_text_utilities.txt_order, index->
-    ui_text_utilities.pos_order);
+    sfText_setPosition(index->ui_text_utilities.txt_order,
+    index->ui_text_utilities.pos_order);
 }
 
 void init_text_mine(Index_t *index)
@@ -46,8 +46,8 @@ void init_text_mine(Index_t *index)
     sfText_setCharacterSize(index->ui_text_utilities.txt_mine, 22);
     index->ui_text_utilities.pos_mine.x = 650;
     index->ui_text_utilities.pos_mine.y = 255;
-    sfText_setPosition(index->ui_text_utilities.txt_mine, index->
-    ui_text_utilities.pos_mine);
+    sfText_setPosition(index->ui_text_utilities.txt_mine,
+    index->ui_text_utilities.pos_mine);
 }
 
 void init_text_the_upgrade(Index_t *index)
@@ -59,8 +59,8 @@ void init_text_the_upgrade(Index_t *index)
     sfText_setCharacterSize(index->ui_text_utilities.txt_upgrade, 22);
     index->ui_text_utilities.pos_upgrade.x = 1175;
     index->ui_text_utilities.pos_upgrade.y = 255;
-    sfText_setPosition(index->ui_text_utilities.txt_upgrade, index->
-    ui_text_utilities.pos_upgrade);
+    sfText_setPosition(index->ui_text_utilities.txt_upgrade,
+    index->ui_text_utilities.pos_upgrade);
 }
 
 void init_text_utility(Index_t *index)

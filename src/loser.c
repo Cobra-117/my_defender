@@ -11,8 +11,6 @@ void lose_loop(Index_t *index, int *scoreboard)
 {
     sfRenderWindow_drawSprite(index->window,
     index->ui.spri_socle, NULL);
-    //sfRenderWindow_drawText(index->window,
-    //index->ui_text.txt_win, NULL);
     sfRenderWindow_drawText(index->window,
     index->ui_text.txt_score_board1, NULL);
     sfRenderWindow_drawText(index->window,

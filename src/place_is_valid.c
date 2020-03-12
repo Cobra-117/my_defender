@@ -58,16 +58,16 @@ void set_turrret_values(Index_t *index, sfVector2f asked_tile)
     set_turret_range(index, asked_tile);
     set_turret_damage(index, asked_tile);
     index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].cycles = 0;
-    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    anim_state = 0;
-    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    aimed_enemy = malloc(sizeof(enemies_list_t *) * 2);
-    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    aimed_enemy[0] = NULL;
-    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    time_shoot = 0;
-    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].
-    time_anim = 0;
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].anim_state
+    = 0;
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].aimed_enemy
+    = malloc(sizeof(enemies_list_t *) * 2);
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].aimed_enemy[0]
+    = NULL;
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].time_shoot
+    = 0;
+    index->turrets_array[(int)asked_tile.y][(int)asked_tile.x].time_anim
+    = 0;
 }
 
 void place_turret(Index_t *index, sfVector2f asked_tile)

@@ -12,9 +12,9 @@ int is_casu(Index_t *index)
     if (index->ui.coord_mouse_x <= index->ui_button_turret.click_pos_casu.x +
     index->ui_button_turret.click_size_casu.x && index->ui.coord_mouse_x >=
     index->ui_button_turret.click_pos_casu.x && index->ui.coord_mouse_y <=
-    index->ui_button_turret.click_pos_casu.y + index->ui_button_turret.
-    click_size_casu.y && index->ui.coord_mouse_y >= index->ui_button_turret.
-    click_pos_casu.y && index->what_is_open == 1) {
+    index->ui_button_turret.click_pos_casu.y +
+    index->ui_button_turret.click_size_casu.y && index->ui.coord_mouse_y >=
+    index->ui_button_turret.click_pos_casu.y && index->what_is_open == 1) {
         index->ui_which_turret = 1;
         index->light_effect_play  = 11;
     }

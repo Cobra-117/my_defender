@@ -19,8 +19,8 @@ void init_text_price_upgrade(Index_t *index)
     sfText_setCharacterSize(index->text_skills.txt_price_upgrade, 22);
     index->text_skills.pos_price_upgrade.x = 1175;
     index->text_skills.pos_price_upgrade.y = 255;
-    sfText_setPosition(index->text_skills.txt_price_upgrade, index->
-    text_skills.pos_price_upgrade);
+    sfText_setPosition(index->text_skills.txt_price_upgrade,
+    index->text_skills.pos_price_upgrade);
 }
 
 void init_text_upgrade(Index_t *index)
@@ -32,7 +32,7 @@ void init_text_upgrade(Index_t *index)
     sfText_setCharacterSize(index->text_skills.txt_upgrade, 22);
     index->text_skills.pos_upgrade.x = 1150;
     index->text_skills.pos_upgrade.y = 230;
-    sfText_setPosition(index->text_skills.txt_upgrade, index->
-    text_skills.pos_upgrade);
+    sfText_setPosition(index->text_skills.txt_upgrade,
+    index->text_skills.pos_upgrade);
     init_text_price_upgrade(index);
 }

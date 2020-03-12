@@ -16,8 +16,8 @@ void init_text_game(menu_t *menu)
     sfText_setCharacterSize(menu->text_settings.txt_sound, 50);
     menu->text_settings.pos_sound.x = 740;
     menu->text_settings.pos_sound.y = 700;
-    sfText_setPosition(menu->text_settings.txt_sound, menu->
-    text_settings.pos_sound);
+    sfText_setPosition(menu->text_settings.txt_sound,
+    menu->text_settings.pos_sound);
 }
 
 void init_text_music(menu_t *menu)
@@ -30,8 +30,8 @@ void init_text_music(menu_t *menu)
     sfText_setCharacterSize(menu->text_settings.txt_music, 50);
     menu->text_settings.pos_music.x = 740;
     menu->text_settings.pos_music.y = 500;
-    sfText_setPosition(menu->text_settings.txt_music, menu->
-    text_settings.pos_music);
+    sfText_setPosition(menu->text_settings.txt_music,
+    menu->text_settings.pos_music);
 }
 
 void init_text_value_music(menu_t *menu, Index_t *index)
@@ -45,8 +45,8 @@ void init_text_value_music(menu_t *menu, Index_t *index)
     sfText_setCharacterSize(menu->text_settings.txt_value_music, 50);
     menu->text_settings.pos_value_music.x = 950;
     menu->text_settings.pos_value_music.y = 420;
-    sfText_setPosition(menu->text_settings.txt_value_music, menu->
-    text_settings.pos_value_music);
+    sfText_setPosition(menu->text_settings.txt_value_music,
+    menu->text_settings.pos_value_music);
 }
 
 void init_text_value_game_music(menu_t *menu, Index_t *index)
@@ -60,8 +60,8 @@ void init_text_value_game_music(menu_t *menu, Index_t *index)
     sfText_setCharacterSize(menu->text_settings.txt_value_sound, 50);
     menu->text_settings.pos_value_sound.x = 950;
     menu->text_settings.pos_value_sound.y = 620;
-    sfText_setPosition(menu->text_settings.txt_value_sound, menu->
-    text_settings.pos_value_sound);
+    sfText_setPosition(menu->text_settings.txt_value_sound,
+    menu->text_settings.pos_value_sound);
 }
 
 void init_text_settings(menu_t *menu, Index_t *index)
