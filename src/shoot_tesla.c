@@ -36,8 +36,7 @@ void tesla_range_damage(Index_t *index, int y, int x)
     float dist;
 
     current = *(&index->enemies_list);
-    while (current != NULL)
-    {
+    while (current != NULL) {
         dist = calc_dist(current, y, x);
         if ((dist < 0 && (dist * -1) <= DEFAULT_RANGE) ||
         (dist >= 0 && dist <= DEFAULT_RANGE)) {

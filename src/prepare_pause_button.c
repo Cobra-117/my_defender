@@ -22,8 +22,8 @@ void init_resume_button(Index_t *index)
     index->ui_pause_button.size_resume);
     sfTexture *texture = sfTexture_createFromFile
     ("assets/UI/Red_Square.png", NULL);
-    sfRectangleShape_setTexture(index->ui_pause_button.
-    button_resume, texture, 0);
+    sfRectangleShape_setTexture(index->ui_pause_button.button_resume,
+    texture, 0);
 }
 
 void init_go_menu_button(Index_t *index)
@@ -41,8 +41,8 @@ void init_go_menu_button(Index_t *index)
     index->ui_pause_button.size_go_menu);
     sfTexture *texture = sfTexture_createFromFile
     ("assets/UI/Red_Square.png", NULL);
-    sfRectangleShape_setTexture(index->ui_pause_button.
-    button_go_menu, texture, 0);
+    sfRectangleShape_setTexture(index->ui_pause_button.button_go_menu,
+    texture, 0);
 }
 
 void init_exit_button(Index_t *index)
@@ -79,8 +79,8 @@ void init_win_button(Index_t *index)
     index->ui_pause_button.size_win);
     sfTexture *texture = sfTexture_createFromFile
     ("assets/UI/Red_Square.png", NULL);
-    sfRectangleShape_setTexture(index->ui_pause_button.
-    button_win, texture, 0);
+    sfRectangleShape_setTexture(index->ui_pause_button.button_win,
+    texture, 0);
 }
 
 void prepare_pause_button(Index_t *index)

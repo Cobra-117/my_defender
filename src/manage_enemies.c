@@ -33,8 +33,8 @@ void manage_enemies(Index_t *index)
     }
     if (compare_time(index, BAL_READMAP, INTERV_READMAP) == 1) {
         type = read_map(index);
-        if (type == - 1) {
-        }
+        //if (type == - 1) {
+        //}
         if (type == 1 || type == 2 || type == 3)
             add_enemy(index, type);
     }

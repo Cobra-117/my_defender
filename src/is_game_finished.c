@@ -12,8 +12,7 @@ int is_there_one_living_enemy(Index_t *index)
     enemies_list_t *current;
 
     current = *(&index->enemies_list);
-    while (current != NULL)
-    {
+    while (current != NULL) {
         if (current->type != 0)
             return (1);
         current = current->next;

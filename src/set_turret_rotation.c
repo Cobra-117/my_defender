@@ -39,8 +39,7 @@ enemies_list_t *find_enemy_to_aim(Index_t *index, int y, int x)
     float cur_dist = 0;
 
     current = *(&index->enemies_list);
-    while (current != NULL)
-    {
+    while (current != NULL) {
         cur_dist = calc_dist(current, y, x);
         if (cur_dist < lowest_dist &&
         cur_dist <= index->turrets_array[y][x].range) {

@@ -24,8 +24,7 @@ sfIntRect set_turret_rect(Index_t *index, int x, int y)
 
 sfSprite *get_the_good_lvl2_sprite(Index_t *index, int x, int y)
 {
-    switch (index->turrets_array[x][y].type)
-    {
+    switch (index->turrets_array[x][y].type) {
     case 6:
         return (index->turrets.casu_mkII_spr);
     case 7:
@@ -43,8 +42,7 @@ sfSprite *get_the_good_sprite(Index_t *index, int x, int y)
 {
     if (index->turrets_array[x][y].type > 5)
         return (get_the_good_lvl2_sprite(index, x, y));
-    switch (index->turrets_array[x][y].type)
-    {
+    switch (index->turrets_array[x][y].type) {
     case 1:
         return (index->turrets.casu_mkI_spr);
     case 2:

@@ -51,8 +51,7 @@ void move_enemies(Index_t *index)
     if (index->game_effects.blizzard == sfTrue || index->what_is_open == 4)
         return;
     current = *(&index->enemies_list);
-    while (current->next != NULL)
-    {
+    while (current->next != NULL) {
         move_this_enemy(index, current);
         current = current->next;
     }

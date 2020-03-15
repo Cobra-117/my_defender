@@ -50,8 +50,8 @@ int info_mine(Index_t *index)
     index->ui_button_utilities.click_size_mine.x &&
     index->ui.coord_mouse_x >=
     index->ui_button_utilities.click_pos_mine.x && index->ui.coord_mouse_y <=
-    index->ui_button_utilities.click_pos_mine.y + index->ui_button_utilities.
-    click_size_mine.y && index->ui.coord_mouse_y >=
+    index->ui_button_utilities.click_pos_mine.y +
+    index->ui_button_utilities.click_size_mine.y && index->ui.coord_mouse_y >=
     index->ui_button_utilities.click_pos_mine.y && index->what_is_open == 2) {
         index->ui_text.which_text = 11;
     } else
