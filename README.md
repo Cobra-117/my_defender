@@ -1,5 +1,5 @@
 # my_defender
-Epitech graphical programming project: my defender
+Epitech graphical programming project: my defenders
 
 To play, simply compile with "make" and then execute ./my_defender
 
